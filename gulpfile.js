@@ -109,6 +109,7 @@ gulp.task('favicon', function () {
 gulp.task('assemble', function (done) {
 	assemble({
 		logErrors: config.dev,
+		baseUrl:'docs',
 		dest:'docs'
 	});
 	done();
