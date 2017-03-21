@@ -33,7 +33,7 @@ var config = {
 		images: 'src/assets/toolkit/images/**/*',
 		views: 'src/toolkit/views/*.html'
 	},
-	dest: 'dist'
+	dest: 'docs'
 };
 
 
@@ -108,7 +108,8 @@ gulp.task('favicon', function () {
 // assemble
 gulp.task('assemble', function (done) {
 	assemble({
-		logErrors: config.dev
+		logErrors: config.dev,
+		dest:'docs'
 	});
 	done();
 });
