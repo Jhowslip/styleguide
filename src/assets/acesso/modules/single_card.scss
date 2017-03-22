@@ -1,0 +1,125 @@
+.single-card {
+	.card-header {
+		@extend %clearfix;
+	}
+  .card-image {
+  	height: auto;
+    margin-bottom: 21px;
+  	width: 100%;
+  }
+
+  .shipping {
+  	display: none;
+
+  	@extend .box-content;
+  	
+  	header,
+  	p {
+  		@extend %clearfix;
+  	}
+  }
+}
+
+
+@media #{$medium-and-up} { 
+	.single-card {
+
+		&.panel-content {
+			padding: 24px;
+		}
+		
+		.single-card-wrapper {
+			position: relative;
+			margin-bottom: 0;
+		}
+		> .row {
+			//margin: 0;
+		}
+
+		.card-header {
+			margin-bottom: 21px;
+		}		
+		.internal-title,
+		.card-type {
+			display: inline-block;
+			float: left;
+			height: 32px;
+			line-height: 32px;
+			margin: 0;
+		}
+
+		.internal-title {
+			font-size: rem(28);
+		}
+		.card-type {
+			font-size: rem(18);
+			margin-left: 14px;
+		}
+
+		.card-image {
+			margin: 0;
+			img {
+				max-width: 100%;
+				width: 602px;
+			}
+		}
+
+		.btn-login {
+			//margin-bottom: -98px;
+			//bottom: -5px;
+			//position: absolute;
+		}
+		
+		// Box de entrega que é exibido apenas em desktop
+		.shipping {
+			color: #000;
+			display: block;
+			margin-top: 24px;
+			padding: 16px;
+
+			i {
+				color: #030303;
+				float: left;
+				font-size: 26px;
+				margin-right: 12px;
+			}
+
+			header {
+				span {
+					font: normal 400 20px/32px 'Poppins', sans-serif;
+				}
+			}
+
+			p {
+				font: normal 300 18px/1.3 'Roboto', sans-serif;
+				margin: 16px 0 0;
+			}
+			
+			.open-modal {
+				i {
+					color: #838383;
+					font-size: 20px;
+					margin-right: 5px;
+				}
+			}
+			a {
+        color: #838383;
+        cursor: pointer;
+        float: left;
+        font: italic 500 18px/24px 'Roboto';
+        text-decoration: underline;
+      }
+
+		}
+	}
+}
+
+@media #{$medium-and-up} { 
+	.single-card {
+		.shipping {
+			p {
+				line-height: 32px;
+			}
+		}
+	}
+}

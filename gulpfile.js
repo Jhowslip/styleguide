@@ -28,7 +28,8 @@ var config = {
 		},
 		styles: {
 			fabricator: 'src/assets/fabricator/styles/fabricator.scss',
-			toolkit: 'src/assets/toolkit/styles/toolkit.scss'
+			toolkit: 'src/assets/toolkit/styles/toolkit.scss',
+			acesso: 'src/assets/acesso/style.scss'
 		},
 		images: 'src/assets/toolkit/images/**/*',
 		views: 'src/toolkit/views/*.html'
@@ -72,7 +73,18 @@ gulp.task('styles:toolkit', function () {
 		.pipe(gulpif(config.dev, reload({stream:true})));
 });
 
-gulp.task('styles', ['styles:fabricator', 'styles:toolkit']);
+gulp.task('styles:acesso', function () {
+	gulp.src(config.src.styles.acesso)
+		.pipe(sourcemaps.init())
+		.pipe(sass().on('error', sass.logError))
+		.pipe(prefix('last 1 version'))
+		.pipe(gulpif(!config.dev, csso()))
+		.pipe(sourcemaps.write())
+		.pipe(gulp.dest(config.dest + '/assets/acesso/style'))
+		.pipe(gulpif(config.dev, reload({stream:true})));
+});
+
+gulp.task('styles', ['styles:fabricator', 'styles:toolkit', 'styles:acesso']);
 
 
 // scripts
@@ -154,6 +166,9 @@ gulp.task('serve', function () {
 
 	gulp.task('styles:toolkit:watch', ['styles:toolkit']);
 	gulp.watch('src/assets/toolkit/styles/**/*.scss', ['styles:toolkit:watch']);
+
+	gulp.task('styles:acesso:watch', ['styles:acesso']);
+	gulp.watch('src/assets/acesso/style/**/*.scss', ['styles:acesso:watch']);
 
 	gulp.task('scripts:watch', ['scripts'], reload);
 	gulp.watch('src/assets/{fabricator,toolkit}/scripts/**/*.js', ['scripts:watch']).on('change', webpackCache);

@@ -1,0 +1,10 @@
+// Estilo do bloco principal de título
+// 
+
+.page-title {
+	margin: 18px 0 16px;
+
+	@media #{$medium-and-up} {
+		margin: 35px 0 25px;
+	}
+}

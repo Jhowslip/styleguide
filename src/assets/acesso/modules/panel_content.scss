@@ -1,0 +1,38 @@
+// Conteúdo interno - Painel de conteúdo
+//
+.panel-content {
+	@extend %box-content;
+	padding: rem(16);
+
+	+ .panel-content {
+		margin-top: 25px;
+	}
+	
+}
+
+.multi-panels {
+	margin-bottom: rem(24);
+	
+	@media #{$medium-and-up} {
+
+		.grouping {
+
+			background-color: #ffffff;
+		  border: solid 1px #d4d4d4;
+			border-radius: 4px;
+
+			.panel-content {
+				background-color: transparent;
+				border: none;
+				border-radius: initial;
+			}
+
+			.info-list {
+				.flow-text {
+					font-size: rem(18);
+					
+				}
+			}
+		}
+	}
+}

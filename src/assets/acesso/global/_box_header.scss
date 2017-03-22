@@ -1,0 +1,42 @@
+// Estilo para o header de box de conteúdo
+// .box-header
+
+.box-header {
+	padding-bottom: rem(8);
+	margin-bottom: rem(24);
+
+	 
+	@extend .border-thin;
+
+	.row {
+		@extend %no-margin;
+	}
+
+	i {
+		color: $warm-grey;
+		font-size: rem(19);
+		height: rem(19);
+		margin-right: 0;
+	}
+
+	h2 {
+		color: $warm-grey;
+		display: inline-block;
+		@extend .internal-title;
+	}
+
+
+	@media #{$medium-and-up} {
+
+		h2 {
+			font-size: rem(22);
+			margin-left: rem(4);
+			margin-top: rem(3);
+		}
+
+		i {
+			font-size: rem(24);
+		}
+	}
+
+}

@@ -1,0 +1,281 @@
+// Text Inputs + Textarea
+//  ==========================================================================
+
+// Style Placeholders 
+
+::-webkit-input-placeholder {
+  color: $placeholder-text-color;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  color: $placeholder-text-color;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+  color: $placeholder-text-color;
+}
+
+:-ms-input-placeholder {
+  color: $placeholder-text-color;
+}
+
+// Text inputs
+input:not([type]),
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=url],
+input[type=time],
+input[type=date],
+input[type=datetime],
+input[type=datetime-local],
+input[type=tel],
+input[type=number],
+input[type=search],
+textarea.materialize-textarea {
+
+  // Estilo geral 
+  background-color: transparent;
+  border: none;
+  border-bottom: $input-border;
+  border-radius: 0;
+  box-sizing: content-box;
+  box-shadow: none;
+  cursor: pointer;  
+  font-family: 'Roboto', sans-serif;
+  font-size: $input-font-size;
+  font-weight: 400;
+  height: $input-height;
+  margin: $input-margin;
+  outline: none;
+  padding: $input-padding;
+  transition: $input-transition;
+  width: 100%;
+
+  // Estilo de input no estado disabled
+  &:disabled,
+  &[readonly="readonly"] {
+    color: $input-disabled-color;
+    border-bottom: $input-disabled-border;
+  }
+
+  //  Estilo de Label no estado Disabled
+  &:disabled+label,
+  &[readonly="readonly"]+label {
+    color: $input-disabled-color;
+  }
+
+  // Estilo de input no estado de focus
+  &:focus:not([readonly]) {
+    border-bottom: 1px solid $blue-sky;
+    box-shadow: 0 1px 0 0 $blue-sky;
+  }
+
+  // Label no estado de focus
+  &:focus:not([readonly])+label {
+    color: $blue-sky;
+  }
+
+  // Input com validação em success
+  &.valid,
+  &:focus.valid {
+    border-bottom: 1px solid $input-success-color;
+    box-shadow: 0 1px 0 0 $input-success-color;
+  }
+
+  // Label com validação em sucesso.
+  &.valid + label:after,
+  &:focus.valid + label:after {
+    content: attr(data-success);
+    color: $input-success-color;
+    opacity: 1;
+  }
+
+  // Input com validação retornando erro/invalido
+  &.invalid,
+  &:focus.invalid {
+    border-bottom: $input-invalid-border;
+    box-shadow: 0 1px 0 0 $input-error-color;
+  }
+
+  // Mesamgem de erro
+  &.invalid + label:after,
+  &:focus.invalid + label:after {
+    content: attr(data-error);
+    color: $input-error-color;
+    opacity: 1;
+  }
+
+  // Label 100% quando usado a validate para mensagem de erros
+  &.validate + label {
+    width: 100%;
+    pointer-events: none;
+  }
+
+  // Form: Estilo compartilhado de mensagem
+  & + label:after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 60px;
+    opacity: 0;
+    transition: .2s opacity ease-out, .2s color ease-out;
+  }
+}
+
+// Estilo para o campo de wrapper de input
+.input-field {
+  // Estilo inline
+  &.inline {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px;
+
+    input,
+    .select-dropdown {
+      margin-bottom: 1rem;
+    }
+  }
+
+  // Espaço de Gutter
+  &.col {
+    label {
+      left: $gutter-width / 2;
+    }
+
+    .prefix ~ label,
+    .prefix ~ .validate ~ label {
+      width: calc(100% - 3rem - #{$gutter-width});
+    }
+  }
+
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: normal;
+  margin-top: 1rem;
+  position: relative;
+
+  label {
+    //color: $input-border-color;
+    color: #838383;
+    cursor: pointer;
+    font: normal normal 18px/1 'Poppins', 'Roboto', sans-serif;
+    left: 0;
+    position: absolute;
+    top: 0.8rem;
+    transition: .08s ease-out;
+    @media #{$medium-and-up} {
+      font-size: 20px;
+    }
+  }
+
+  label {
+    &.active {
+      //font-size: $label-font-size;
+      font-size: 16px;
+      transform: translateY(-170%);
+      @media #{$medium-and-up} {
+        font-size: 18px;
+      }
+    }
+  }
+    
+
+  // Prefixo de ícones
+  .prefix {
+    position: absolute;
+    width: $input-height;
+    font-size: 2rem;
+    transition: color .2s;
+
+    &.active { color: $input-focus-color; }
+  }
+
+  .prefix ~ input,
+  .prefix ~ textarea,
+  .prefix ~ label,
+  .prefix ~ .validate ~ label,
+  .prefix ~ .autocomplete-content {
+    margin-left: 3rem;
+    width: 92%;
+    width: calc(100% - 3rem);
+  }
+
+  .prefix ~ label { margin-left: 3rem; }
+
+  @media #{$medium-and-down} {
+    .prefix ~ input {
+      width: 86%;
+      width: calc(100% - 3rem);
+    }
+  }
+
+  @media #{$small-and-down} {
+    .prefix ~ input {
+      width: 80%;
+      width: calc(100% - 3rem);
+    }
+  }
+}
+
+
+// Textarea
+
+// Textarea padrão
+textarea {
+  background-color: transparent;
+  height: $input-height;
+  width: 100%;
+
+  &.materialize-textarea {
+    min-height: $input-height;
+    overflow-y: hidden; /* prevents scroll bar flash */
+    padding: .8rem 0 1.6rem 0; /* prevents text jump on Enter keypress */
+    resize: none;
+  }
+}
+
+// Textarea com autoresize
+.hiddendiv {
+  display: none;
+  overflow-wrap: break-word; /* future version of deprecated 'word-wrap' */
+  padding-top: 1.2rem; /* prevents text jump on Enter keypress */
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+
+// Autocomplete
+.autocomplete-content {
+  margin-top: -15px;
+  display: block;
+  opacity: 1;
+  position: static;
+
+  li {
+    .highlight { color: #444; }
+
+    img {
+      height: $dropdown-item-height - 10;
+      width: $dropdown-item-height - 10;
+      margin: 5px 15px;
+    }
+  }
+}
+
+// Removendo o fundo de autocomplete do webkit
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus
+input:-webkit-autofill, 
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  background-color: transparent;
+  box-shadow: 0 0 0px 1000px white inset;
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
+}

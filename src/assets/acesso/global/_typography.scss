@@ -1,0 +1,116 @@
+
+a {
+  text-decoration: none;
+}
+
+p, a {
+  font-size: 100%;
+  line-height: 100%;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+}
+
+html{
+  font-size: 16px;
+  line-height: 0;
+
+  @media only screen and (min-width: 0) {
+    font-size: 14px;
+  }
+
+  @media only screen and (min-width: $medium-screen) {
+    font-size: 14.5px;
+  }
+
+  @media only screen and (min-width: $large-screen) {
+    font-size: 15px;
+  }
+
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+  color: $black;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 400;
+	line-height: 1.1;
+}
+
+// Estilo de Headers
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
+h1 { 
+  font-size: $h1-fontsize; 
+  line-height: 110%; 
+  margin: ($h1-fontsize / 2) 0 ($h1-fontsize / 2.5) 0;
+}
+h2 { 
+  font-size: $h2-fontsize; 
+  line-height: 110%; 
+  margin: ($h2-fontsize / 2) 0 ($h2-fontsize / 2.5) 0;
+}
+h3 { 
+  font-size: $h3-fontsize; 
+  line-height: 110%; 
+  margin: ($h3-fontsize / 2) 0 ($h3-fontsize / 2.5) 0;
+}
+h4 { 
+  font-size: $h4-fontsize; 
+  line-height: 110%; 
+  margin: ($h4-fontsize / 2) 0 ($h4-fontsize / 2.5) 0;
+}
+h5 { 
+  font-size: $h5-fontsize; 
+  line-height: 110%; 
+  margin: ($h5-fontsize / 2) 0 ($h5-fontsize / 2.5) 0;
+}
+h6 { 
+  font-size: $h6-fontsize; 
+  line-height: 110%; 
+  margin: ($h6-fontsize / 2) 0 ($h6-fontsize / 2.5) 0;
+}
+
+.paragraph {
+  font-size: $paragraph-fontsize;
+  line-height: 110%; 
+  margin: ($paragraph-fontsize / 2) 0 ($paragraph-fontsize / 2.5) 0;
+}
+
+// Estilo de texto
+em {
+  font-style: italic;
+}
+strong { 
+  font-weight: 500;
+}
+small { 
+  font-size: 75%;
+}
+.highlight {
+  font-weight: 700;
+}
+.strong {
+  font-weight: 500;
+}
+.light { 
+  font-weight: 300;
+}
+.thin { 
+  font-weight: 200;
+}
+
+.flow-text{
+  font-weight: 300;
+  margin: 0.5rem 0;
+  $i: 0;
+  @while $i <= $intervals {
+    @media only screen and (min-width : 360 + ($i * $interval-size)) {
+      font-size: rem(18) * (1 + (.02 * $i));
+    }
+    $i: $i + 1;
+  }
+
+  @media only screen and (max-width: 360px) {
+    font-size: 1.2rem;
+  }
+}

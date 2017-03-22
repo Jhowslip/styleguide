@@ -1,0 +1,41 @@
+.promo-code {
+	display: block;
+	margin: 30px 0 40px;
+
+	.input-field {
+		display: block;
+		width: 100%;
+	}
+
+	p {
+		font-style: italic;
+	}
+
+	// Box que contem o botão de aplicar o código promocional
+	.enter-code {
+		position: relative;
+		
+		.input-on {
+			display: inline-block;
+			position: absolute;
+			right: 11px;
+			top: 21px;
+			width: auto;
+		}
+	}
+	
+}
+
+@media #{$medium-and-up}  {
+	.promo-code {
+		margin: 20px 0 40px;
+
+		.enter-code {
+		position: relative;
+		
+		.input-on {
+				top: 16px;
+			}
+		}
+	}
+}

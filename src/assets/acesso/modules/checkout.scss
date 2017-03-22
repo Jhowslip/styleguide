@@ -1,0 +1,50 @@
+// Estilo para a tela de finalizar pedido
+// Resumo da compra e dos dados de envio e do cliente 
+//
+
+.checkout {	
+	.combined-buy-box {
+		margin: rem(16) 0 0;
+	}
+}
+.processing {
+	margin-top: rem(8);
+}
+.info-list {
+	p {
+		margin: 0 0 rem(6);
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&.shipping {
+		margin-top: rem(16);
+
+		p {
+			font-size: rem(16);
+		}
+	}
+}
+
+
+
+// Estilo para telas médias e maiores
+@media #{$medium-and-up} {
+	.info-list {
+		&.shipping {
+			margin-top: rem(36);
+			.open-modal {
+				margin-top: rem(32);
+			}
+		}
+		a {
+			font-size: rem(18);
+		}
+		i {
+			display: none;
+		}
+	}
+
+}

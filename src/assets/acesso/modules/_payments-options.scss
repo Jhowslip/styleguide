@@ -1,0 +1,39 @@
+//
+
+.payments-options {
+	[type="radio"] + label:before, [type="radio"] + label:after {
+		top: initial;
+	}
+
+	.row {
+		margin-bottom: 0;
+	}
+	
+	.flow-text {
+		font-size: rem(18);
+	}
+}
+[type="radio"]:not(:checked),
+[type="radio"]:checked {
+	height: 20px;
+}
+
+
+.payments-group {
+	margin-top: rem(45);
+	padding-bottom: rem(25);
+
+	@extend .border-thin;
+}
+
+.terms {
+	font-size: rem(16);
+	line-height: 1.1;
+	margin-bottom: rem(25);	
+	margin-top: rem(19);
+
+	a {
+		color: #000;
+		text-decoration: underline;
+	}
+}

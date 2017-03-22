@@ -1,0 +1,103 @@
+// Estilo para o modal padrão
+//
+
+
+// Removendo a barra de rolagem quando a modal estiver ativa
+.ReactModal__Body--open {
+  overflow: hidden;
+}
+
+.main-modal {
+  @include position(absolute, 8px 8px 8px 8px);
+
+  .container {
+    width: 100%;
+
+     @media #{$medium-and-up} {
+      width: 70%;
+     }
+  }
+
+  border: 0px;
+  border-radius: 4px;
+  outline: none;
+  overflow: auto;
+  padding: 0px;
+
+  // Caixa que contém todo o conteúdo da motal, incluindo o título e botão de fechar
+  .modal-content {
+    @extend %box-content;
+    background-color: #fff;
+    padding: 16px;
+
+     @media #{$medium-and-up} {
+      padding: 16px;
+     }
+  }
+
+  .modal-header {
+    @extend %clearfix;
+    margin-bottom: 16px;
+    position: relative;
+    width: 100%;
+
+    h2 {
+      @extend .main-title;
+      float: left;
+      @media #{$medium-and-up} {
+
+      line-height: 34px;
+      }
+    }
+
+
+    &[class*="icon-"] {
+      color: #838383;
+      &::before {
+        float: left;
+        font-size: 28px;
+        line-height: 22px;
+        margin-left: -4px;
+        margin-right: 8px;
+        margin-top: 3px;
+        @media #{$medium-and-up} {
+          font-size: 24px;
+          margin: 0 6px 0 0;
+        }
+      }
+    }
+  }
+}
+
+.OverlayClass {
+  @include position(fixed, 0 0 0 0);
+
+  background-color: rgba(#000, 0.7);
+  z-index: 1000;
+}
+
+// Botão de fechar
+.close-button {
+  float: right;
+  font-size: 22px;
+  position: relative;
+  z-index: 9;
+  cursor: pointer;
+  @include position(absolute, 0 0 null null);
+
+  i {
+    color: #c0bbbb;
+  }
+}
+
+.rc_collapse_Panel {
+  line-height: 1;
+}
+
+// Telas médias e superiores
+@media #{$medium-and-up} {
+  br {
+    display: none;
+  }
+
+}

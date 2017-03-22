@@ -1,0 +1,133 @@
+
+
+// Caracteristicas globais dos botões
+// Esta class deve ser usada como extensão para classes mais específicas
+.buttons-common {
+  font: normal 400 18px/40px 'Poppins', sans-serif;
+  height: 48px;
+  line-height: 48px;
+  padding-left: 8px;
+  padding-right: 8px;
+  text-transform: lowercase;
+  vertical-align: middle;
+  -webkit-tap-highlight-color: transparent;
+  
+  // Estilo do ícone de  botão
+  i {
+    display: inline-block;
+    direction: ltr;
+    font-size: 24px;
+    line-height: inherit;
+    letter-spacing: normal;
+    margin-left: initial;
+    white-space: nowrap;
+    word-wrap: normal;
+    -webkit-font-feature-settings: 'liga';
+  }
+
+   @media #{$medium-and-up} {
+    height: 40px;
+    line-height: 40px;
+   }
+}
+
+.button-default.btn,
+.button-default {
+  @extend .buttons-common;
+	background-color: $blue-sky;
+  border: none;
+  border-radius: 3px;
+  box-shadow: 0 3px 0 0 #25779f;
+  color: #fff;
+  display: inline-block;
+  text-transform: initial;
+}
+
+.button-ghost.btn,
+.button-ghost {
+  @extend .buttons-common;
+  background-color: transparent;
+  border: 1px solid $blue-sky;
+  border-radius: 3px;
+  box-shadow: 0 2px 0 0 $blue-sky;
+  color: $blue-sky;
+  display: inline-block;
+  line-height: 46px;
+   @media #{$medium-and-up} {
+    line-height: 38px;
+   }
+}
+
+// Largura dos botões
+.btn-large {
+  @extend .block;
+}
+.btn-small {
+  border-radius: 3px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  height: 24px;
+  line-height: 24px;
+  padding: 0 20px;
+
+  @media #{$medium-and-up} {
+    font-size: 18px;
+    height: 32px;
+    line-height: 18px;
+    padding: 0 35px;
+  }
+}
+
+
+// Removendo o outline
+.btn,
+.btn-small,
+.btn-large,
+.button-default {
+  outline: 0;
+}
+
+// Aplicando o estilo de botão desabilitado
+.btn.disabled,
+.btn-large.disabled,
+.btn-small.disabled,
+.btn:disabled,
+.btn-large:disabled,
+.btn-small:disabled,
+.btn[disabled],
+.btn-large[disabled],
+.btn-small[disabled] {
+  @extend .disabled-button;
+}
+
+// Estilo padrão de botão no estado desabilitado
+.disabled-button {
+  background-color: #DFDFDF;
+  box-shadow: 0 3px 0 0 #bebebe;
+  color: #FFFFFF;
+  cursor: default;
+  pointer-events: none;
+
+  &:hover {
+    background-color: #DFDFDF;
+    color: #FFFFFF;
+  }
+}
+
+  @media #{$large-and-up} {
+    .button-default {
+      &:hover {
+        background: #45c2ff;
+        box-shadow: 0 3px 0 0 #25779f;
+      }
+    }
+
+    .button-ghost {
+      &:hover {
+        border: solid 1px #45c2ff;
+        box-shadow: 0 2px 0 0 #45c2ff;
+      }
+    }
+
+  }

@@ -1,0 +1,78 @@
+// Vendo CSS - Bibliotecas de terceiros
+@import "vendor/bourbon/bourbon";
+@import "vendor/materialize/materialize";
+
+@import "global/variables";
+
+// Helpers
+@import "helpers/clearfix";
+@import "helpers/no-margin";
+@import "helpers/box_content";
+@import "helpers/border-thin";
+@import "helpers/block";
+
+// Global
+// ========================================================
+@import "global/grid";
+@import "global/fonts";
+@import "global/color";
+@import "global/typography";
+@import "global/page_title";
+@import "global/_article";
+@import "global/modal";
+@import "global/titles";
+@import "global/buttons";
+@import "global/input_error";
+@import "global/hint";
+//@import "global/radio-buttons";
+@import "global/input-fields";
+@import "global/link";
+@import "global/box_header";
+// @import "global/type_faces";
+
+
+@import "form/_radio-buttons";
+
+
+// Iconography
+@import "iconography/style";
+
+// Settings
+// @import "settings/settings";
+
+
+// Mixins
+@import "mixins/fonts";
+@import "mixins/svg_png_fallback";
+
+// Load Core files
+// @import "core/reset";
+
+// Core
+@import "core/base";
+// @import "core/typography";
+// @import "core/layout";
+
+// Modules
+@import "modules/main_header";
+@import "modules/track-steps";
+@import "modules/card";
+@import "modules/single_card";
+@import "modules/checkout-card-header";
+@import "modules/card_load_options";
+@import "modules/panel_content";
+@import "modules/card_load";
+@import "modules/accordion";
+@import "modules/promo_code";
+@import "modules/price_resume";
+@import "modules/signup_personal_data";
+@import "modules/signup";
+@import "modules/checkout";
+@import "modules/payments-options";
+@import "modules/main_footer";
+@import "modules/loader";
+@import "modules/bank-slip";
+@import "modules/recovery";
+// Modal que mostra o vídeo de prazo de entregaS
+@import "modules/prazo_de_entrega";
+@import "modules/recovery";
