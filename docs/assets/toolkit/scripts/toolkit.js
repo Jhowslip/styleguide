@@ -44,11 +44,11 @@
 /* 0 */
 /***/ function(module, exports) {
 
+	"use strict";
+
 	/**
 	 * Toolkit JavaScript
 	 */
-
-	'use strict';
 
 /***/ }
 /******/ ]);
