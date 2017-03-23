@@ -1,7 +1,0 @@
-// Este mixin é para fallback de png para browsers que não suportam o formato svg. 
-//
-
-@mixin svg-bg($name) {
-  background: url('../images/#{$name}.png') transparent 0 0 no-repeat; // IE8 e anteriores
-  background: none, url('../images/#{$name}.svg') 0 0 no-repeat;
-}
