@@ -59,13 +59,13 @@
 	 * @type {Object}
 	 */
 	fabricator.options = {
-	  toggles: {
-	    labels: true,
-	    notes: true,
-	    code: false
-	  },
-	  menu: false,
-	  mq: '(min-width: 60em)'
+		toggles: {
+			labels: true,
+			notes: true,
+			code: false
+		},
+		menu: false,
+		mq: '(min-width: 60em)'
 	};
 
 	// open menu by default if large screen
@@ -79,19 +79,19 @@
 
 	// test for sessionStorage
 	fabricator.test.sessionStorage = (function () {
-	  var test = '_f';
-	  try {
-	    sessionStorage.setItem(test, test);
-	    sessionStorage.removeItem(test);
-	    return true;
-	  } catch (e) {
-	    return false;
-	  }
+		var test = '_f';
+		try {
+			sessionStorage.setItem(test, test);
+			sessionStorage.removeItem(test);
+			return true;
+		} catch (e) {
+			return false;
+		}
 	})();
 
 	// create storage object if it doesn't exist; store options
 	if (fabricator.test.sessionStorage) {
-	  sessionStorage.fabricator = sessionStorage.fabricator || JSON.stringify(fabricator.options);
+		sessionStorage.fabricator = sessionStorage.fabricator || JSON.stringify(fabricator.options);
 	}
 
 	/**
@@ -99,10 +99,10 @@
 	 * @type {Object}
 	 */
 	fabricator.dom = {
-	  root: document.querySelector('html'),
-	  primaryMenu: document.querySelector('.f-menu'),
-	  menuItems: document.querySelectorAll('.f-menu li a'),
-	  menuToggle: document.querySelector('.f-menu-toggle')
+		root: document.querySelector('html'),
+		primaryMenu: document.querySelector('.f-menu'),
+		menuItems: document.querySelectorAll('.f-menu li a'),
+		menuToggle: document.querySelector('.f-menu-toggle')
 	};
 
 	/**
@@ -110,7 +110,7 @@
 	 * @return {Object}
 	 */
 	fabricator.getOptions = function () {
-	  return fabricator.test.sessionStorage ? JSON.parse(sessionStorage.fabricator) : fabricator.options;
+		return fabricator.test.sessionStorage ? JSON.parse(sessionStorage.fabricator) : fabricator.options;
 	};
 
 	/**
@@ -118,15 +118,16 @@
 	 */
 	fabricator.buildColorChips = function () {
 
-	  var chips = document.querySelectorAll('.f-color-chip');
+		var chips = document.querySelectorAll('.f-color-chip'),
+		    color;
 
-	  for (var i = chips.length - 1; i >= 0; i--) {
-	    var color = chips[i].querySelector('.f-color-chip__color').innerHTML;
-	    chips[i].style.borderTopColor = color;
-	    chips[i].style.borderBottomColor = color;
-	  }
+		for (var i = chips.length - 1; i >= 0; i--) {
+			color = chips[i].querySelector('.f-color-chip__color').innerHTML;
+			chips[i].style.borderTopColor = color;
+			chips[i].style.borderBottomColor = color;
+		}
 
-	  return fabricator;
+		return this;
 	};
 
 	/**
@@ -134,38 +135,70 @@
 	 */
 	fabricator.setActiveItem = function () {
 
-	  /**
-	   * Match the window location with the menu item, set menu item as active
-	   */
-	  var setActive = function setActive() {
+		/**
+	  * @return {Array} Sorted array of menu item 'ids'
+	  */
+		var parsedItems = function parsedItems() {
 
-	    // get current file and hash without first slash
-	    var loc = window.location.pathname + window.location.hash;
-	    var current = loc.replace(/(^\/)([^#]+)?(#[\w\-\.]+)?$/ig, function (match, slash, file, hash) {
-	      return (file || '') + (hash || '').split('.')[0];
-	    }) || 'index.html';
+			var items = [],
+			    id,
+			    href;
 
-	    // find the current section in the items array
-	    for (var i = fabricator.dom.menuItems.length - 1; i >= 0; i--) {
+			for (var i = fabricator.dom.menuItems.length - 1; i >= 0; i--) {
 
-	      var item = fabricator.dom.menuItems[i];
+				// remove active class from items
+				fabricator.dom.menuItems[i].classList.remove('f-active');
 
-	      // get item href without first slash
-	      var href = item.getAttribute('href').replace(/^\//g, '');
+				// get item href
+				href = fabricator.dom.menuItems[i].getAttribute('href');
 
-	      if (href === current) {
-	        item.classList.add('f-active');
-	      } else {
-	        item.classList.remove('f-active');
-	      }
-	    }
-	  };
+				// get id
+				if (href.indexOf('#') > -1) {
+					id = href.split('#').pop();
+				} else {
+					id = href.split('/').pop().replace(/\.[^/.]+$/, '');
+				}
 
-	  window.addEventListener('hashchange', setActive);
+				items.push(id);
+			}
 
-	  setActive();
+			return items.reverse();
+		};
 
-	  return fabricator;
+		/**
+	  * Match the 'id' in the window location with the menu item, set menu item as active
+	  */
+		var setActive = function setActive() {
+
+			var href = window.location.href,
+			    items = parsedItems(),
+			    id,
+			    index;
+
+			// get window 'id'
+			if (href.indexOf('#') > -1) {
+				id = window.location.hash.replace('#', '');
+			} else {
+				id = window.location.pathname.split('/').pop().replace(/\.[^/.]+$/, '');
+			}
+
+			// In case the first menu item isn't the index page.
+			if (id === '') {
+				id = 'index';
+			}
+
+			// find the window id in the items array
+			index = items.indexOf(id) > -1 ? items.indexOf(id) : 0;
+
+			// set the matched item as active
+			fabricator.dom.menuItems[index].classList.add('f-active');
+		};
+
+		window.addEventListener('hashchange', setActive);
+
+		setActive();
+
+		return this;
 	};
 
 	/**
@@ -174,44 +207,38 @@
 	 */
 	fabricator.menuToggle = function () {
 
-	  // shortcut menu DOM
-	  var toggle = fabricator.dom.menuToggle;
-	  var options = fabricator.getOptions();
+		// shortcut menu DOM
+		var toggle = fabricator.dom.menuToggle;
 
-	  // toggle classes on certain elements
-	  var toggleClasses = function toggleClasses() {
-	    options.menu = !fabricator.dom.root.classList.contains('f-menu-active');
-	    fabricator.dom.root.classList.toggle('f-menu-active');
+		var options = fabricator.getOptions();
 
-	    if (fabricator.test.sessionStorage) {
-	      sessionStorage.setItem('fabricator', JSON.stringify(options));
-	    }
-	  };
+		// toggle classes on certain elements
+		var toggleClasses = function toggleClasses() {
+			options.menu = !fabricator.dom.root.classList.contains('f-menu-active');
+			fabricator.dom.root.classList.toggle('f-menu-active');
 
-	  // toggle classes on ctrl + m press
-	  document.onkeydown = function (e) {
-	    if (e.ctrlKey && e.keyCode === 'M'.charCodeAt(0)) {
-	      toggleClasses();
-	    }
-	  };
+			if (fabricator.test.sessionStorage) {
+				sessionStorage.setItem('fabricator', JSON.stringify(options));
+			}
+		};
 
-	  // toggle classes on click
-	  toggle.addEventListener('click', function () {
-	    toggleClasses();
-	  });
+		// toggle classes on click
+		toggle.addEventListener('click', function () {
+			toggleClasses();
+		});
 
-	  // close menu when clicking on item (for collapsed menu view)
-	  var closeMenu = function closeMenu() {
-	    if (!window.matchMedia(fabricator.options.mq).matches) {
-	      toggleClasses();
-	    }
-	  };
+		// close menu when clicking on item (for collapsed menu view)
+		var closeMenu = function closeMenu() {
+			if (!window.matchMedia(fabricator.options.mq).matches) {
+				toggleClasses();
+			}
+		};
 
-	  for (var i = 0; i < fabricator.dom.menuItems.length; i++) {
-	    fabricator.dom.menuItems[i].addEventListener('click', closeMenu);
-	  }
+		for (var i = 0; i < fabricator.dom.menuItems.length; i++) {
+			fabricator.dom.menuItems[i].addEventListener('click', closeMenu);
+		}
 
-	  return fabricator;
+		return this;
 	};
 
 	/**
@@ -220,63 +247,66 @@
 	 */
 	fabricator.allItemsToggles = function () {
 
-	  var itemCache = {
-	    labels: document.querySelectorAll('[data-f-toggle="labels"]'),
-	    notes: document.querySelectorAll('[data-f-toggle="notes"]'),
-	    code: document.querySelectorAll('[data-f-toggle="code"]')
-	  };
+		var items = {
+			labels: document.querySelectorAll('[data-f-toggle="labels"]'),
+			notes: document.querySelectorAll('[data-f-toggle="notes"]'),
+			code: document.querySelectorAll('[data-f-toggle="code"]')
+		};
 
-	  var toggleAllControls = document.querySelectorAll('.f-controls [data-f-toggle-control]');
-	  var options = fabricator.getOptions();
+		var toggleAllControls = document.querySelectorAll('.f-controls [data-f-toggle-control]');
 
-	  // toggle all
-	  var toggleAllItems = function toggleAllItems(type, value) {
+		var options = fabricator.getOptions();
 
-	    var button = document.querySelector('.f-controls [data-f-toggle-control=' + type + ']');
-	    var items = itemCache[type];
+		// toggle all
+		var toggleAllItems = function toggleAllItems(type, value) {
 
-	    for (var i = 0; i < items.length; i++) {
-	      if (value) {
-	        items[i].classList.remove('f-item-hidden');
-	      } else {
-	        items[i].classList.add('f-item-hidden');
-	      }
-	    }
+			var button = document.querySelector('.f-controls [data-f-toggle-control=' + type + ']'),
+			    _items = items[type];
 
-	    // toggle styles
-	    if (value) {
-	      button.classList.add('f-active');
-	    } else {
-	      button.classList.remove('f-active');
-	    }
+			for (var i = 0; i < _items.length; i++) {
+				if (value) {
+					_items[i].classList.remove('f-item-hidden');
+				} else {
+					_items[i].classList.add('f-item-hidden');
+				}
+			}
 
-	    // update options
-	    options.toggles[type] = value;
+			// toggle styles
+			if (value) {
+				button.classList.add('f-active');
+			} else {
+				button.classList.remove('f-active');
+			}
 
-	    if (fabricator.test.sessionStorage) {
-	      sessionStorage.setItem('fabricator', JSON.stringify(options));
-	    }
-	  };
+			// update options
+			options.toggles[type] = value;
 
-	  for (var i = 0; i < toggleAllControls.length; i++) {
+			if (fabricator.test.sessionStorage) {
+				sessionStorage.setItem('fabricator', JSON.stringify(options));
+			}
+		};
 
-	    toggleAllControls[i].addEventListener('click', function (e) {
+		for (var i = 0; i < toggleAllControls.length; i++) {
 
-	      // extract info from target node
-	      var type = e.currentTarget.getAttribute('data-f-toggle-control');
-	      var value = e.currentTarget.className.indexOf('f-active') < 0;
+			toggleAllControls[i].addEventListener('click', function (e) {
 
-	      // toggle the items
-	      toggleAllItems(type, value);
-	    });
-	  }
+				// extract info from target node
+				var type = e.currentTarget.getAttribute('data-f-toggle-control'),
+				    value = e.currentTarget.className.indexOf('f-active') < 0;
 
-	  // persist toggle options from page to page
-	  Object.keys(options.toggles).forEach(function (key) {
-	    toggleAllItems(key, options.toggles[key]);
-	  });
+				// toggle the items
+				toggleAllItems(type, value);
+			});
+		}
 
-	  return fabricator;
+		// persist toggle options from page to page
+		for (var toggle in options.toggles) {
+			if (options.toggles.hasOwnProperty(toggle)) {
+				toggleAllItems(toggle, options.toggles[toggle]);
+			}
+		}
+
+		return this;
 	};
 
 	/**
@@ -284,20 +314,21 @@
 	 */
 	fabricator.singleItemToggle = function () {
 
-	  var itemToggleSingle = document.querySelectorAll('.f-item-group [data-f-toggle-control]');
+		var itemToggleSingle = document.querySelectorAll('.f-item-group [data-f-toggle-control]');
 
-	  // toggle single
-	  var toggleSingleItemCode = function toggleSingleItemCode(e) {
-	    var group = e.currentTarget.parentNode.parentNode.parentNode;
-	    var type = e.currentTarget.getAttribute('data-f-toggle-control');
-	    group.querySelector('[data-f-toggle=' + type + ']').classList.toggle('f-item-hidden');
-	  };
+		// toggle single
+		var toggleSingleItemCode = function toggleSingleItemCode(e) {
+			var group = this.parentNode.parentNode.parentNode,
+			    type = e.currentTarget.getAttribute('data-f-toggle-control');
 
-	  for (var i = 0; i < itemToggleSingle.length; i++) {
-	    itemToggleSingle[i].addEventListener('click', toggleSingleItemCode);
-	  }
+			group.querySelector('[data-f-toggle=' + type + ']').classList.toggle('f-item-hidden');
+		};
 
-	  return fabricator;
+		for (var i = 0; i < itemToggleSingle.length; i++) {
+			itemToggleSingle[i].addEventListener('click', toggleSingleItemCode);
+		}
+
+		return this;
 	};
 
 	/**
@@ -305,19 +336,19 @@
 	 */
 	fabricator.bindCodeAutoSelect = function () {
 
-	  var codeBlocks = document.querySelectorAll('.f-item-code');
+		var codeBlocks = document.querySelectorAll('.f-item-code');
 
-	  var select = function select(block) {
-	    var selection = window.getSelection();
-	    var range = document.createRange();
-	    range.selectNodeContents(block.querySelector('code'));
-	    selection.removeAllRanges();
-	    selection.addRange(range);
-	  };
+		var select = function select(block) {
+			var selection = window.getSelection();
+			var range = document.createRange();
+			range.selectNodeContents(block.querySelector('code'));
+			selection.removeAllRanges();
+			selection.addRange(range);
+		};
 
-	  for (var i = codeBlocks.length - 1; i >= 0; i--) {
-	    codeBlocks[i].addEventListener('click', select.bind(undefined, codeBlocks[i]));
-	  }
+		for (var i = codeBlocks.length - 1; i >= 0; i--) {
+			codeBlocks[i].addEventListener('click', select.bind(this, codeBlocks[i]));
+		}
 	};
 
 	/**
@@ -326,34 +357,38 @@
 	 */
 	fabricator.setInitialMenuState = function () {
 
-	  // root element
-	  var root = document.querySelector('html');
+		// root element
+		var root = document.querySelector('html');
 
-	  var mq = window.matchMedia(fabricator.options.mq);
+		var mq = window.matchMedia(fabricator.options.mq);
 
-	  // if small screen
-	  var mediaChangeHandler = function mediaChangeHandler(list) {
-	    if (!list.matches) {
-	      root.classList.remove('f-menu-active');
-	    } else {
-	      if (fabricator.getOptions().menu) {
-	        root.classList.add('f-menu-active');
-	      } else {
-	        root.classList.remove('f-menu-active');
-	      }
-	    }
-	  };
+		// if small screen
+		var mediaChangeHandler = function mediaChangeHandler(list) {
+			if (!list.matches) {
+				root.classList.remove('f-menu-active');
+			} else {
+				if (fabricator.getOptions().menu) {
+					root.classList.add('f-menu-active');
+				} else {
+					root.classList.remove('f-menu-active');
+				}
+			}
+		};
 
-	  mq.addListener(mediaChangeHandler);
-	  mediaChangeHandler(mq);
+		mq.addListener(mediaChangeHandler);
+		mediaChangeHandler(mq);
 
-	  return fabricator;
+		return this;
 	};
 
 	/**
 	 * Initialization
 	 */
-	fabricator.setInitialMenuState().menuToggle().allItemsToggles().singleItemToggle().buildColorChips().setActiveItem().bindCodeAutoSelect();
+	(function () {
+
+		// invoke
+		fabricator.setInitialMenuState().menuToggle().allItemsToggles().singleItemToggle().buildColorChips().setActiveItem().bindCodeAutoSelect();
+	})();
 
 /***/ },
 /* 1 */

@@ -1,17 +1,18 @@
 <!doctype html>
-<html lang="">
+<html>
 <head>
 
 	<meta charset="utf-8">
-	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<title></title>
 
-	<link rel="stylesheet" href="assets/fabricator/styles/f.css">
+	<link rel="stylesheet" href="/assets/fabricator/styles/f.css">
 
 	<!-- toolkit styles -->
-	<link rel="stylesheet" href="assets/toolkit/styles/toolkit.css">
+	<link rel="stylesheet" href="/assets/toolkit/styles/toolkit.css">
+	  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 	<!-- /toolkit styles -->
 
 </head>
@@ -108,7 +109,7 @@
 					<a href="pages.html" class="f-menu__heading">Pages</a>
 					<ul>
 						<li>
-							<a href="pages/home.html" target="_blank">Home</a>
+							<a href="pages/home.html">Home</a>
 						</li>
 					</ul>
 				</li>
@@ -162,10 +163,14 @@
 
 </div>
 <div class="f-item-preview">
-	<button class="button">Submit</button>
+	<a class="waves-effect waves-light btn">button</a>
+<a class="waves-effect waves-light btn"><i class="material-icons left">cloud</i>button</a>
+<a class="waves-effect waves-light btn"><i class="material-icons right">cloud</i>button</a>
 </div>
 <div class="f-item-code f-item-hidden" data-f-toggle="code">
-	<pre><code class="language-markup">&lt;button class&#x3D;&quot;button&quot;&gt;Submit&lt;/button&gt;</code></pre>
+	<pre><code class="language-markup">&lt;a class&#x3D;&quot;waves-effect waves-light btn&quot;&gt;button&lt;/a&gt;
+&lt;a class&#x3D;&quot;waves-effect waves-light btn&quot;&gt;&lt;i class&#x3D;&quot;material-icons left&quot;&gt;cloud&lt;/i&gt;button&lt;/a&gt;
+&lt;a class&#x3D;&quot;waves-effect waves-light btn&quot;&gt;&lt;i class&#x3D;&quot;material-icons right&quot;&gt;cloud&lt;/i&gt;button&lt;/a&gt;</code></pre>
 </div>
 
 
@@ -177,13 +182,15 @@
 	<div class="f-item-heading-group" data-f-toggle="labels">
 		<h2 class="f-item-heading">Checkbox</h2>
 		<div class="f-item-controls">
+			
 			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
 				<svg>
 					<use xlink:href="#f-icon-code" />
 				</svg>
 			</span>
 		</div>
-	</div><div class="f-item-preview">
+	</div>
+<div class="f-item-preview">
 	<label>
 	<input type="checkbox" /> Checkbox
 </label>
@@ -207,13 +214,15 @@
 			<div class="f-item-heading-group" data-f-toggle="labels">
 				<h3 class="f-item-heading">Ordered</h3>
 				<div class="f-item-controls">
+					
 					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
 						<svg>
 							<use xlink:href="#f-icon-code" />
 						</svg>
 					</span>
 				</div>
-			</div><div class="f-item-preview">
+			</div>
+<div class="f-item-preview">
 	<ol>
 	<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
 	<li>Aliquam tincidunt mauris eu risus.</li>
@@ -233,13 +242,15 @@
 			<div class="f-item-heading-group" data-f-toggle="labels">
 				<h3 class="f-item-heading">Unordered</h3>
 				<div class="f-item-controls">
+					
 					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
 						<svg>
 							<use xlink:href="#f-icon-code" />
 						</svg>
 					</span>
 				</div>
-			</div><div class="f-item-preview">
+			</div>
+<div class="f-item-preview">
 	<ul>
 	<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
 	<li>Aliquam tincidunt mauris eu risus.</li>
@@ -264,13 +275,15 @@
 	<div class="f-item-heading-group" data-f-toggle="labels">
 		<h2 class="f-item-heading">Paragraph</h2>
 		<div class="f-item-controls">
+			
 			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
 				<svg>
 					<use xlink:href="#f-icon-code" />
 				</svg>
 			</span>
 		</div>
-	</div><div class="f-item-preview">
+	</div>
+<div class="f-item-preview">
 	<p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam quis risus eget urna mollis ornare vel eu leo. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum
 	nibh, ut fermentum massa justo sit amet risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper nulla non metus auctor fringilla. Donec id elit non mi porta gravida at eget metus.</p>
 </div>
@@ -288,13 +301,15 @@
 	<div class="f-item-heading-group" data-f-toggle="labels">
 		<h2 class="f-item-heading">Radio</h2>
 		<div class="f-item-controls">
+			
 			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
 				<svg>
 					<use xlink:href="#f-icon-code" />
 				</svg>
 			</span>
 		</div>
-	</div><div class="f-item-preview">
+	</div>
+<div class="f-item-preview">
 	<label>
 	<input type="radio" name="groupName" id="radio1" /> Radio 1
 </label>
@@ -330,13 +345,15 @@
 	<div class="f-item-heading-group" data-f-toggle="labels">
 		<h2 class="f-item-heading">Select</h2>
 		<div class="f-item-controls">
+			
 			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
 				<svg>
 					<use xlink:href="#f-icon-code" />
 				</svg>
 			</span>
 		</div>
-	</div><div class="f-item-preview">
+	</div>
+<div class="f-item-preview">
 	<select name="" id="">
 	<option value="">Option 1</option>
 	<option value="">Option 2</option>
@@ -364,13 +381,15 @@
 	<div class="f-item-heading-group" data-f-toggle="labels">
 		<h2 class="f-item-heading">Table</h2>
 		<div class="f-item-controls">
+			
 			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
 				<svg>
 					<use xlink:href="#f-icon-code" />
 				</svg>
 			</span>
 		</div>
-	</div><div class="f-item-preview">
+	</div>
+<div class="f-item-preview">
 	<table>
 	<thead>
 		<tr>
@@ -460,13 +479,15 @@
 	<div class="f-item-heading-group" data-f-toggle="labels">
 		<h2 class="f-item-heading">Text Input</h2>
 		<div class="f-item-controls">
+			
 			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
 				<svg>
 					<use xlink:href="#f-icon-code" />
 				</svg>
 			</span>
 		</div>
-	</div><div class="f-item-preview">
+	</div>
+<div class="f-item-preview">
 	<label for="textInput">Text input</label>
 <input type="text" id="textInput" />
 </div>
@@ -484,13 +505,15 @@
 	<div class="f-item-heading-group" data-f-toggle="labels">
 		<h2 class="f-item-heading">Textarea</h2>
 		<div class="f-item-controls">
+			
 			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
 				<svg>
 					<use xlink:href="#f-icon-code" />
 				</svg>
 			</span>
 		</div>
-	</div><div class="f-item-preview">
+	</div>
+<div class="f-item-preview">
 	<textarea name="" id="" cols="30" rows="10"></textarea>
 </div>
 <div class="f-item-code f-item-hidden" data-f-toggle="code">
@@ -504,11 +527,16 @@
 
 
 		</div>
-	<script src="assets/fabricator/scripts/f.js"></script>
+	<script src="/assets/fabricator/scripts/f.js"></script>
 
 	<!-- toolkit scripts -->
-	<script src="assets/toolkit/scripts/toolkit.js"></script>
+	<script src="/assets/toolkit/scripts/toolkit.js"></script>
+
 	<!-- /toolkit scripts -->
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+
 
 </body>
 </html>

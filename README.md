@@ -1,13 +1,10 @@
-# Acesso Style Guide
+# acessostyle
 
-This guide serves as a resource to bring together all our products and to help define their visual and stylistic elements. It exists to provide you with the tools and assets you need to further our mission through communications, websites, products and more.
-
-Use the links on the left to find what you’re looking for or just start exploring.
-
+The acessostyle UI toolkit is a highly-modular design system for rapid web page development. It contains different materials that can be assembled into more complex page layouts.
 
 ## Getting Started
 
-guide-style requires [node.js](http://nodejs.org). Make sure your have `v0.10` or higher installed before proceeding.
+acessostyle requires [node.js](http://nodejs.org). Make sure your have `v0.10` or higher installed before proceeding.
 
 **Start the local development environment:**
 
