@@ -7,7 +7,7 @@
 
 	<title>{{title}}</title>
 
-	{{#if fabricator}}<link rel="stylesheet" href="{{baseurl}}/assets/fabricator/styles/f.css">{{/if}}
+	{{#if fabricator}}<link rel="stylesheet" href="{{#if baseurl}}{{ baseurl }}/{{/if}}assets/fabricator/styles/f.css">{{/if}}
 
 	<!-- toolkit styles -->
 	<link rel="stylesheet" href="{{baseurl}}/assets/toolkit/styles/toolkit.css">
@@ -31,11 +31,11 @@
 
 	{{#if fabricator}}
 		</div>
-	<script src="{{baseurl}}/assets/fabricator/scripts/f.js"></script>
+	<script src="{{#if baseurl}}{{ baseurl }}/{{/if}}assets/fabricator/scripts/f.js"></script>
 	{{/if}}
 
 	<!-- toolkit scripts -->
-	<script src="{{baseurl}}/assets/toolkit/scripts/toolkit.js"></script>
+	<script src="{{#if baseurl}}{{ baseurl }}/{{/if}}assets/toolkit/scripts/toolkit.js"></script>
 
 	<!-- /toolkit scripts -->
 
