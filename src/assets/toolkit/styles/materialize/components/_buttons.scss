@@ -1,17 +1,30 @@
 // shared styles
-.button,
-.button-flat {
+
+.large-height {
+  height: $button-height;
+  line-height: $button-height;
+}
+
+.button-default {
+  @extend .large-height;
+
   border: $button-border;
   border-radius: $button-radius;
   display: inline-block;
-
-  height: $button-height;
-  line-height: $button-height;
+  font-family: 'Poppins', sans-serif; 
+  font-size: rem(22);
+  font-weight: 400;
   padding: $button-padding;
   vertical-align: middle;
   // Gets rid of tap active state
   -webkit-tap-highlight-color: transparent;
+
+  @media #{$medium-and-up} {
+    height: 40px;
+    line-height: 40px;  
+  }
 }
+
 
 // Disabled shared style
 .button.disabled,
@@ -60,21 +73,20 @@
 
 // Raised Button
 .button {
-  color: $button-raised-color;
+  @extend .button-default;
+
   background-color: $button-raised-background;
-  font-family: 'Poppins', sans-serif;
-  font-size: rem(22);
-  font-weight: 400;
+  color: $button-raised-color;
   text-align: center;
   letter-spacing: .5px;
   text-decoration: none;
-  @extend .z-depth-1;
+  //@extend .z-depth-1;
   transition: .2s ease-out;
   cursor: pointer;
 
   &:hover {
     background-color: $button-raised-background-hover;
-    @extend .z-depth-1-half;
+    //@extend .z-depth-1-half;
   }
 }
 
@@ -254,6 +266,8 @@ button.button-floating {
 
 // Flat button
 .button-flat {
+  @extend .button-default;
+
   box-shadow: none;
   background-color: transparent;
   color: $button-flat-color;

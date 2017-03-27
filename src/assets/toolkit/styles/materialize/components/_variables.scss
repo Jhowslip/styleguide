@@ -60,8 +60,8 @@ $button-border: none !default;
 $button-background-focus: lighten($secondary-color, 4%) !default;
 $button-font-size: 1.3rem !default;
 $button-height: 48px !default;
-$button-padding: 0 2rem !default;
-$button-radius: 2px !default;
+$button-padding: 0 rem(16) !default;
+$button-radius: 3px !default;
 
 // Disabled styles
 $button-disabled-background: #DFDFDF !default;
