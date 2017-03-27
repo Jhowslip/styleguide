@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>Overview | Fabricator</title>
+	<title>Overview | Acesso</title>
 
 	<link rel="stylesheet" href="assets/fabricator/styles/f.css">
 
@@ -141,7 +141,10 @@
 	
 <h1>Overview</h1>
 
-<p>This UI toolkit is a highly-modular design system for rapid web page development. It contains different materials that can be assembled into more complex page layouts.</p>
+<p>
+	This UI toolkit is a highly-modular design system for rapid web page development. It contains 
+	different materials that can be assembled into more complex page layouts.
+</p>
 
 <p>This guide contains real working examples, code snippets, documentation, and style guidelines.</p>
 
@@ -149,37 +152,57 @@
 
 <p>Start by adding the following files to your page:</p>
 
-<pre class="language-markup"><code class="language-markup">&lt;link rel=&quot;stylesheet&quot; href=&quot;assets/toolkit/styles/toolkit.css&quot;&gt;</code></pre>
+<pre class="language-markup">
+	<code class="language-markup">&lt;link rel=&quot;stylesheet&quot; href=&quot;assets/toolkit/styles/toolkit.css&quot;&gt;</code>
+</pre>
 
-<pre class="language-markup"><code class="language-markup">&lt;script src=&quot;assets/toolkit/scripts/toolkit.js&quot;&gt;&lt;/script&gt;</code></pre>
+<pre class="language-markup">
+	<code class="language-markup">&lt;script src=&quot;assets/toolkit/scripts/toolkit.js&quot;&gt;&lt;/script&gt;</code>
+</pre>
 
 
-<h2>Color</h2>
-
-	<div class="f-color-chips">
-		<div class="f-color-chip">
-			<div class="f-color-chip__name">Dark</div>
-			<div class="f-color-chip__color">rgb(30, 30, 30)</div>
-		</div>
-		<div class="f-color-chip">
-			<div class="f-color-chip__name">Light</div>
-			<div class="f-color-chip__color">rgb(242, 242, 242)</div>
-		</div>
+<h2>Color Palette</h2>
+<div class="row dynamic-color">
+	<div class="col s12 m6 l4">
+		<div class="color-base blue">#00A6DF blue</div>
+		<div class="color-item blue lighten-3">#79ddff blue lighten-3</div>
+		<div class="color-item blue lighten-2">#46d0ff blue lighten-2</div>
+		<div class="color-item blue lighten-1">#13C3FF blue lighten-1</div>
+		<div class="color-item blue darken-1">#0080cc blue darken-1</div>
+		<div class="color-item blue darken-2">#005A79 blue darken-2</div>
+		<div class="color-item blue darken-3">#003446 blue darken-3</div>
 	</div>
-	<div class="f-color-chips">
-		<div class="f-color-chip">
-			<div class="f-color-chip__name">Red</div>
-			<div class="f-color-chip__color">rgb(201, 55, 6)</div>
-		</div>
-		<div class="f-color-chip">
-			<div class="f-color-chip__name">Yellow</div>
-			<div class="f-color-chip__color">rgb(252, 207, 80)</div>
-		</div>
-		<div class="f-color-chip">
-			<div class="f-color-chip__name">Blue</div>
-			<div class="f-color-chip__color">rgb(39, 102, 143)</div>
-		</div>
+
+	<div class="col s12 m6 l4">
+		<div class="color-base squash">#00A6DF squash</div>
+		<div class="color-item squash lighten-3">#fbe0af squash lighten-3</div>
+		<div class="color-item squash lighten-2">#f9cd7e squash lighten-2</div>
+		<div class="color-item squash lighten-1">#f6bb4e squash lighten-1</div>
+		<div class="color-item squash darken-1">#d48d0a squash darken-1</div>
+		<div class="color-item squash darken-2">#a36c08 squash darken-2</div>
+		<div class="color-item squash darken-3">#734c06 squash darken-3</div>
 	</div>
+
+	<div class="col s12 m6 l4">
+		<div class="color-base warm-grey">#d9d9d9 warm-grey</div>
+		<div class="color-item warm-grey lighten-3">#fbfbfb warm-grey lighten-3</div>
+		<div class="color-item warm-grey lighten-2">#f2f2f2 warm-grey lighten-2</div>
+		<div class="color-item warm-grey lighten-1">#eaeaea warm-grey lighten-1</div>
+		<div class="color-item warm-grey darken-1">#c0c0c0 warm-grey darken-1</div>
+		<div class="color-item warm-grey darken-2">#a6a6a6 warm-grey darken-2</div>
+		<div class="color-item warm-grey darken-3">#8d8d8d warm-grey darken-3</div>
+	</div>
+</div>
+
+<div class="row dynamic-color">
+	<div class="col s12 m6">
+		<div class="color-base red">#d71010 red</div>		
+	</div>
+	<div class="col s12 m6">
+		<div class="color-base green">#00A6DF green</div>		
+	</div>
+</div>
+
 
 <h2>Typography</h2>
 

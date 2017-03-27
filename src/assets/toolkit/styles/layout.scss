@@ -1,0 +1,28 @@
+.dynamic-color {
+	margin-bottom: rem(50);
+	
+	.color-item {
+		color: #fff;
+		font-size: rem(22);
+		height: rem(60);
+		line-height: rem(60);
+		padding: rem(0) rem(16);
+	}
+
+	.lighten-1,
+	.lighten-2,
+	.lighten-3 {
+		color: #000;
+	}
+	
+
+	.color-base {
+		@extend .color-item; 
+
+		height: rem(100);
+		line-height: rem(100);
+		margin-bottom: rem(16);
+
+	} 
+	
+}
