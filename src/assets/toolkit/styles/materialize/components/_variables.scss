@@ -59,7 +59,7 @@ $badge-height: 22px !default;
 $button-border: none !default;
 $button-background-focus: lighten($secondary-color, 4%) !default;
 $button-font-size: 1.3rem !default;
-$button-height: 48px !default;
+$button-height: rem(40) !default;
 $button-padding: 0 rem(16) !default;
 $button-radius: 3px !default;
 
@@ -76,7 +76,7 @@ $button-raised-color: #fff !default;
 
 // Large buttons
 $button-large-icon-font-size: 1.6rem !default;
-$button-large-height: $button-height * 1.5 !default;
+$button-large-height: $button-height * 1.2 !default;
 
 // Flat buttons
 $button-flat-color: #343434 !default;

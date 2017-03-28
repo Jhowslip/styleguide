@@ -22,7 +22,8 @@ code[class*='language-'],
 pre[class*='language-'] {
 	color: map-get($code-colors, black);
 	text-align: left;
-	white-space: pre;
+	//white-space: pre;
+	white-space: inherit;
 	word-spacing: normal;
 	tab-size: 4;
 	hyphens: none;
