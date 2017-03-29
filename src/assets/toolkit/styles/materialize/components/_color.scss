@@ -7,22 +7,24 @@
 // Google Color Palette defined: http://www.google.com/design/spec/style/color.html
 
 
-$azure: #00A6DF;
+$azul: #00A6DF;
 $squash: #f4a81d;
 $warm-grey: #d9d9d9;
 $red: #d71010;
 $frog-green: #67c004;
 
-
-
-$blue: (
-  "base": $azure,
+$azul: (
+  "base": $azul,
+  "lighten-5": #79ddff,
+  "lighten-4": #79ddff,
   "lighten-3": #79ddff,
   "lighten-2": #46d0ff,
   "lighten-1": #13C3FF,
   "darken-1": #0080cc,
   "darken-2": #005A79,
   "darken-3": #003446,
+  "darken-4": #003446,
+  "darken-5": #003446,
   "accent-1": #82B1FF,
   "accent-2": #448AFF,
   "accent-3": #2979FF,
@@ -36,7 +38,7 @@ $warm-grey: (
   "lighten-1": #eaeaea,
   "darken-1": #c0c0c0,
   "darken-2": #a6a6a6,
-  "darken-3": #8d8d8d,
+  "darken-3": #8d8d8d
 );
 
 $squash: (
@@ -184,22 +186,22 @@ $indigo: (
   "accent-4":    #304ffe
 );
 
-// $blue: (
-//   "base":       #2196F3,
-//   "lighten-5":  #E3F2FD,
-//   "lighten-4":  #BBDEFB,
-//   "lighten-3":  #90CAF9,
-//   "lighten-2":  #64B5F6,
-//   "lighten-1":  #42A5F5,
-//   "darken-1":   #1E88E5,
-//   "darken-2":   #1976D2,
-//   "darken-3":   #1565C0,
-//   "darken-4":   #0D47A1,
-//   "accent-1":    #82B1FF,
-//   "accent-2":    #448AFF,
-//   "accent-3":    #2979FF,
-//   "accent-4":    #2962FF
-// );
+$blue: (
+  "base":       #2196F3,
+  "lighten-5":  #E3F2FD,
+  "lighten-4":  #BBDEFB,
+  "lighten-3":  #90CAF9,
+  "lighten-2":  #64B5F6,
+  "lighten-1":  #42A5F5,
+  "darken-1":   #1E88E5,
+  "darken-2":   #1976D2,
+  "darken-3":   #1565C0,
+  "darken-4":   #0D47A1,
+  "accent-1":    #82B1FF,
+  "accent-2":    #448AFF,
+  "accent-3":    #2979FF,
+  "accent-4":    #2962FF
+);
 
 $light-blue: (
   "base":       #03a9f4,

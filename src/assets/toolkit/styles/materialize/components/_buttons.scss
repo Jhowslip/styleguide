@@ -27,6 +27,10 @@
 
 
 // Disabled shared style
+.button-disabled,
+.button-floating-disabled,
+.button-large-disabled,
+.button-flat-disabled,
 .button.disabled,
 .button-floating.disabled,
 .button-large.disabled,
@@ -39,8 +43,11 @@
 .button-floating[disabled],
 .button-large[disabled],
 .button-flat[disabled] {
+
+  @extend .button-default;
+
   background-color: $button-disabled-background !important;
-  box-shadow: none;
+  box-shadow: 0 3px 0 0 #c0c0c0;
   color: $button-disabled-color !important;
   cursor: default;
   pointer-events: none;
@@ -74,7 +81,8 @@
 // Raised Button
 .button {
   @extend .button-default;
-
+  
+  box-shadow: 0 3px 0 #0080ac;
   background-color: $button-raised-background;
   color: $button-raised-color;
   text-align: center;
@@ -87,6 +95,7 @@
   &:hover {
     background-color: $button-raised-background-hover;
     //@extend .z-depth-1-half;
+    @extend .button-hover;
   }
 }
 
@@ -296,15 +305,34 @@ button.button-floating {
   }
 }
 
+.button-secondary {
+  @extend .button;
+}
+
 // Large button
-.button-large {
+.button-large,
+.button-large-disabled,
+.button-large:disabled,
+.button-large[disabled] {
   @extend .button;
   height: $button-large-height;
   line-height: $button-large-height;
 
+  @media #{$medium-and-up} {
+    height: 48px;
+    line-height: 48px;
+
+  }
+
   i {
     font-size: $button-large-icon-font-size;
   }
+}
+
+// Default hover for Buttons
+.button-hover {
+  background-color: $button-raised-background-hover;
+  box-shadow: 0 3px 0 0 $blue;
 }
 
 // Block button
