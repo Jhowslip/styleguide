@@ -1,37 +1,37 @@
-// shared styles
-
-.large-height {
-  height: $button-height;
-  line-height: $button-height;
-}
-
+// Disabled Button
 .button-default {
-  @extend .large-height;
-
   border: $button-border;
   border-radius: $button-radius;
   display: inline-block;
-  font-family: 'Poppins', sans-serif; 
-  font-size: rem(22);
-  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  font-weight: normal;
+  height: $button-height;
+  line-height: $button-height;
   padding: $button-padding;
+  text-transform: initial;
   vertical-align: middle;
   // Gets rid of tap active state
   -webkit-tap-highlight-color: transparent;
-
-  @media #{$medium-and-up} {
-    height: 40px;
-    line-height: 40px;  
-  }
 }
 
 
+// shared styles
+.button,
+.button-flat {
+  @extend .button-default;
+
+  
+}
+
+
+// Disabled Button
+.button-disabled {
+  @extend .button-default;
+}
+
 // Disabled shared style
-.button-disabled,
-.button-floating-disabled,
-.button-large-disabled,
-.button-flat-disabled,
 .button.disabled,
+.button-disabled,
 .button-floating.disabled,
 .button-large.disabled,
 .button-flat.disabled,
@@ -43,14 +43,11 @@
 .button-floating[disabled],
 .button-large[disabled],
 .button-flat[disabled] {
-
-  @extend .button-default;
-
+  pointer-events: none;
   background-color: $button-disabled-background !important;
-  box-shadow: 0 3px 0 0 #c0c0c0;
+  box-shadow: none;
   color: $button-disabled-color !important;
   cursor: default;
-  pointer-events: none;
 
   &:hover {
     background-color: $button-disabled-background !important;
@@ -63,7 +60,9 @@
 .button-floating,
 .button-large,
 .button-flat {
+
   outline: 0;
+
   i {
     font-size: $button-font-size;
     line-height: inherit;
@@ -80,32 +79,24 @@
 
 // Raised Button
 .button {
-  @extend .button-default;
-  
-  box-shadow: 0 3px 0 #0080ac;
-  background-color: $button-raised-background;
-  color: $button-raised-color;
-  text-align: center;
-  letter-spacing: .5px;
   text-decoration: none;
-  //@extend .z-depth-1;
-  transition: .2s ease-out;
+  background-color: $button-raised-background;
   cursor: pointer;
+  color: $button-raised-color;
+ 
+  letter-spacing: .5px;
+  text-align: center;
+  transition: .2s ease-out;
 
   &:hover {
     background-color: $button-raised-background-hover;
-    //@extend .z-depth-1-half;
-    @extend .button-hover;
   }
 }
-
-
 
 // Floating button
 .button-floating {
   &:hover {
     background-color: $button-floating-background-hover;
-    @extend .z-depth-1-half;
   }
 
   &:before {
@@ -135,21 +126,20 @@
     bottom: -$button-floating-size / 2;
   }
 
-  display: inline-block;
-  color: $button-floating-color;
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-  width: $button-floating-size;
-  height: $button-floating-size;
-  line-height: $button-floating-size;
-  padding: 0;
   background-color: $button-floating-background;
   border-radius: $button-floating-radius;
-  @extend .z-depth-1;
-  transition: .3s;
+  color: $button-floating-color;
   cursor: pointer;
+  display: inline-block;
+  height: $button-floating-size;
+  line-height: $button-floating-size;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  transition: .3s;
   vertical-align: middle;
+  width: $button-floating-size;
+  z-index: 1;
 
   i {
     width: inherit;
@@ -275,8 +265,6 @@ button.button-floating {
 
 // Flat button
 .button-flat {
-  @extend .button-default;
-
   box-shadow: none;
   background-color: transparent;
   color: $button-flat-color;
@@ -305,34 +293,15 @@ button.button-floating {
   }
 }
 
-.button-secondary {
-  @extend .button;
-}
-
 // Large button
-.button-large,
-.button-large-disabled,
-.button-large:disabled,
-.button-large[disabled] {
+.button-large {
   @extend .button;
   height: $button-large-height;
   line-height: $button-large-height;
 
-  @media #{$medium-and-up} {
-    height: 48px;
-    line-height: 48px;
-
-  }
-
   i {
     font-size: $button-large-icon-font-size;
   }
-}
-
-// Default hover for Buttons
-.button-hover {
-  background-color: $button-raised-background-hover;
-  box-shadow: 0 3px 0 0 $blue;
 }
 
 // Block button

@@ -7,14 +7,9 @@
 // Google Color Palette defined: http://www.google.com/design/spec/style/color.html
 
 
-$azul: #00A6DF;
-$squash: #f4a81d;
-$warm-grey: #d9d9d9;
-$red: #d71010;
-$frog-green: #67c004;
-
-$azul: (
-  "base": $azul,
+// Acesso custom color
+$azure: (
+  "base": #00A6DF,
   "lighten-5": #79ddff,
   "lighten-4": #79ddff,
   "lighten-3": #79ddff,
@@ -31,18 +26,9 @@ $azul: (
   "accent-4": #2962FF
 );
 
-$warm-grey: (
-  "base": $warm-grey,
-  "lighten-3": #fbfbfb,
-  "lighten-2": #f2f2f2,
-  "lighten-1": #eaeaea,
-  "darken-1": #c0c0c0,
-  "darken-2": #a6a6a6,
-  "darken-3": #8d8d8d
-);
 
 $squash: (
-  "base": $squash,
+  "base": #f4a81d,
   "lighten-3": #fbe0af,
   "lighten-2": #f9cd7e,
   "lighten-1": #f6bb4e,
@@ -51,21 +37,19 @@ $squash: (
   "darken-3": #734c06,
 );
 
-$materialize-red: (
-  "base":       #e51c23,
-  "lighten-5":  #fdeaeb,
-  "lighten-4":  #f8c1c3,
-  "lighten-3":  #f3989b,
-  "lighten-2":  #ee6e73,
-  "lighten-1":  #ea454b,
-  "darken-1":   #d0181e,
-  "darken-2":   #b9151b,
-  "darken-3":   #a21318,
-  "darken-4":   #8b1014,
+
+$warm-grey: (
+  "base": #d9d9d9,
+  "lighten-3": #fbfbfb,
+  "lighten-2": #f2f2f2,
+  "lighten-1": #eaeaea,
+  "darken-1": #c0c0c0,
+  "darken-2": #a6a6a6,
+  "darken-3": #8d8d8d
 );
 
-$red: (
-  "base":       $red,
+$vermillion: (
+  "base":       #d71010,
   "lighten-5":  #FFEBEE,
   "lighten-4":  #FFCDD2,
   "lighten-3":  #EF9A9A,
@@ -81,9 +65,8 @@ $red: (
   "accent-4":    #D50000
 );
 
-
-$green: (
-  "base":       $frog-green,
+$frog: (
+  "base":       #67c004,
   "lighten-5":  #E8F5E9,
   "lighten-4":  #C8E6C9,
   "lighten-3":  #A5D6A7,
@@ -99,24 +82,39 @@ $green: (
   "accent-4":    #00C853
 );
 
-// ==========================================================================================================
 
-// $red: (
-//   "base":       #F44336,
-//   "lighten-5":  #FFEBEE,
-//   "lighten-4":  #FFCDD2,
-//   "lighten-3":  #EF9A9A,
-//   "lighten-2":  #E57373,
-//   "lighten-1":  #EF5350,
-//   "darken-1":   #E53935,
-//   "darken-2":   #D32F2F,
-//   "darken-3":   #C62828,
-//   "darken-4":   #B71C1C,
-//   "accent-1":    #FF8A80,
-//   "accent-2":    #FF5252,
-//   "accent-3":    #FF1744,
-//   "accent-4":    #D50000
-// );
+// Acesso's colors
+
+
+$materialize-red: (
+  "base":       #e51c23,
+  "lighten-5":  #fdeaeb,
+  "lighten-4":  #f8c1c3,
+  "lighten-3":  #f3989b,
+  "lighten-2":  #ee6e73,
+  "lighten-1":  #ea454b,
+  "darken-1":   #d0181e,
+  "darken-2":   #b9151b,
+  "darken-3":   #a21318,
+  "darken-4":   #8b1014,
+);
+
+$red: (
+  "base":       #F44336,
+  "lighten-5":  #FFEBEE,
+  "lighten-4":  #FFCDD2,
+  "lighten-3":  #EF9A9A,
+  "lighten-2":  #E57373,
+  "lighten-1":  #EF5350,
+  "darken-1":   #E53935,
+  "darken-2":   #D32F2F,
+  "darken-3":   #C62828,
+  "darken-4":   #B71C1C,
+  "accent-1":    #FF8A80,
+  "accent-2":    #FF5252,
+  "accent-3":    #FF1744,
+  "accent-4":    #D50000
+);
 
 $pink: (
   "base":       #e91e63,
@@ -254,22 +252,22 @@ $teal: (
   "accent-4":    #00bfa5
 );
 
-// $green: (
-//   "base":       #4CAF50,
-//   "lighten-5":  #E8F5E9,
-//   "lighten-4":  #C8E6C9,
-//   "lighten-3":  #A5D6A7,
-//   "lighten-2":  #81C784,
-//   "lighten-1":  #66BB6A,
-//   "darken-1":   #43A047,
-//   "darken-2":   #388E3C,
-//   "darken-3":   #2E7D32,
-//   "darken-4":   #1B5E20,
-//   "accent-1":    #B9F6CA,
-//   "accent-2":    #69F0AE,
-//   "accent-3":    #00E676,
-//   "accent-4":    #00C853
-// );
+$green: (
+  "base":       #4CAF50,
+  "lighten-5":  #E8F5E9,
+  "lighten-4":  #C8E6C9,
+  "lighten-3":  #A5D6A7,
+  "lighten-2":  #81C784,
+  "lighten-1":  #66BB6A,
+  "darken-1":   #43A047,
+  "darken-2":   #388E3C,
+  "darken-3":   #2E7D32,
+  "darken-4":   #1B5E20,
+  "accent-1":    #B9F6CA,
+  "accent-2":    #69F0AE,
+  "accent-3":    #00E676,
+  "accent-4":    #00C853
+);
 
 $light-green: (
   "base":       #8bc34a,
@@ -419,9 +417,12 @@ $shades: (
 );
 
 $colors: (
-  "materialize-red": $materialize-red,
+  "azure": $azure,
   "squash": $squash,
   "warm-grey": $warm-grey,
+  "vermillion": $vermillion,
+  "frog": $frog,
+  "materialize-red": $materialize-red,
   "red": $red,
   "pink": $pink,
   "purple": $purple,
