@@ -65,6 +65,11 @@ $button-radius: 3px !default;
 $button-disabled-background: #DFDFDF !default;
 $button-disabled-color: #FFFFFF !default;
 
+// Buttons Effect
+$button-background-hover: lighten(#13c3ff, 0) !default;
+$button-shadow-color-hover: $primary-color !default;
+
+
 // Raised buttons
 $button-raised-background: $primary-color !default;
 $button-raised-background-hover: lighten($button-raised-background, 5%) !default;

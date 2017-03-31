@@ -11,7 +11,7 @@
   text-decoration: none;
 
   &:hover {
-    background-color: $button-raised-background-hover;
+   @extend .hover-effect;
   }
 }
 
@@ -30,13 +30,6 @@
   vertical-align: middle;
   // Gets rid of tap active state
   -webkit-tap-highlight-color: transparent;
-}
-
-// shared styles
-.button,
-.button-flat {
-  @extend .button-default;
-  @extend .button-raised;
 }
 
 // Disabled Button
@@ -88,6 +81,14 @@
   @extend .button-large;
 }
 
+// shared styles
+// ==========================================================================================================
+.button,
+.button-flat {
+  @extend .button-default;
+  @extend .button-raised;
+}
+
 // Shared icon styles
 .button,
 .button-floating,
@@ -104,10 +105,18 @@
 
 // Shared focus button style
 .button,
+.button-large,
 .button-floating {
   &:focus {
-    background-color: darken($button-raised-background, 10%);
+    @extend .hover-effect;
   }
+}
+
+// Hover effect
+// ==========================================================================================================
+.hover-effect {
+  background-color: $button-background-hover;
+  box-shadow: 0 3px 0 0 $button-shadow-color-hover;
 }
 
 

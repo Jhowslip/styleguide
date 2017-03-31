@@ -146,7 +146,7 @@
 
 	<div class="f-item-heading-group" data-f-toggle="labels">
 		<h2 class="f-item-heading">Button</h2>
-		<div class="f-item-controls">
+		<div class="f-item-controls" style="display: none;">
 			<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
 				<svg>
 					<use xlink:href="#f-icon-notes" />
@@ -165,18 +165,20 @@
 <div class="f-item-preview">
 	<div class="row">
 	<div class="col s12">
-		<h3>Default Button</h3>
+		<h4>Default Button</h4>
 		<p>To use, place the following class <code>.buton</code></p>
 	</div>
 	<div class="col s12 m6">
 		<div class="preview">
 			<p class="title-code">Example:</p>
-			<a class="waves-effect waves-light button">default</a>
+			<button class="button">default</button>
+			<button class="waves-effect waves-light button">default with ripple</button>
 		</div>
 		<div class="code-snippet">
 			<p class="title-code">Code snippet:</p>
 			<pre class="language-markup">
-				<code class="language-markup">&lt;a class="waves-effect waves-light button"&gt;default&lt;/a&gt;</code>
+				<code class="language-markup">&lt;button class="button"&gt;default&lt;/button&gt;</code><br>
+				<code class="language-markup">&lt;button class="waves-effect waves-light button"&gt;default&lt;/default with ripple&gt;</code>
 			</pre>
 		</div>
 	</div>
@@ -184,20 +186,20 @@
 
 <div class="row">
 	<div class="col s12">
-		<h3>Disabled Button</h3>
+		<h4>Disabled Button</h4>
 		<p>To use, place the following class <code>.buton-disabled</code> or add attribute <code>disbaled</code> in the button</p>
 	</div>
 	<div class="col s12 m6">
 		<div class="preview">
 			<p class="title-code">Example:</p>
-			<a class="button-disabled">disabled</a>
-			<a class="button" disabled>disabled</a>
+			<button class="button-disabled">disabled</button>
+			<button class="button" disabled>disabled</button>
 		</div>
 		<div class="code-snippet">
 			<p class="title-code">Code snippet:</p>
 			<pre class="language-markup">
-				<code class="language-markup">&lt;a class="button-disabled"&gt;disabled&lt;/a&gt;</code><br/>
-				<code class="language-markup">&lt;a class="button" disabled&gt;disabled&lt;/a&gt;</code>
+				<code class="language-markup">&lt;button class="button-disabled"&gt;disabled&lt;/button&gt;</code><br/>
+				<code class="language-markup">&lt;button class="button" disabled&gt;disabled&lt;/button&gt;</code>
 			</pre>
 		</div>
 	</div>
@@ -205,20 +207,20 @@
 
 <div class="row">
 	<div class="col s12">
-		<h3>Large Button</h3>
+		<h4>Large Button</h4>
 		<p>To use, place the following class <code>.buton-disabled</code> or add attribute <code>disbaled</code> in the button</p>
 	</div>
 	<div class="col s12 m6">
 		<div class="preview">
 			<p class="title-code">Example:</p>
-			<a class="waves-effect waves-light button-large">large</a>
-			<a class="waves-effect waves-light button-large-disabled" disabled>large disabled</a>
+			<button class="waves-effect waves-light button-large">large</button>
+			<button class="waves-effect waves-light button-large-disabled" disabled>large disabled</button>
 		</div>
 		<div class="code-snippet">
 			<p class="title-code">Code snippet:</p>
 			<pre class="language-markup">
-				<code class="language-markup">&lt;a class="waves-effect waves-light button-large"&gt;large&lt;/a&gt;</code><br>
-				<code class="language-markup">&lt;a class="waves-effect waves-light button-large-disabled"&gt;button-large-disabled&lt;a&gt;</code>
+				<code class="language-markup">&lt;button class="waves-effect waves-light button-large"&gt;large&lt;/button&gt;</code><br>
+				<code class="language-markup">&lt;button class="waves-effect waves-light button-large-disabled"&gt;button-large-disabled&lt;/button&gt;</code>
 			</pre>
 		</div>
 	</div>
@@ -227,18 +229,20 @@
 <div class="f-item-code f-item-hidden" data-f-toggle="code">
 	<pre><code class="language-markup">&lt;div class&#x3D;&quot;row&quot;&gt;
 	&lt;div class&#x3D;&quot;col s12&quot;&gt;
-		&lt;h3&gt;Default Button&lt;/h3&gt;
+		&lt;h4&gt;Default Button&lt;/h4&gt;
 		&lt;p&gt;To use, place the following class &lt;code&gt;.buton&lt;/code&gt;&lt;/p&gt;
 	&lt;/div&gt;
 	&lt;div class&#x3D;&quot;col s12 m6&quot;&gt;
 		&lt;div class&#x3D;&quot;preview&quot;&gt;
 			&lt;p class&#x3D;&quot;title-code&quot;&gt;Example:&lt;/p&gt;
-			&lt;a class&#x3D;&quot;waves-effect waves-light button&quot;&gt;default&lt;/a&gt;
+			&lt;button class&#x3D;&quot;button&quot;&gt;default&lt;/button&gt;
+			&lt;button class&#x3D;&quot;waves-effect waves-light button&quot;&gt;default with ripple&lt;/button&gt;
 		&lt;/div&gt;
 		&lt;div class&#x3D;&quot;code-snippet&quot;&gt;
 			&lt;p class&#x3D;&quot;title-code&quot;&gt;Code snippet:&lt;/p&gt;
 			&lt;pre class&#x3D;&quot;language-markup&quot;&gt;
-				&lt;code class&#x3D;&quot;language-markup&quot;&gt;&amp;lt;a class&#x3D;&quot;waves-effect waves-light button&quot;&amp;gt;default&amp;lt;/a&amp;gt;&lt;/code&gt;
+				&lt;code class&#x3D;&quot;language-markup&quot;&gt;&amp;lt;button class&#x3D;&quot;button&quot;&amp;gt;default&amp;lt;/button&amp;gt;&lt;/code&gt;&lt;br&gt;
+				&lt;code class&#x3D;&quot;language-markup&quot;&gt;&amp;lt;button class&#x3D;&quot;waves-effect waves-light button&quot;&amp;gt;default&amp;lt;/default with ripple&amp;gt;&lt;/code&gt;
 			&lt;/pre&gt;
 		&lt;/div&gt;
 	&lt;/div&gt;
@@ -246,20 +250,20 @@
 
 &lt;div class&#x3D;&quot;row&quot;&gt;
 	&lt;div class&#x3D;&quot;col s12&quot;&gt;
-		&lt;h3&gt;Disabled Button&lt;/h3&gt;
+		&lt;h4&gt;Disabled Button&lt;/h4&gt;
 		&lt;p&gt;To use, place the following class &lt;code&gt;.buton-disabled&lt;/code&gt; or add attribute &lt;code&gt;disbaled&lt;/code&gt; in the button&lt;/p&gt;
 	&lt;/div&gt;
 	&lt;div class&#x3D;&quot;col s12 m6&quot;&gt;
 		&lt;div class&#x3D;&quot;preview&quot;&gt;
 			&lt;p class&#x3D;&quot;title-code&quot;&gt;Example:&lt;/p&gt;
-			&lt;a class&#x3D;&quot;button-disabled&quot;&gt;disabled&lt;/a&gt;
-			&lt;a class&#x3D;&quot;button&quot; disabled&gt;disabled&lt;/a&gt;
+			&lt;button class&#x3D;&quot;button-disabled&quot;&gt;disabled&lt;/button&gt;
+			&lt;button class&#x3D;&quot;button&quot; disabled&gt;disabled&lt;/button&gt;
 		&lt;/div&gt;
 		&lt;div class&#x3D;&quot;code-snippet&quot;&gt;
 			&lt;p class&#x3D;&quot;title-code&quot;&gt;Code snippet:&lt;/p&gt;
 			&lt;pre class&#x3D;&quot;language-markup&quot;&gt;
-				&lt;code class&#x3D;&quot;language-markup&quot;&gt;&amp;lt;a class&#x3D;&quot;button-disabled&quot;&amp;gt;disabled&amp;lt;/a&amp;gt;&lt;/code&gt;&lt;br/&gt;
-				&lt;code class&#x3D;&quot;language-markup&quot;&gt;&amp;lt;a class&#x3D;&quot;button&quot; disabled&amp;gt;disabled&amp;lt;/a&amp;gt;&lt;/code&gt;
+				&lt;code class&#x3D;&quot;language-markup&quot;&gt;&amp;lt;button class&#x3D;&quot;button-disabled&quot;&amp;gt;disabled&amp;lt;/button&amp;gt;&lt;/code&gt;&lt;br/&gt;
+				&lt;code class&#x3D;&quot;language-markup&quot;&gt;&amp;lt;button class&#x3D;&quot;button&quot; disabled&amp;gt;disabled&amp;lt;/button&amp;gt;&lt;/code&gt;
 			&lt;/pre&gt;
 		&lt;/div&gt;
 	&lt;/div&gt;
@@ -267,20 +271,20 @@
 
 &lt;div class&#x3D;&quot;row&quot;&gt;
 	&lt;div class&#x3D;&quot;col s12&quot;&gt;
-		&lt;h3&gt;Large Button&lt;/h3&gt;
+		&lt;h4&gt;Large Button&lt;/h4&gt;
 		&lt;p&gt;To use, place the following class &lt;code&gt;.buton-disabled&lt;/code&gt; or add attribute &lt;code&gt;disbaled&lt;/code&gt; in the button&lt;/p&gt;
 	&lt;/div&gt;
 	&lt;div class&#x3D;&quot;col s12 m6&quot;&gt;
 		&lt;div class&#x3D;&quot;preview&quot;&gt;
 			&lt;p class&#x3D;&quot;title-code&quot;&gt;Example:&lt;/p&gt;
-			&lt;a class&#x3D;&quot;waves-effect waves-light button-large&quot;&gt;large&lt;/a&gt;
-			&lt;a class&#x3D;&quot;waves-effect waves-light button-large-disabled&quot; disabled&gt;large disabled&lt;/a&gt;
+			&lt;button class&#x3D;&quot;waves-effect waves-light button-large&quot;&gt;large&lt;/button&gt;
+			&lt;button class&#x3D;&quot;waves-effect waves-light button-large-disabled&quot; disabled&gt;large disabled&lt;/button&gt;
 		&lt;/div&gt;
 		&lt;div class&#x3D;&quot;code-snippet&quot;&gt;
 			&lt;p class&#x3D;&quot;title-code&quot;&gt;Code snippet:&lt;/p&gt;
 			&lt;pre class&#x3D;&quot;language-markup&quot;&gt;
-				&lt;code class&#x3D;&quot;language-markup&quot;&gt;&amp;lt;a class&#x3D;&quot;waves-effect waves-light button-large&quot;&amp;gt;large&amp;lt;/a&amp;gt;&lt;/code&gt;&lt;br&gt;
-				&lt;code class&#x3D;&quot;language-markup&quot;&gt;&amp;lt;a class&#x3D;&quot;waves-effect waves-light button-large-disabled&quot;&amp;gt;button-large-disabled&amp;lt;a&amp;gt;&lt;/code&gt;
+				&lt;code class&#x3D;&quot;language-markup&quot;&gt;&amp;lt;button class&#x3D;&quot;waves-effect waves-light button-large&quot;&amp;gt;large&amp;lt;/button&amp;gt;&lt;/code&gt;&lt;br&gt;
+				&lt;code class&#x3D;&quot;language-markup&quot;&gt;&amp;lt;button class&#x3D;&quot;waves-effect waves-light button-large-disabled&quot;&amp;gt;button-large-disabled&amp;lt;/button&amp;gt;&lt;/code&gt;
 			&lt;/pre&gt;
 		&lt;/div&gt;
 	&lt;/div&gt;
@@ -295,7 +299,7 @@
 
 	<div class="f-item-heading-group" data-f-toggle="labels">
 		<h2 class="f-item-heading">Checkbox</h2>
-		<div class="f-item-controls">
+		<div class="f-item-controls" style="display: none;">
 			
 			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
 				<svg>
@@ -327,7 +331,7 @@
 		<div class="f-item-group" id="lists.ordered">
 			<div class="f-item-heading-group" data-f-toggle="labels">
 				<h3 class="f-item-heading">Ordered</h3>
-				<div class="f-item-controls">
+				<div class="f-item-controls" style="display: none;">
 					
 					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
 						<svg>
@@ -355,7 +359,7 @@
 		<div class="f-item-group" id="lists.unordered">
 			<div class="f-item-heading-group" data-f-toggle="labels">
 				<h3 class="f-item-heading">Unordered</h3>
-				<div class="f-item-controls">
+				<div class="f-item-controls" style="display: none;">
 					
 					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
 						<svg>
@@ -388,7 +392,7 @@
 
 	<div class="f-item-heading-group" data-f-toggle="labels">
 		<h2 class="f-item-heading">Paragraph</h2>
-		<div class="f-item-controls">
+		<div class="f-item-controls" style="display: none;">
 			
 			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
 				<svg>
@@ -414,7 +418,7 @@
 
 	<div class="f-item-heading-group" data-f-toggle="labels">
 		<h2 class="f-item-heading">Radio</h2>
-		<div class="f-item-controls">
+		<div class="f-item-controls" style="display: none;">
 			
 			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
 				<svg>
@@ -458,7 +462,7 @@
 
 	<div class="f-item-heading-group" data-f-toggle="labels">
 		<h2 class="f-item-heading">Select</h2>
-		<div class="f-item-controls">
+		<div class="f-item-controls" style="display: none;">
 			
 			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
 				<svg>
@@ -494,7 +498,7 @@
 
 	<div class="f-item-heading-group" data-f-toggle="labels">
 		<h2 class="f-item-heading">Table</h2>
-		<div class="f-item-controls">
+		<div class="f-item-controls" style="display: none;">
 			
 			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
 				<svg>
@@ -592,7 +596,7 @@
 
 	<div class="f-item-heading-group" data-f-toggle="labels">
 		<h2 class="f-item-heading">Text Input</h2>
-		<div class="f-item-controls">
+		<div class="f-item-controls" style="display: none;">
 			
 			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
 				<svg>
@@ -618,7 +622,7 @@
 
 	<div class="f-item-heading-group" data-f-toggle="labels">
 		<h2 class="f-item-heading">Textarea</h2>
-		<div class="f-item-controls">
+		<div class="f-item-controls" style="display: none;">
 			
 			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
 				<svg>
