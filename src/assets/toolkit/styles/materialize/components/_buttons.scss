@@ -22,6 +22,7 @@
   border-radius: $button-radius;
   display: inline-block;
   font-family: "Poppins", sans-serif;
+  font-size: 22px;
   font-weight: normal;
   height: $button-height;
   line-height: $button-height;
@@ -42,15 +43,15 @@
 .button.disabled,
 .button-disabled,
 .button-floating.disabled,
-.button-large.disabled,
+.button-small.disabled,
 .button-flat.disabled,
 .button:disabled,
 .button-floating:disabled,
-.button-large:disabled,
+.button-small:disabled,
 .button-flat:disabled,
 .button[disabled],
 .button-floating[disabled],
-.button-large[disabled],
+.button-small[disabled],
 .button-flat[disabled] {
   background-color: $button-disabled-background !important;
   box-shadow: 0 3px 0 0 #d7d7d7;
@@ -59,26 +60,25 @@
   pointer-events: none;
 
   &:hover {
-    background-color: $button-disabled-background !important;
-    color: $button-disabled-color !important;
+    @extend .no-hover-effect;
   }
 }
 
 // Large button
 // ==========================================================================================================
-.button-large {
+.button-small {
   @extend .button-default;
   @extend .button-raised;
-  height: $button-large-height;
-  line-height: $button-large-height;
+  height: $button-small-height;
+  line-height: $button-small-height;
 
   i {
     font-size: $button-large-icon-font-size;
   }
 }
 
-.button-large-disabled {
-  @extend .button-large;
+.button-small-disabled {
+  @extend .button-small;
 }
 
 // shared styles
@@ -92,7 +92,7 @@
 // Shared icon styles
 .button,
 .button-floating,
-.button-large,
+.button-small,
 .button-flat {
 
   outline: 0;
@@ -105,7 +105,7 @@
 
 // Shared focus button style
 .button,
-.button-large,
+.button-small,
 .button-floating {
   &:focus {
     @extend .hover-effect;
@@ -119,6 +119,70 @@
   box-shadow: 0 3px 0 0 $button-shadow-color-hover;
 }
 
+.no-hover-effect {
+  background-color: $button-disabled-background !important;
+  color: $button-disabled-color !important;
+}
+
+.hover-effect-secondary {
+  background-color: $button-secondary-background-hover;
+  border: 1px solid $button-secondary-background-hover;
+  box-shadow: 0 3px 0 0 $button-secondary-shadow-color-hover;
+  color: #fff;
+}
+.no-hover-effect-secondary {
+  background: #ffffff;
+}
+
+// Secondary Button 
+// ==========================================================================================================
+
+
+.secondary-button {
+  @extend .button-default;
+  background: #fff;
+  border: 1px solid $primary-color;
+  box-shadow: 0 3px 0 0 $primary-color;
+  color: $primary-color;
+  transition: .2s ease-out;
+  
+   &:hover,
+   &:focus  {
+    @extend .hover-effect-secondary;
+  }
+
+}
+
+.button-ghost-disabled {
+  background-color:  #fff !important;
+  border: solid 1px #d9d9d9 !important;
+  box-shadow: 0 3px 0 0 #c0c0c0 !important;
+  color: #d9d9d9;
+}
+
+.secondary-button.disabled,
+.secondary-button-disabled,
+.secondary-button-floating.disabled,
+.secondary-button-small.disabled,
+.secondary-button-flat.disabled,
+.secondary-button:disabled,
+.secondary-button-floating:disabled,
+.secondary-button-small:disabled,
+.secondary-button-flat:disabled,
+.secondary-button[disabled],
+.secondary-button-floating[disabled],
+.secondary-button-small[disabled],
+.secondary-button-flat[disabled]  {
+  @extend .secondary-button;
+  @extend .button-ghost-disabled;
+  cursor: default;
+  pointer-events: none;
+
+  &:hover {
+    @extend .no-hover-effect;
+  }
+
+}
 
 // Floating button
 .button-floating {
@@ -130,7 +194,7 @@
     border-radius: 0;
   }
 
-  &.button-large {
+  &.button-small {
     &.halfway-fab {
       bottom: -$button-floating-large-size / 2;
     }

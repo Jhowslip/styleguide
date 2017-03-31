@@ -57,7 +57,7 @@ $badge-height: 22px !default;
 $button-border: none !default;
 $button-background-focus: lighten($secondary-color, 4%) !default;
 $button-font-size: 1.3rem !default;
-$button-height: 40px !default;
+$button-height: 48px !default;
 $button-padding: 0 2rem !default;
 $button-radius: 3px !default;
 
@@ -69,6 +69,9 @@ $button-disabled-color: #FFFFFF !default;
 $button-background-hover: lighten(#13c3ff, 0) !default;
 $button-shadow-color-hover: $primary-color !default;
 
+$button-secondary-background-hover: lighten(#79ddff, 0) !default;
+$button-secondary-shadow-color-hover: lighten(#13c3ff, 0) !default;
+
 
 // Raised buttons
 $button-raised-background: $primary-color !default;
@@ -78,6 +81,9 @@ $button-raised-color: #fff !default;
 // Large buttons
 $button-large-icon-font-size: 1.6rem !default;
 $button-large-height: $button-height * 1.2 !default;
+
+// Small buttons
+$button-small-height: 40px;
 
 // Flat buttons
 $button-flat-color: #343434 !default;
