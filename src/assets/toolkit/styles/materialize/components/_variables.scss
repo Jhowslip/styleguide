@@ -63,7 +63,7 @@ $button-radius: 3px !default;
 
 // Disabled styles
 $button-disabled-background: #DFDFDF !default;
-$button-disabled-color: #9F9F9F !default;
+$button-disabled-color: #FFFFFF !default;
 
 // Raised buttons
 $button-raised-background: $primary-color !default;
@@ -72,7 +72,7 @@ $button-raised-color: #fff !default;
 
 // Large buttons
 $button-large-icon-font-size: 1.6rem !default;
-$button-large-height: $button-height * 1.5 !default;
+$button-large-height: $button-height * 1.2 !default;
 
 // Flat buttons
 $button-flat-color: #343434 !default;

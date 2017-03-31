@@ -1,4 +1,22 @@
+// Raised Button
+// ==========================================================================================================
+.button-raised {
+  background-color: $button-raised-background;
+  box-shadow: 0 3px 0 0 #0080ac;
+  cursor: pointer;
+  color: $button-raised-color;
+  letter-spacing: .5px;
+  transition: .2s ease-out;
+  text-align: center;
+  text-decoration: none;
+
+  &:hover {
+    background-color: $button-raised-background-hover;
+  }
+}
+
 // Disabled Button
+// ==========================================================================================================
 .button-default {
   border: $button-border;
   border-radius: $button-radius;
@@ -14,17 +32,15 @@
   -webkit-tap-highlight-color: transparent;
 }
 
-
 // shared styles
 .button,
 .button-flat {
   @extend .button-default;
-
-  
+  @extend .button-raised;
 }
 
-
 // Disabled Button
+// ==========================================================================================================
 .button-disabled {
   @extend .button-default;
 }
@@ -43,16 +59,33 @@
 .button-floating[disabled],
 .button-large[disabled],
 .button-flat[disabled] {
-  pointer-events: none;
   background-color: $button-disabled-background !important;
-  box-shadow: none;
+  box-shadow: 0 3px 0 0 #d7d7d7;
   color: $button-disabled-color !important;
   cursor: default;
+  pointer-events: none;
 
   &:hover {
     background-color: $button-disabled-background !important;
     color: $button-disabled-color !important;
   }
+}
+
+// Large button
+// ==========================================================================================================
+.button-large {
+  @extend .button-default;
+  @extend .button-raised;
+  height: $button-large-height;
+  line-height: $button-large-height;
+
+  i {
+    font-size: $button-large-icon-font-size;
+  }
+}
+
+.button-large-disabled {
+  @extend .button-large;
 }
 
 // Shared icon styles
@@ -77,21 +110,6 @@
   }
 }
 
-// Raised Button
-.button {
-  text-decoration: none;
-  background-color: $button-raised-background;
-  cursor: pointer;
-  color: $button-raised-color;
- 
-  letter-spacing: .5px;
-  text-align: center;
-  transition: .2s ease-out;
-
-  &:hover {
-    background-color: $button-raised-background-hover;
-  }
-}
 
 // Floating button
 .button-floating {
@@ -290,17 +308,6 @@ button.button-floating {
     background-color: transparent !important;
     color: $button-flat-disabled-color !important;
     cursor: default;
-  }
-}
-
-// Large button
-.button-large {
-  @extend .button;
-  height: $button-large-height;
-  line-height: $button-large-height;
-
-  i {
-    font-size: $button-large-icon-font-size;
   }
 }
 
