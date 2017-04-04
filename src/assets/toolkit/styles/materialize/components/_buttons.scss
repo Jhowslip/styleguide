@@ -81,7 +81,7 @@
   font-size: $button-icon-font-size;
 }
 
-// Large button
+// Small button
 // ==========================================================================================================
 .button-small {
   @extend .button-default;
@@ -98,6 +98,26 @@
   @extend .button-small;
 }
 
+// Tiny Button
+.button-tiny {
+  @extend .button-default;
+  
+  background-color: #eaeaea;
+  border-radius: 3px;
+  box-shadow: 0 2px 0 0 #d9d9d9;
+  color: #838383;
+  font-size: 14px;
+  font-weight: 500;
+  height: $button-tiny-height;
+  line-height: $button-tiny-height;
+
+  &:hover,
+  &:focus {
+    background-color: #d9d9d9;
+    box-shadow: 0 2px 0 0 #a6a6a6;
+  }
+}
+
 // shared styles
 // ==========================================================================================================
 .button,
@@ -110,6 +130,7 @@
 .button,
 .button-floating,
 .button-small,
+.button-tiny,
 .button-flat {
 
   outline: 0;

@@ -89,6 +89,9 @@ $button-large-height: $button-height * 1.2 !default;
 // Small buttons
 $button-small-height: 40px;
 
+
+$button-tiny-height: 22px; //24px with box-shadow height 
+
 // Flat buttons
 $button-flat-color: #343434 !default;
 $button-flat-disabled-color: lighten(#999, 10%) !default;
