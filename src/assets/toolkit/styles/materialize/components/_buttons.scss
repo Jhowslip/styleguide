@@ -31,6 +31,12 @@
   vertical-align: middle;
   // Gets rid of tap active state
   -webkit-tap-highlight-color: transparent;
+  
+  i {
+    @extend .button-icon;
+    color: #fff;
+    line-height: $button-height;
+  }
 }
 
 // Disabled Button
@@ -59,9 +65,20 @@
   cursor: default;
   pointer-events: none;
 
+  i {
+    color: $button-disabled-color !important;
+    line-height: $button-large-icon-font-size;
+  }
+
   &:hover {
     @extend .no-hover-effect;
   }
+}
+
+// Icon 
+
+.button-icon {
+  font-size: $button-icon-font-size;
 }
 
 // Large button
@@ -73,7 +90,7 @@
   line-height: $button-small-height;
 
   i {
-    font-size: $button-large-icon-font-size;
+    line-height: $button-small-height;
   }
 }
 
@@ -98,7 +115,8 @@
   outline: 0;
 
   i {
-    font-size: $button-font-size;
+    @extend .button-icon;
+    font-size: $button-large-icon-font-size;
     line-height: inherit;
   }
 }
@@ -106,7 +124,8 @@
 // Shared focus button style
 .button,
 .button-small,
-.button-floating {
+.button-floating,
+.secondary-button {
   &:focus {
     @extend .hover-effect;
   }
@@ -129,6 +148,11 @@
   border: 1px solid $button-secondary-background-hover;
   box-shadow: 0 3px 0 0 $button-secondary-shadow-color-hover;
   color: #fff;
+
+  i {
+    color: #fff;
+  }
+
 }
 .no-hover-effect-secondary {
   background: #ffffff;
@@ -151,6 +175,9 @@
     @extend .hover-effect-secondary;
   }
 
+  i {
+    color: $primary-color;
+  }
 }
 
 .button-ghost-disabled {
@@ -158,6 +185,11 @@
   border: solid 1px #d9d9d9 !important;
   box-shadow: 0 3px 0 0 #c0c0c0 !important;
   color: #d9d9d9;
+
+  i {
+    @extend .button-icon;
+    color: #d9d9d9;
+  }
 }
 
 .secondary-button.disabled,
@@ -203,6 +235,7 @@
     height: $button-floating-large-size;
     i {
       line-height: $button-floating-large-size;
+      @extend .button-icon;
     }
   }
 

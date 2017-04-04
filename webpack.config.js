@@ -17,7 +17,7 @@ module.exports = function(fabricatorConfig) {
 		module: {
 			loaders: [
 				{
-					test: /\.js$/,
+					test: /\.(js|ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/,
 					exclude: /(node_modules|prism\.js)/,
 					loaders: ['babel-loader']
 				}
