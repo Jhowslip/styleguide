@@ -74,6 +74,9 @@
 							<a href="components.html#checkbox">Checkbox</a>
 						</li>
 						<li>
+							<a href="components.html#dropdown">Dropdown</a>
+						</li>
+						<li>
 							<a href="components.html#lists">Lists</a>
 						</li>
 						<li>
@@ -167,7 +170,7 @@
 	<div class="col s12">
 		<h4>Default Button</h4>
 		<p>
-			To use, place the following class <code>.buton</code> and will be dispalyed the default button without effects. This button has a larger height for buttons that need more attention.
+			To use, place the following class <code>.button</code> and will be dispalyed the default button without effects. This button has a larger height for buttons that need more attention.
 		</p>
 		<p>
 			If you want a ripple effect, you can add <code>waves-effect</code> and <code>waves-light</code> and will appear on click action.
@@ -298,7 +301,7 @@
 	&lt;div class&#x3D;&quot;col s12&quot;&gt;
 		&lt;h4&gt;Default Button&lt;/h4&gt;
 		&lt;p&gt;
-			To use, place the following class &lt;code&gt;.buton&lt;/code&gt; and will be dispalyed the default button without effects. This button has a larger height for buttons that need more attention.
+			To use, place the following class &lt;code&gt;.button&lt;/code&gt; and will be dispalyed the default button without effects. This button has a larger height for buttons that need more attention.
 		&lt;/p&gt;
 		&lt;p&gt;
 			If you want a ripple effect, you can add &lt;code&gt;waves-effect&lt;/code&gt; and &lt;code&gt;waves-light&lt;/code&gt; and will appear on click action.
@@ -451,6 +454,61 @@
 	<pre><code class="language-markup">&lt;label&gt;
 	&lt;input type&#x3D;&quot;checkbox&quot; /&gt; Checkbox
 &lt;/label&gt; sadyasdyg</code></pre>
+</div>
+
+
+</div>
+
+
+<div class="f-item-group" id="dropdown">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Dropdown</h2>
+		<div class="f-item-controls" style="display: none;">
+			<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+				<svg>
+					<use xlink:href="#f-icon-notes" />
+				</svg>
+			</span>
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>These are notes associated with this <code>button</code> component.</p>
+
+</div>
+<div class="f-item-preview">
+	<div class="row">
+	<div class="col s12">
+		<h4>Dropdown Select</h4>
+		<div class="input-field col s12 m6">
+			<select class="icons">
+	      <option value="" disabled selected>Choose your option</option>
+	      <option value="" data-icon="images/sample-1.jpg" class="left circle">example 1</option>
+	      <option value="" data-icon="images/office.jpg" class="left circle">example 2</option>
+	      <option value="" data-icon="images/yuna.jpg" class="left circle">example 3</option>
+	    </select>
+		</div>
+	</div>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class&#x3D;&quot;row&quot;&gt;
+	&lt;div class&#x3D;&quot;col s12&quot;&gt;
+		&lt;h4&gt;Dropdown Select&lt;/h4&gt;
+		&lt;div class&#x3D;&quot;input-field col s12 m6&quot;&gt;
+			&lt;select class&#x3D;&quot;icons&quot;&gt;
+	      &lt;option value&#x3D;&quot;&quot; disabled selected&gt;Choose your option&lt;/option&gt;
+	      &lt;option value&#x3D;&quot;&quot; data-icon&#x3D;&quot;images/sample-1.jpg&quot; class&#x3D;&quot;left circle&quot;&gt;example 1&lt;/option&gt;
+	      &lt;option value&#x3D;&quot;&quot; data-icon&#x3D;&quot;images/office.jpg&quot; class&#x3D;&quot;left circle&quot;&gt;example 2&lt;/option&gt;
+	      &lt;option value&#x3D;&quot;&quot; data-icon&#x3D;&quot;images/yuna.jpg&quot; class&#x3D;&quot;left circle&quot;&gt;example 3&lt;/option&gt;
+	    &lt;/select&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
 </div>
 
 
@@ -782,12 +840,12 @@
 	<script src="assets/fabricator/scripts/f.js"></script>
 
 	<!-- toolkit scripts -->
-	<script src="assets/toolkit/scripts/toolkit.js"></script>
 
 	<!-- /toolkit scripts -->
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+	<script src="assets/toolkit/scripts/toolkit.js"></script>
 
 
 </body>

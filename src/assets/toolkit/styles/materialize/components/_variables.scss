@@ -148,7 +148,7 @@ $datepicker-selected-outfocus: desaturate(lighten($secondary-color, 35%), 15%) !
 
 $dropdown-bg-color: #fff !default;
 $dropdown-hover-bg-color: #eee !default;
-$dropdown-color: $secondary-color !default;
+$dropdown-color: #000000 !default;
 $dropdown-item-height: 50px !default;
 
 
@@ -169,7 +169,7 @@ $input-background: #fff !default;
 $input-error-color: $error-color !default;
 $input-success-color: $success-color !default;
 $input-focus-color: $secondary-color !default;
-$input-font-size: 1rem !default;
+$input-font-size: rem(18) !default;
 $input-margin-bottom: 20px;
 $input-margin: 0 0 $input-margin-bottom 0 !default;
 $input-padding: 0 !default;
@@ -197,7 +197,7 @@ $select-background: rgba(255, 255, 255, 0.90) !default;
 $select-focus: 1px solid lighten($secondary-color, 47%) !default;
 $select-padding: 5px !default;
 $select-radius: 2px !default;
-$select-disabled-color: rgba(0,0,0,.3) !default;
+$select-disabled-color: $primary-color !default;
 
 // Switches
 $switch-bg-color: $secondary-color !default;
