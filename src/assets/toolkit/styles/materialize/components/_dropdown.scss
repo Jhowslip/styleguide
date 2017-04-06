@@ -12,6 +12,7 @@
   position: absolute;
   z-index: 999;
   will-change: width, height;
+  //display: block !important;
 
   li {
     clear: both;
@@ -59,6 +60,16 @@
       float: left;
       margin: 0 24px 0 0;
       width: 24px;
+    }
+
+    &:first-child {
+
+      @extend .icon-arrow;
+      &::before {
+        float: right;
+        line-height: 100%;
+        margin: rem(16);
+      }
     }
   }
 }

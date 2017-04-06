@@ -44,15 +44,23 @@ select {
   }
 
   span.caret {
-    color: initial;
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
+    bottom: 16px;
+    color: transparent;
     height: 10px;
-    margin: auto 0;
-    font-size: 10px;
+    font-size: rem(16);
     line-height: 10px;
+    margin: auto 0;
+    position: absolute;
+    right: 16px;
+    transform: rotate(180deg);
+    top: 16px;
+
+    @extend .icon-arrow;
+    &:after, 
+    &:before {
+      color: initial;
+    }
+    
 
     &.disabled {
       color: $input-disabled-color;
