@@ -43,24 +43,17 @@ select {
     width: 100%;
   }
 
-  span.caret {
+  .caret {
     bottom: 16px;
-    color: transparent;
+    color: #d9d9d9;
     height: 10px;
-    font-size: rem(16);
-    line-height: 10px;
+    font-size: rem(18);
+    line-height: 1;
     margin: auto 0;
     position: absolute;
     right: 16px;
     transform: rotate(180deg);
     top: 16px;
-
-    @extend .icon-arrow;
-    &:after, 
-    &:before {
-      color: initial;
-    }
-    
 
     &.disabled {
       color: $input-disabled-color;
@@ -94,8 +87,11 @@ select:disabled {
 
 .select-dropdown li.disabled,
 .select-dropdown li.disabled > span,
+.select-dropdown li.disabled > i,
 .select-dropdown li.optgroup {
   background-color: transparent;
+  font-family: 'Poppins', sans-serif;
+  font-weight: normal;
   color: $select-disabled-color;
 }
 

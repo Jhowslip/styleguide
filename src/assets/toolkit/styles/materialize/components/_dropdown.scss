@@ -12,24 +12,33 @@
   position: absolute;
   z-index: 999;
   will-change: width, height;
-  //display: block !important;
+  display: block !important;
 
   li {
     clear: both;
     color: $off-black;
     cursor: pointer;
-    min-height: $dropdown-item-height;
     line-height: 1.5rem;
-    width: 100%;
+    min-height: $dropdown-item-height;
+     padding: (($dropdown-item-height - 22) / 2) 16px;
+    position: relative;
     text-align: left;
     text-transform: none;
+    width: 100%;
 
-    &:hover, &.active, &.selected {
+    &:hover, 
+    &.active, 
+    &.selected {
       background-color: $dropdown-hover-bg-color;
     }
 
     &.active.selected {
-      background-color: darken($dropdown-hover-bg-color, 5%);
+      background-color: $primary-color;
+
+      span,
+      i {
+        color: #ffffff;
+      }
     }
 
     &.divider {
@@ -40,12 +49,21 @@
     & > a, 
     & > span {
       color: $dropdown-color;
-      display: block;
+      display: inline;
       font-family: 'Roboto', sans-serif;
       font-size: rem(17);
+      font-weight: 300;
       line-height: 22px;
-      padding: (($dropdown-item-height - 22) / 2) 16px;
     }
+
+   i {
+      color: #000;
+      font-size: 20px;
+      padding-right: 8px;
+      height: 20px;
+      line-height: 20px;
+    }
+    
 
     & > span > label {
       top: 1px;
@@ -71,6 +89,8 @@
         margin: rem(16);
       }
     }
+
+
   }
 }
 
