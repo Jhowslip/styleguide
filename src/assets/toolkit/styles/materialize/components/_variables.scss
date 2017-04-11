@@ -162,23 +162,30 @@ $roboto-font-path: "../fonts/roboto/" !default;
 // ==========================================================================
 
 // Text Inputs + Textarea
-$input-height: 3rem !default;
+
+$input-disabled-color: color("warm-grey", "base") !default;
+$input-color: #000000 !default;
+$input-margin-bottom: 20px;
+
 $input-border-color: color("grey", "base") !default;
 $input-border: 1px solid $input-border-color !default;
 $input-background: #fff !default;
+$input-disabled-border: 1px solid $input-disabled-color !default;
+$input-disabled-solid-color: #BDBDBD !default;
 $input-error-color: $error-color !default;
-$input-success-color: $success-color !default;
-$input-focus-color: $secondary-color !default;
-$input-font-size: rem(18) !default;
-$input-margin-bottom: 20px;
+$input-focus-color: color("azure", "base") !default;
+$input-font-size: rem(22) !default;
+$input-font-family: 'Roboto', sans-serif !default;
+$label-font-size: rem(18) !default;
+$input-height: rem(40) !default;
+$input-invalid-border: 1px solid $input-error-color !default;
+//$input-label-color: color("warm-grey", "base") !default;
+$input-label-color: #838383 !default;
+$input-label-font-family: 'Poppins', sans-serif !default;
 $input-margin: 0 0 $input-margin-bottom 0 !default;
 $input-padding: 0 !default;
+$input-success-color: $success-color !default;
 $input-transition: all .3s !default;
-$label-font-size: .8rem !default;
-$input-disabled-color: rgba(0,0,0, .26) !default;
-$input-disabled-solid-color: #BDBDBD !default;
-$input-disabled-border: 1px dotted $input-disabled-color !default;
-$input-invalid-border: 1px solid $input-error-color !default;
 $placeholder-text-color: lighten($input-border-color, 20%) !default;
 
 // Radio Buttons
