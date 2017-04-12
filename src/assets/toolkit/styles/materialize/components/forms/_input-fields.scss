@@ -91,14 +91,37 @@ textarea.materialize-textarea {
     opacity: 1;
   }
 
-  // Invalid Input Style
+  // Warning Input Style ==================================
+  &.warning {
+    color: $warning-color;
+  }
+  &:focus.warning {
+    color: $warning-color;
+  }
+  &.warning,
+  &:focus.warning {
+    border-bottom: $input-invalid-border;
+    box-shadow: 0 1px 0 0 $input-warning-color;
+  }
+  // ======================================================
+
+
+  // Invalid Input Style ==================================
+  &.invalid {
+    color: $input-error-color;
+  }
+  &:focus.invalid,
+  &:focus.warning {
+    color: $input-color;
+  }
   &.invalid,
   &:focus.invalid {
-    border-bottom: $input-invalid-border;
+    border-bottom: $input-warning-border;
     box-shadow: 0 1px 0 0 $input-error-color;
   }
+  // ======================================================
 
-  // Custom Error message
+  // Custom Error message =================================
   &.invalid + label:after,
   &:focus.invalid + label:after {
     content: attr(data-error);
@@ -108,8 +131,8 @@ textarea.materialize-textarea {
 
   // Full width label when using validate for error messages
   &.validate + label {
-    width: 100%;
     pointer-events: none;
+    width: 100%;
   }
 
   // Form Message Shared Styles
@@ -120,6 +143,33 @@ textarea.materialize-textarea {
     top: 60px;
     opacity: 0;
     transition: .2s opacity ease-out, .2s color ease-out;
+  }
+
+
+  // Messages Validation - Acesso
+
+  &.valid ~ .feedback.icon-checked {
+    display: block;
+  }
+  &.invalid ~ .feedback.icon-error {
+    display: block;
+  }
+
+  &.warning ~ .feedback.icon-exclamation {
+    display: block;
+  }
+
+  &.valid ~ .feedback,
+  &.valid ~ .feedback span {
+    color: $input-success-color;
+  }
+  &.warning ~ .feedback,
+  &.warning ~ .feedback span {
+    color: $warning-color;
+  }
+  &.invalid ~ .feedback,
+  &.invalid ~ .feedback span {
+    color: $error-color;
   }
 }
 
@@ -242,6 +292,26 @@ textarea.materialize-textarea {
     cursor: pointer;
     font-size: 2rem;
     transition: .3s color;
+  }
+}
+
+// Feedback 
+
+.input-field {
+  .feedback {
+    transition: .2s opacity ease-out, .2s color ease-out;
+    display: none;
+    .message {
+      font-family: $input-font-family;
+      font-size: rem(14); // Feedback font-size
+      font-style: italic;
+      font-weight: 600;
+      color: #a7a7a7;
+    }
+  }
+  [class^="icon-"],
+  [class*=" icon-"] {
+    font-size: rem(14);
   }
 }
 

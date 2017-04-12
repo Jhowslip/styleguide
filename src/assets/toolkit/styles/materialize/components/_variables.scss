@@ -38,8 +38,9 @@ $primary-color-light: lighten($primary-color, 15%) !default;
 $primary-color-dark: darken($primary-color, 15%) !default;
 
 $secondary-color: color("teal", "lighten-1") !default;
-$success-color: color("green", "base") !default;
-$error-color: color("red", "base") !default;
+$success-color: color("frog", "base") !default;
+$error-color: color("vermillion", "base") !default;
+$warning-color: color("squash", "base") !default;
 $link-color: color("light-blue", "darken-1") !default;
 
 
@@ -165,7 +166,7 @@ $roboto-font-path: "../fonts/roboto/" !default;
 
 $input-disabled-color: color("warm-grey", "base") !default;
 $input-color: #000000 !default;
-$input-margin-bottom: 20px;
+$input-margin-bottom: rem(8);
 
 $input-border-color: color("grey", "base") !default;
 $input-border: 1px solid $input-border-color !default;
@@ -173,11 +174,13 @@ $input-background: #fff !default;
 $input-disabled-border: 1px solid $input-disabled-color !default;
 $input-disabled-solid-color: #BDBDBD !default;
 $input-error-color: $error-color !default;
+$input-warning-color: $warning-color !default;
 $input-focus-color: color("azure", "base") !default;
 $input-font-size: rem(22) !default;
 $input-font-family: 'Roboto', sans-serif !default;
 $label-font-size: rem(18) !default;
 $input-height: rem(40) !default;
+$input-warning-border: 1px solid $input-warning-color !default;
 $input-invalid-border: 1px solid $input-error-color !default;
 //$input-label-color: color("warm-grey", "base") !default;
 $input-label-color: #838383 !default;
