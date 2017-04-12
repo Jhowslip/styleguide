@@ -3405,7 +3405,7 @@ if (jQuery) {
           lastID = $select.data('select-id'); // Tear down structure if Select needs to be rebuilt
 
       if (lastID) {
-        $select.parent().find('span.caret').remove();
+        $select.parent().find('i.caret').remove();
         $select.parent().find('input').remove();
 
         $select.unwrap();
@@ -3448,6 +3448,20 @@ if (jQuery) {
           options.append($('<li class="' + disabledClass + optgroupClass + '"><img alt="" src="' + icon_url + '"' + classString + '><span>' + multipleCheckbox + option.html() + '</span></li>'));
           return true;
         }
+
+
+        // add icons
+        var icon_name = option.data('graph');
+        var classes = option.attr('class');
+        if (!!icon_name) {
+          var classString = '';
+          if (!!classes) classString = ' class="' + classes + '"';
+
+          // Check for multiple type.
+          options.append($('<li class="' + disabledClass + optgroupClass + '"><i class="' + icon_name + '"></i><span>' + multipleCheckbox + option.html() + '</span></li>'));
+          return true;
+        }
+
 
         // Check for multiple type.
         options.append($('<li class="' + disabledClass + optgroupClass + '"><span>' + multipleCheckbox + option.html() + '</span></li>'));
@@ -3506,7 +3520,7 @@ if (jQuery) {
       // Wrap Elements
       $select.wrap(wrapper);
       // Add Select Display Element
-      var dropdownIcon = $('<span class="caret">&#9660;</span>');
+      var dropdownIcon = $('<i class="icon-arrow caret"></i>');
       if ($select.is(':disabled'))
         dropdownIcon.addClass('disabled');
 
@@ -3514,8 +3528,8 @@ if (jQuery) {
       var sanitizedLabelHtml = label.replace(/"/g, '&quot;');
 
       var $newSelect = $('<input type="text" class="select-dropdown" readonly="true" ' + (($select.is(':disabled')) ? 'disabled' : '') + ' data-activates="select-options-' + uniqueID +'" value="'+ sanitizedLabelHtml +'"/>');
-      $select.before($newSelect);
-      $newSelect.before(dropdownIcon);
+      $select.after($newSelect);
+      $newSelect.after(dropdownIcon);
 
       $newSelect.after(options);
       // Check if section element is disabled

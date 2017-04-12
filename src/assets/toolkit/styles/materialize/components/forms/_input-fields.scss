@@ -148,30 +148,80 @@ textarea.materialize-textarea {
 
   // Messages Validation - Acesso
 
-  &.valid ~ .feedback.icon-checked {
+  &.valid ~ .feedback.valid .message {
     display: block;
   }
-  &.invalid ~ .feedback.icon-error {
+  &.invalid ~ .feedback.error,
+  &.invalid ~ .feedback.error .message {
     display: block;
   }
 
-  &.warning ~ .feedback.icon-exclamation {
+  &.warning ~ .feedback.warning,
+  &.warning ~ .feedback.warning .message {
     display: block;
   }
 
   &.valid ~ .feedback,
+  &.valid ~ .feedback [class^="icon-"],
+  &.valid ~ .feedback , [class*=" icon-"],
   &.valid ~ .feedback span {
     color: $input-success-color;
   }
   &.warning ~ .feedback,
+  &.warning ~ .feedback [class^="icon-"],
+  &.warning ~ .feedback , [class*=" icon-"],
   &.warning ~ .feedback span {
     color: $warning-color;
   }
   &.invalid ~ .feedback,
+  &.invalid ~ .feedback [class^="icon-"],
+  &.invalid ~ .feedback , [class*=" icon-"],
   &.invalid ~ .feedback span {
     color: $error-color;
   }
+
+  // Tip 
+  &:focus {
+    ~ {
+      .feedback.tip {
+        display: none; // todo 
+        transition: .2s opacity ease-out, .2s color ease-out;
+      }
+    }
+  }
 }
+
+.input-field {
+  .feedback {
+    display: none;
+    transition: .2s opacity ease-out, .2s color ease-out;
+    
+    .message {
+      color: #a7a7a7;
+      font-family: $input-font-family;
+      font-size: rem(14); // Feedback font-size
+      font-style: italic;
+      font-weight: 600;
+
+      .row {
+        margin: 0;
+      }
+    }
+    &.tip {
+      .message {
+        font-weight: normal;
+      }
+    }
+  }
+  [class^="icon-"],
+  [class*=" icon-"] {
+    font-size: rem(14);
+    margin-top: 4px;
+    padding-right: 4px;
+  }
+}
+
+// ========================================================
 
 // Styling for input field wrapper
 .input-field {
@@ -294,27 +344,6 @@ textarea.materialize-textarea {
     transition: .3s color;
   }
 }
-
-// Feedback 
-
-.input-field {
-  .feedback {
-    transition: .2s opacity ease-out, .2s color ease-out;
-    display: none;
-    .message {
-      font-family: $input-font-family;
-      font-size: rem(14); // Feedback font-size
-      font-style: italic;
-      font-weight: 600;
-      color: #a7a7a7;
-    }
-  }
-  [class^="icon-"],
-  [class*=" icon-"] {
-    font-size: rem(14);
-  }
-}
-
 
 /* Textarea */
 
