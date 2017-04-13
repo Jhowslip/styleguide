@@ -148,17 +148,24 @@ textarea.materialize-textarea {
 
   // Messages Validation - Acesso
 
-  &.valid ~ .feedback.valid .message {
+
+
+  &.valid ~ .valid.feedback {
     display: block;
   }
-  &.invalid ~ .feedback.error,
-  &.invalid ~ .feedback.error .message {
+  &.invalid ~ .error.feedback,
+  &.invalid ~ .error.feedback .message {
     display: block;
   }
 
-  &.warning ~ .feedback.warning,
-  &.warning ~ .feedback.warning .message {
+  &.warning ~ .warning.feedback,
+  &.warning ~ .warning.feedback .message {
     display: block;
+  }
+
+  &.invalid ~ .tip.feedback,
+  &.warning ~ .tip.feedback {
+    display: none !important;
   }
 
   &.valid ~ .feedback,
@@ -180,11 +187,20 @@ textarea.materialize-textarea {
     color: $error-color;
   }
 
+  &:focus.valid,
+  &:focus.invalid,
+  &:focus.warning {
+    ~ .tip {
+      display: none !important;
+    }
+  }
+
+
   // Tip 
   &:focus {
     ~ {
       .feedback.tip {
-        display: none; // todo 
+        display: block; // todo 
         transition: .2s opacity ease-out, .2s color ease-out;
       }
     }
