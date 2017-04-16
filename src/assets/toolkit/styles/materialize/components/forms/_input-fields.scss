@@ -195,12 +195,11 @@ textarea.materialize-textarea {
     }
   }
 
-
   // Tip 
   &:focus {
     ~ {
       .feedback.tip {
-        display: block; // todo 
+        display: block;
         transition: .2s opacity ease-out, .2s color ease-out;
       }
     }
@@ -238,6 +237,7 @@ textarea.materialize-textarea {
     padding-right: 4px;
   }
 }
+
 // ========================================================
 .button-inside {
   position: relative;
@@ -278,6 +278,29 @@ textarea.materialize-textarea {
       pointer-events: all;
       cursor: pointer;
     }
+  }
+}
+
+
+.button-inside-prefix {
+  @extend .button-inside;
+    
+  input[type=text] {
+    padding-left: rem(32);
+
+    &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+      color: pink;
+      padding-right: rem(150);
+      text-align: right;
+    }
+  }
+  .input-prefix {
+    color: $input-disabled-color;
+    font-size: rem(20);
+    font-weight: 900;
+    position: absolute;
+    left: rem(12);
+    top: rem(6);
   }
 }
 
