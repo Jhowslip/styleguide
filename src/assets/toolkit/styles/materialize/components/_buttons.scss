@@ -118,6 +118,18 @@
   }
 }
 
+
+// ==========================================================================================================
+.button-infield {
+  @extend .button-default;
+  color: #ffffff;
+  font-family: $input-font-family;
+  font-size: rem(14);
+  font-weight: 900;
+  height: $button-tiny-height;
+  line-height: $button-tiny-height;
+}
+
 // shared styles
 // ==========================================================================================================
 .button,

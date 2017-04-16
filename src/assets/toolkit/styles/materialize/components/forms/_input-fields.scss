@@ -214,6 +214,7 @@ textarea.materialize-textarea {
     
     .message {
       color: #a7a7a7;
+      display: block;
       font-family: $input-font-family;
       font-size: rem(14); // Feedback font-size
       font-style: italic;
@@ -223,17 +224,63 @@ textarea.materialize-textarea {
         margin: 0;
       }
     }
-    &.tip {
-      .message {
-        font-weight: normal;
-      }
+    .tip-message {
+      @extend .message;
+      font-weight: normal;
+      line-height: 1.1;
     }
   }
+
   [class^="icon-"],
   [class*=" icon-"] {
     font-size: rem(14);
     margin-top: 4px;
     padding-right: 4px;
+  }
+}
+// ========================================================
+.button-inside {
+  position: relative;
+
+  input[type=text] {
+    &:focus,
+    &.valid {
+      color: green; 
+      ~ .input-on {
+        display: block;
+      }
+    }
+
+    &:not(:empty) {
+      color: yellow;
+    }
+
+    > div {
+      color: red;
+    }
+
+  }
+
+  .input-on {
+    display: none;
+    position: absolute;
+    right: rem(12);
+    top: rem(6);
+  }
+
+  button {
+    font-size: rem(18);
+    line-height: rem(18);
+    height: 32px;
+    line-height: 32px;
+  }
+
+  .valid ~ .input-on {
+    color: purple;
+
+    button {
+      @extend .button-raised;
+    }
   }
 }
 

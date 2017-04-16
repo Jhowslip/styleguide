@@ -42,17 +42,22 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ function(module, exports) {
+/***/ (function(module, exports) {
 
 	/**
 	 * Toolkit JavaScript
 	 */
 
-	'use strict';
+	"use strict";
 
 	$(document).ready(function () {
 	  $('select').material_select();
 	});
 
-/***/ }
+	$(".sibling-button").focus(function () {
+	  $(this).parent().addClass("is-active");
+	  $(this).siblings(".input-on").addClass("button-on");
+	});
+
+/***/ })
 /******/ ]);

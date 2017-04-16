@@ -40,7 +40,11 @@ notes: |
 
 <div class="row">
 	<div class="col s12">
-		<h4>Input</h4>
+		<h4>Input With Validation</h4>
+		<p>
+			The validate class leverages HTML5 validation and will add a <code>valid</code> and <code>invalid</code> 
+			class accordingly. If you don't want the Green and Red validation states, just remove the validate class from your inputs.
+		</p>
 		<div class="preview">
 			<p class="title-code">Example:</p>
 			<div class="row">
@@ -88,7 +92,7 @@ notes: |
           <div class="feedback tip">
           	<div class="row">
           		<div class="col s12 no-padding">
-								<span class="message">
+								<span class="tip-message">
 		          		Recusandae voluptatibus consequuntur eius. Fugit saepe ex, porro laudantium molestiae laborum dolore vel doloribus, pariatur, quis eligendi. Excepturi itaque quo, dolorum tempore?
 								</span>
 							</div>
@@ -99,11 +103,92 @@ notes: |
 		</div>
 		<div class="code-snippet">
 			<p class="title-code">Code snippet:</p>
-			<pre class="language-markup">
-				<code class="language-markup">&lt;button class="button"&gt;default&lt;/button&gt;</code><br>
-				<code class="language-markup">&lt;button class="waves-effect waves-light button"&gt;default with ripple&lt;/button&gt;</code>
+				<pre class="language-markup">
+				<code class="language-markup">&lt;div&gt;</code><br>
+				&nbsp;<code class="language-markup">&lt;input id="full_name" type="text" class="validate"&gt;</code><br>
+				&nbsp;<code class="language-markup">&lt;label for="full_name"&gt;Full Name&lt;/label&gt;</code><br>
+				<code class="language-markup">&lt;/div&gt;</code>
 			</pre>
 		</div>
 	</div>
 </div>
+
+<div class="row">
+	<div class="col s12">
+		<h4>Input  button inside</h4>
+		<p>
+			The validate class leverages HTML5 validation and will add a <code>valid</code> and <code>invalid</code> 
+			class accordingly. If you don't want the Green and Red validation states, just remove the validate class from your inputs.
+		</p>
+		<div class="preview">
+			<p class="title-code">Example:</p>
+			<div class="row">
+        <div class="input-field button-inside col s12">
+          <input id="full_name" type="text" class="sibling-button validate">
+          <label for="full_name">Full Name</label>
+          <div class="input-on">
+          	<button type="submit" class="waves-effect waves-light button-infield">submit</button>
+          </div>
+          
+	        <div class="feedback valid">
+          	<div class="row">
+          		<div class="col no-padding">
+	          		<i class="icon-checked"></i>
+          		</div>
+          		<div class="col s11 no-padding">
+								<span class="message">
+	  	        		Valid name ;P
+								</span>
+          		</div>
+	          </div>
+          </div>
+
+          <div class="feedback error">
+          	<div class="row">
+          		<div class="col no-padding">
+          			<i class="icon-error"></i>
+          		</div>
+	          	<div class="col s11 no-padding">
+								<span class="message">
+		          		Wrong name format
+								</span>
+							</div>
+          	</div>
+          </div>
+          <div class="feedback warning">
+          	<div class="row">
+          		<div class="col no-padding">
+          			<i class="icon-exclamation"></i>
+							</div>
+							<div>
+								<span class="message">
+          				Name cannot contain number
+								</span>
+							</div>
+						</div>
+          </div>
+          <div class="feedback tip">
+          	<div class="row">
+          		<div class="col s12 no-padding">
+								<span class="tip-message">
+		          		Recusandae voluptatibus consequuntur eius. Fugit saepe ex, porro laudantium molestiae laborum dolore vel doloribus, pariatur, quis eligendi. Excepturi itaque quo, dolorum tempore?
+								</span>
+							</div>
+						</div>
+          </div>
+        </div>
+      </div>				
+		</div>
+		<div class="code-snippet">
+			<p class="title-code">Code snippet:</p>
+				<pre class="language-markup">
+				<code class="language-markup">&lt;div&gt;</code><br>
+				&nbsp;<code class="language-markup">&lt;input id="full_name" type="text" class="validate"&gt;</code><br>
+				&nbsp;<code class="language-markup">&lt;label for="full_name"&gt;Full Name&lt;/label&gt;</code><br>
+				<code class="language-markup">&lt;/div&gt;</code>
+			</pre>
+		</div>
+	</div>
+</div>
+
 

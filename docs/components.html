@@ -640,7 +640,10 @@
 
 <div class="row">
 	<div class="col s12">
-		<h4>Input</h4>
+		<h4>Input With Validation</h4>
+		<p>
+			The validate class leverages HTML5 validation and will add a <code>valid</code> and <code>invalid</code> class accordingly. If you don't want the Green and Red validation states, just remove the validate class from your inputs.
+		</p>
 		<div class="preview">
 			<p class="title-code">Example:</p>
 			<div class="row">
@@ -688,7 +691,7 @@
 					<div class="feedback tip">
 						<div class="row">
 							<div class="col s12 no-padding">
-								<span class="message">
+								<span class="tip-message">
 		          		Recusandae voluptatibus consequuntur eius. Fugit saepe ex, porro laudantium molestiae laborum dolore vel doloribus, pariatur, quis eligendi. Excepturi itaque quo, dolorum tempore?
 								</span>
 							</div>
@@ -700,8 +703,87 @@
 		<div class="code-snippet">
 			<p class="title-code">Code snippet:</p>
 			<pre class="language-markup">
-				<code class="language-markup">&lt;button class="button"&gt;default&lt;/button&gt;</code><br>
-				<code class="language-markup">&lt;button class="waves-effect waves-light button"&gt;default with ripple&lt;/button&gt;</code>
+				<code class="language-markup">&lt;div&gt;</code><br>
+				&nbsp;<code class="language-markup">&lt;input id="full_name" type="text" class="validate"&gt;</code><br>
+				&nbsp;<code class="language-markup">&lt;label for="full_name"&gt;Full Name&lt;/label&gt;</code><br>
+				<code class="language-markup">&lt;/div&gt;</code>
+			</pre>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col s12">
+		<h4>Input button inside</h4>
+		<p>
+			The validate class leverages HTML5 validation and will add a <code>valid</code> and <code>invalid</code> class accordingly. If you don't want the Green and Red validation states, just remove the validate class from your inputs.
+		</p>
+		<div class="preview">
+			<p class="title-code">Example:</p>
+			<div class="row">
+				<div class="input-field button-inside col s12">
+					<input id="full_name" type="text" class="sibling-button validate">
+					<label for="full_name">Full Name</label>
+					<div class="input-on">
+						<button type="submit" class="waves-effect waves-light button-infield">submit</button>
+					</div>
+
+					<div class="feedback valid">
+						<div class="row">
+							<div class="col no-padding">
+								<i class="icon-checked"></i>
+							</div>
+							<div class="col s11 no-padding">
+								<span class="message">
+	  	        		Valid name ;P
+								</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="feedback error">
+						<div class="row">
+							<div class="col no-padding">
+								<i class="icon-error"></i>
+							</div>
+							<div class="col s11 no-padding">
+								<span class="message">
+		          		Wrong name format
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="feedback warning">
+						<div class="row">
+							<div class="col no-padding">
+								<i class="icon-exclamation"></i>
+							</div>
+							<div>
+								<span class="message">
+          				Name cannot contain number
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="feedback tip">
+						<div class="row">
+							<div class="col s12 no-padding">
+								<span class="tip-message">
+		          		Recusandae voluptatibus consequuntur eius. Fugit saepe ex, porro laudantium molestiae laborum dolore vel doloribus, pariatur, quis eligendi. Excepturi itaque quo, dolorum tempore?
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="code-snippet">
+			<p class="title-code">Code snippet:</p>
+			<pre class="language-markup">
+				<code class="language-markup">&lt;div&gt;</code><br>
+				&nbsp;<code class="language-markup">&lt;input id="full_name" type="text" class="validate"&gt;</code><br>
+				&nbsp;<code class="language-markup">&lt;label for="full_name"&gt;Full Name&lt;/label&gt;</code><br>
+				<code class="language-markup">&lt;/div&gt;</code>
 			</pre>
 		</div>
 	</div>
@@ -744,7 +826,10 @@
 
 &lt;div class&#x3D;&quot;row&quot;&gt;
 	&lt;div class&#x3D;&quot;col s12&quot;&gt;
-		&lt;h4&gt;Input&lt;/h4&gt;
+		&lt;h4&gt;Input With Validation&lt;/h4&gt;
+		&lt;p&gt;
+			The validate class leverages HTML5 validation and will add a &lt;code&gt;valid&lt;/code&gt; and &lt;code&gt;invalid&lt;/code&gt; class accordingly. If you don&#x27;t want the Green and Red validation states, just remove the validate class from your inputs.
+		&lt;/p&gt;
 		&lt;div class&#x3D;&quot;preview&quot;&gt;
 			&lt;p class&#x3D;&quot;title-code&quot;&gt;Example:&lt;/p&gt;
 			&lt;div class&#x3D;&quot;row&quot;&gt;
@@ -792,7 +877,7 @@
 					&lt;div class&#x3D;&quot;feedback tip&quot;&gt;
 						&lt;div class&#x3D;&quot;row&quot;&gt;
 							&lt;div class&#x3D;&quot;col s12 no-padding&quot;&gt;
-								&lt;span class&#x3D;&quot;message&quot;&gt;
+								&lt;span class&#x3D;&quot;tip-message&quot;&gt;
 		          		Recusandae voluptatibus consequuntur eius. Fugit saepe ex, porro laudantium molestiae laborum dolore vel doloribus, pariatur, quis eligendi. Excepturi itaque quo, dolorum tempore?
 								&lt;/span&gt;
 							&lt;/div&gt;
@@ -804,8 +889,87 @@
 		&lt;div class&#x3D;&quot;code-snippet&quot;&gt;
 			&lt;p class&#x3D;&quot;title-code&quot;&gt;Code snippet:&lt;/p&gt;
 			&lt;pre class&#x3D;&quot;language-markup&quot;&gt;
-				&lt;code class&#x3D;&quot;language-markup&quot;&gt;&amp;lt;button class&#x3D;&quot;button&quot;&amp;gt;default&amp;lt;/button&amp;gt;&lt;/code&gt;&lt;br&gt;
-				&lt;code class&#x3D;&quot;language-markup&quot;&gt;&amp;lt;button class&#x3D;&quot;waves-effect waves-light button&quot;&amp;gt;default with ripple&amp;lt;/button&amp;gt;&lt;/code&gt;
+				&lt;code class&#x3D;&quot;language-markup&quot;&gt;&amp;lt;div&amp;gt;&lt;/code&gt;&lt;br&gt;
+				&amp;nbsp;&lt;code class&#x3D;&quot;language-markup&quot;&gt;&amp;lt;input id&#x3D;&quot;full_name&quot; type&#x3D;&quot;text&quot; class&#x3D;&quot;validate&quot;&amp;gt;&lt;/code&gt;&lt;br&gt;
+				&amp;nbsp;&lt;code class&#x3D;&quot;language-markup&quot;&gt;&amp;lt;label for&#x3D;&quot;full_name&quot;&amp;gt;Full Name&amp;lt;/label&amp;gt;&lt;/code&gt;&lt;br&gt;
+				&lt;code class&#x3D;&quot;language-markup&quot;&gt;&amp;lt;/div&amp;gt;&lt;/code&gt;
+			&lt;/pre&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class&#x3D;&quot;row&quot;&gt;
+	&lt;div class&#x3D;&quot;col s12&quot;&gt;
+		&lt;h4&gt;Input button inside&lt;/h4&gt;
+		&lt;p&gt;
+			The validate class leverages HTML5 validation and will add a &lt;code&gt;valid&lt;/code&gt; and &lt;code&gt;invalid&lt;/code&gt; class accordingly. If you don&#x27;t want the Green and Red validation states, just remove the validate class from your inputs.
+		&lt;/p&gt;
+		&lt;div class&#x3D;&quot;preview&quot;&gt;
+			&lt;p class&#x3D;&quot;title-code&quot;&gt;Example:&lt;/p&gt;
+			&lt;div class&#x3D;&quot;row&quot;&gt;
+				&lt;div class&#x3D;&quot;input-field button-inside col s12&quot;&gt;
+					&lt;input id&#x3D;&quot;full_name&quot; type&#x3D;&quot;text&quot; class&#x3D;&quot;sibling-button validate&quot;&gt;
+					&lt;label for&#x3D;&quot;full_name&quot;&gt;Full Name&lt;/label&gt;
+					&lt;div class&#x3D;&quot;input-on&quot;&gt;
+						&lt;button type&#x3D;&quot;submit&quot; class&#x3D;&quot;waves-effect waves-light button-infield&quot;&gt;submit&lt;/button&gt;
+					&lt;/div&gt;
+
+					&lt;div class&#x3D;&quot;feedback valid&quot;&gt;
+						&lt;div class&#x3D;&quot;row&quot;&gt;
+							&lt;div class&#x3D;&quot;col no-padding&quot;&gt;
+								&lt;i class&#x3D;&quot;icon-checked&quot;&gt;&lt;/i&gt;
+							&lt;/div&gt;
+							&lt;div class&#x3D;&quot;col s11 no-padding&quot;&gt;
+								&lt;span class&#x3D;&quot;message&quot;&gt;
+	  	        		Valid name ;P
+								&lt;/span&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+
+					&lt;div class&#x3D;&quot;feedback error&quot;&gt;
+						&lt;div class&#x3D;&quot;row&quot;&gt;
+							&lt;div class&#x3D;&quot;col no-padding&quot;&gt;
+								&lt;i class&#x3D;&quot;icon-error&quot;&gt;&lt;/i&gt;
+							&lt;/div&gt;
+							&lt;div class&#x3D;&quot;col s11 no-padding&quot;&gt;
+								&lt;span class&#x3D;&quot;message&quot;&gt;
+		          		Wrong name format
+								&lt;/span&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+					&lt;div class&#x3D;&quot;feedback warning&quot;&gt;
+						&lt;div class&#x3D;&quot;row&quot;&gt;
+							&lt;div class&#x3D;&quot;col no-padding&quot;&gt;
+								&lt;i class&#x3D;&quot;icon-exclamation&quot;&gt;&lt;/i&gt;
+							&lt;/div&gt;
+							&lt;div&gt;
+								&lt;span class&#x3D;&quot;message&quot;&gt;
+          				Name cannot contain number
+								&lt;/span&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+					&lt;div class&#x3D;&quot;feedback tip&quot;&gt;
+						&lt;div class&#x3D;&quot;row&quot;&gt;
+							&lt;div class&#x3D;&quot;col s12 no-padding&quot;&gt;
+								&lt;span class&#x3D;&quot;tip-message&quot;&gt;
+		          		Recusandae voluptatibus consequuntur eius. Fugit saepe ex, porro laudantium molestiae laborum dolore vel doloribus, pariatur, quis eligendi. Excepturi itaque quo, dolorum tempore?
+								&lt;/span&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class&#x3D;&quot;code-snippet&quot;&gt;
+			&lt;p class&#x3D;&quot;title-code&quot;&gt;Code snippet:&lt;/p&gt;
+			&lt;pre class&#x3D;&quot;language-markup&quot;&gt;
+				&lt;code class&#x3D;&quot;language-markup&quot;&gt;&amp;lt;div&amp;gt;&lt;/code&gt;&lt;br&gt;
+				&amp;nbsp;&lt;code class&#x3D;&quot;language-markup&quot;&gt;&amp;lt;input id&#x3D;&quot;full_name&quot; type&#x3D;&quot;text&quot; class&#x3D;&quot;validate&quot;&amp;gt;&lt;/code&gt;&lt;br&gt;
+				&amp;nbsp;&lt;code class&#x3D;&quot;language-markup&quot;&gt;&amp;lt;label for&#x3D;&quot;full_name&quot;&amp;gt;Full Name&amp;lt;/label&amp;gt;&lt;/code&gt;&lt;br&gt;
+				&lt;code class&#x3D;&quot;language-markup&quot;&gt;&amp;lt;/div&amp;gt;&lt;/code&gt;
 			&lt;/pre&gt;
 		&lt;/div&gt;
 	&lt;/div&gt;
