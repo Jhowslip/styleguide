@@ -331,6 +331,31 @@ textarea.materialize-textarea {
   }
 }
 
+// Hide Show
+// ========================================================
+.showhide {
+  &[class^="icon-"], 
+  &[class*=" icon-"] {
+    color: $input-label-color;
+    display: inline-block;
+    font-size: rem(32);
+    margin: 0;
+    min-width: 60px;
+    position: absolute;
+    text-align: center;
+    right: 0;
+    top: - rem(6);
+  }
+  
+  
+  .wink {
+    margin: -2px 0 0;
+    font-family: $input-label-font-family;
+    font-size: rem(12);
+    font-weight: 400;
+  }
+}
+
 // ========================================================
 
 // Styling for input field wrapper
