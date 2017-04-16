@@ -243,22 +243,13 @@ textarea.materialize-textarea {
   position: relative;
 
   input[type=text] {
+    height: rem(48);
     &:focus,
     &.valid {
-      color: green; 
       ~ .input-on {
         display: block;
       }
     }
-
-    &:not(:empty) {
-      color: yellow;
-    }
-
-    > div {
-      color: red;
-    }
-
   }
 
   .input-on {
@@ -269,17 +260,23 @@ textarea.materialize-textarea {
   }
 
   button {
+    @extend .button-default;
+    background-color: $button-disabled-background;
+    box-shadow: 0 3px 0 0 #d7d7d7;
+    color: $button-disabled-color;
+    cursor: default;
     font-size: rem(18);
+    height: 29px; // 3px from box shadow value
     line-height: rem(18);
-    height: 32px;
+    pointer-events: none;
     line-height: 32px;
   }
 
   .valid ~ .input-on {
-    color: purple;
-
     button {
       @extend .button-raised;
+      pointer-events: all;
+      cursor: pointer;
     }
   }
 }
