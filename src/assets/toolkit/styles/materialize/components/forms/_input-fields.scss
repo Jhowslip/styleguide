@@ -38,7 +38,7 @@ textarea.materialize-textarea {
   // General Styles
   background-color: transparent;
   box-shadow: none;
-  box-sizing: content-box;
+  box-sizing: border-box;
   border: none;
   border-bottom: $input-border;
   border-radius: 0;
@@ -281,19 +281,46 @@ textarea.materialize-textarea {
   }
 }
 
+.placeholder-content {
+  color: pink;
+  padding-right: rem(110);
+  text-align: right;
+}
 
 .button-inside-prefix {
   @extend .button-inside;
+ 
+ .input-on {
+  display: block;
+ }
     
   input[type=text] {
     padding-left: rem(32);
+    text-align: right;
+      padding-right: rem(110);
 
-    &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-      color: pink;
-      padding-right: rem(150);
+    // Chrome/Opera/Safari
+    &::-webkit-input-placeholder {
+      font-weight: 700;
+      text-align: right;
+    }
+    // Firefox 19+
+    &::-moz-placeholder {
+      font-weight: 700;
+      text-align: right;
+    }
+    // IE 10+
+    &:-ms-input-placeholder {
+      font-weight: 700;
+      text-align: right;
+    }
+    // Firefox 18-
+    &:-moz-placeholder {
+      font-weight: 700;
       text-align: right;
     }
   }
+
   .input-prefix {
     color: $input-disabled-color;
     font-size: rem(20);
