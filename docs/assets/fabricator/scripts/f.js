@@ -42,7 +42,7 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
@@ -390,9 +390,9 @@
 		fabricator.setInitialMenuState().menuToggle().allItemsToggles().singleItemToggle().buildColorChips().setActiveItem().bindCodeAutoSelect();
 	})();
 
-/***/ }),
+/***/ },
 /* 1 */
-/***/ (function(module, exports) {
+/***/ function(module, exports) {
 
 	/* http://prismjs.com/download.html?themes=prism&languages=markup+css+clike+javascript */
 	self = (typeof window !== 'undefined')
@@ -978,5 +978,5 @@
 	;
 
 
-/***/ })
+/***/ }
 /******/ ]);

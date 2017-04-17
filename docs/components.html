@@ -69,13 +69,16 @@
 					<a href="components.html" class="f-menu__heading">Components</a>
 					<ul>
 						<li>
-							<a href="components.html#button">Button</a>
+							<a href="components.html#buttons">Buttons</a>
 						</li>
 						<li>
 							<a href="components.html#dropdown">Dropdown</a>
 						</li>
 						<li>
 							<a href="components.html#input">Input</a>
+						</li>
+						<li>
+							<a href="components.html#inputs">Inputs</a>
 						</li>
 						<li>
 							<a href="components.html#typograph">Typograph</a>
@@ -128,126 +131,35 @@
 <h1 data-f-toggle="labels">Components</h1>
 
 
-<div class="f-item-group" id="button">
+<div class="f-item-group" id="buttons">
 
-	<div class="f-item-heading-group" data-f-toggle="labels">
-		<h2 class="f-item-heading">Button</h2>
-		<div class="f-item-controls" style="display: none;">
-			<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
-				<svg>
-					<use xlink:href="#f-icon-notes" />
-				</svg>
-			</span>
-			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
-				<svg>
-					<use xlink:href="#f-icon-code" />
-				</svg>
-			</span>
-		</div>
-	</div><div class="f-item-notes" data-f-toggle="notes">
-	<p>These are notes associated with this <code>button</code> component.</p>
-
-</div>
+	<div class="f-item-heading-group">
+		<h2 class="f-item-heading" data-f-toggle="labels">Buttons</h2>
+	</div>
+		<div class="f-item-group" id="buttons.button-with-icon">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Button With Icon</h3>
+				<div class="f-item-controls" style="display: none;">
+					
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div>
 <div class="f-item-preview">
 	<div class="row">
 	<div class="col s12">
-		<h4>Default Button</h4>
 		<p>
-			To use, place the following class <code>.button</code> and will be dispalyed the default button without effects. This button has a larger height for buttons that need more attention.
-		</p>
-		<p>
-			If you want a ripple effect, you can add <code>waves-effect</code> and <code>waves-light</code> and will appear on click action.
+			If you want add icons, place the following block code <code>.icon-copy left</code>
 		</p>
 	</div>
 	<div class="col s12">
 		<div class="preview">
 			<p class="title-code">Example:</p>
-			<button class="button">default without ripple</button>
-			<button class="waves-effect waves-light button">default with ripple</button>
-		</div>
-		<div class="code-snippet">
-			<p class="title-code">Code snippet:</p>
-			<pre class="language-markup">
-				<code class="language-markup">&lt;button class="button"&gt;default&lt;/button&gt;</code><br>
-				<code class="language-markup">&lt;button class="waves-effect waves-light button"&gt;default with ripple&lt;/button&gt;</code>
-			</pre>
-		</div>
-	</div>
-</div>
-
-<div class="row">
-	<div class="col s12">
-		<h4>Disabled Button</h4>
-		<p>To use, place the following class <code>.buton-disabled</code> or add attribute <code>disbaled</code> in the button.</p>
-	</div>
-	<div class="col s12">
-		<div class="preview">
-			<p class="title-code">Example:</p>
-			<button class="button-disabled">disabled</button>
-			<button class="button" disabled>disabled</button>
-		</div>
-		<div class="code-snippet">
-			<p class="title-code">Code snippet:</p>
-			<pre class="language-markup">
-				<code class="language-markup">&lt;button class="button-disabled"&gt;disabled&lt;/button&gt;</code><br/>
-				<code class="language-markup">&lt;button class="button" disabled&gt;disabled&lt;/button&gt;</code>
-			</pre>
-		</div>
-	</div>
-</div>
-
-<div class="row">
-	<div class="col s12">
-		<h4>Small Button</h4>
-		<p>To use, place the following class <code>.buton-disabled</code> or add attribute <code>disbaled</code> in the button</p>
-	</div>
-	<div class="col s12">
-		<div class="preview">
-			<p class="title-code">Example:</p>
-			<button class="waves-effect waves-light button-small">small</button>
-			<button class="waves-effect waves-light button-small-disabled" disabled>Small disabled</button>
-		</div>
-		<div class="code-snippet">
-			<p class="title-code">Code snippet:</p>
-			<pre class="language-markup">
-				<code class="language-markup">&lt;button class="waves-effect waves-light button-small"&gt;small&lt;/button&gt;</code><br>
-				<code class="language-markup">&lt;button class="waves-effect waves-light button-small-disabled"&gt;button-small-disabled&lt;/button&gt;</code>
-			</pre>
-		</div>
-	</div>
-</div>
-
-<div class="row">
-	<div class="col s12">
-		<h4>Secondary Button</h4>
-		<p>To use, place the following class <code>.buton-disabled</code> or add attribute <code>disbaled</code> in the button</p>
-	</div>
-	<div class="col s12">
-		<div class="preview">
-			<p class="title-code">Example:</p>
-			<button class="waves-effect waves-light secondary-button-disabled">Secondary</button>
-			<button class="waves-effect waves-light secondary-button">label</button>
-		</div>
-		<div class="code-snippet">
-			<p class="title-code">Code snippet:</p>
-			<pre class="language-markup">
-				<code class="language-markup">&lt;button class="waves-effect waves-light secondary-button"&gt;large&lt;/button&gt;</code><br>
-				<code class="language-markup">&lt;button class="waves-effect waves-light button-large-disabled"&gt;button-large-disabled&lt;/button&gt;</code>
-			</pre>
-		</div>
-	</div>
-</div>
-
-
-<div class="row">
-	<div class="col s12">
-		<h4>Button with Icon</h4>
-	</div>
-	<div class="col s12">
-		<div class="preview">
-			<p class="title-code">Example:</p>
-			<button class="button waves-effect waves-light">Default button with icon<i class="icon-copy left"></i></button>
-			<button class="secondary-button-disabled waves-effect waves-light">Disabled button<i class="icon-copy left"></i></button>
+			<button class="button waves-effect waves-light">Default button with icon<i class="icon-copy left"></i></button><br><br>
+			<button class="secondary-button-disabled waves-effect waves-light">Disabled button<i class="icon-copy left"></i></button><br><br>
 			<button class="secondary-button waves-effect waves-light">Secondary Button<i class="icon-copy left"></i></button>
 		</div>
 		<div class="code-snippet">
@@ -260,10 +172,290 @@
 		</div>
 	</div>
 </div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class&#x3D;&quot;row&quot;&gt;
+	&lt;div class&#x3D;&quot;col s12&quot;&gt;
+		&lt;p&gt;
+			If you want add icons, place the following block code &lt;code&gt;.icon-copy left&lt;/code&gt;
+		&lt;/p&gt;
+	&lt;/div&gt;
+	&lt;div class&#x3D;&quot;col s12&quot;&gt;
+		&lt;div class&#x3D;&quot;preview&quot;&gt;
+			&lt;p class&#x3D;&quot;title-code&quot;&gt;Example:&lt;/p&gt;
+			&lt;button class&#x3D;&quot;button waves-effect waves-light&quot;&gt;Default button with icon&lt;i class&#x3D;&quot;icon-copy left&quot;&gt;&lt;/i&gt;&lt;/button&gt;&lt;br&gt;&lt;br&gt;
+			&lt;button class&#x3D;&quot;secondary-button-disabled waves-effect waves-light&quot;&gt;Disabled button&lt;i class&#x3D;&quot;icon-copy left&quot;&gt;&lt;/i&gt;&lt;/button&gt;&lt;br&gt;&lt;br&gt;
+			&lt;button class&#x3D;&quot;secondary-button waves-effect waves-light&quot;&gt;Secondary Button&lt;i class&#x3D;&quot;icon-copy left&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+		&lt;/div&gt;
+		&lt;div class&#x3D;&quot;code-snippet&quot;&gt;
+			&lt;p class&#x3D;&quot;title-code&quot;&gt;Code snippet:&lt;/p&gt;
+			&lt;pre class&#x3D;&quot;language-markup&quot;&gt;
+				&lt;code class&#x3D;&quot;language-markup&quot;&gt;&amp;lt;button class&#x3D;&quot;button waves-effect waves-light&quot;&amp;gt;Default button with icon&amp;lt;/button&amp;gt;&lt;/code&gt;&lt;br&gt;
+				&lt;code class&#x3D;&quot;language-markup&quot;&gt;&amp;lt;button class&#x3D;&quot;secondary-button-disabled waves-effect waves-light&quot;&amp;gt;Disabled button&amp;lt;/button&amp;gt;&lt;/code&gt;&lt;br&gt;
+				&lt;code class&#x3D;&quot;language-markup&quot;&gt;&amp;lt;button class&#x3D;&quot;secondary-button waves-effect waves-light&quot;&amp;gt;Secondary Button&amp;lt;/button&amp;gt;&lt;/code&gt;&lt;br&gt;
+			&lt;/pre&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
 
-<div class="row">
+		</div>
+		<div class="f-item-group" id="buttons.default-button">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Default Button</h3>
+				<div class="f-item-controls" style="display: none;">
+					
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div>
+<div class="f-item-preview">
+	<div class="row">
 	<div class="col s12">
-		<h4>Button Tiny</h4>
+		<p>
+			To use, place the following class <code>.button</code> and will be dispalyed the default button without effects. This button has a larger height for buttons that need more attention.
+		</p>
+		<p>
+			If you want a ripple effect, you can add <code>waves-effect</code> and <code>waves-light</code> and will appear on click action.
+		</p>
+	</div>
+	<div class="col s12">
+		<div class="preview">
+			<p class="title-code">Example:</p>
+			<button class="button">default without ripple</button> <br /><br />
+			<button class="waves-effect waves-light button">default with ripple</button>
+		</div>
+		<div class="code-snippet">
+			<p class="title-code">Code snippet:</p>
+			<pre class="language-markup">
+				<code class="language-markup">&lt;button class="button"&gt;default&lt;/button&gt;</code><br>
+				<code class="language-markup">&lt;button class="waves-effect waves-light button"&gt;default with ripple&lt;/button&gt;</code>
+			</pre>
+		</div>
+	</div>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class&#x3D;&quot;row&quot;&gt;
+	&lt;div class&#x3D;&quot;col s12&quot;&gt;
+		&lt;p&gt;
+			To use, place the following class &lt;code&gt;.button&lt;/code&gt; and will be dispalyed the default button without effects. This button has a larger height for buttons that need more attention.
+		&lt;/p&gt;
+		&lt;p&gt;
+			If you want a ripple effect, you can add &lt;code&gt;waves-effect&lt;/code&gt; and &lt;code&gt;waves-light&lt;/code&gt; and will appear on click action.
+		&lt;/p&gt;
+	&lt;/div&gt;
+	&lt;div class&#x3D;&quot;col s12&quot;&gt;
+		&lt;div class&#x3D;&quot;preview&quot;&gt;
+			&lt;p class&#x3D;&quot;title-code&quot;&gt;Example:&lt;/p&gt;
+			&lt;button class&#x3D;&quot;button&quot;&gt;default without ripple&lt;/button&gt; &lt;br /&gt;&lt;br /&gt;
+			&lt;button class&#x3D;&quot;waves-effect waves-light button&quot;&gt;default with ripple&lt;/button&gt;
+		&lt;/div&gt;
+		&lt;div class&#x3D;&quot;code-snippet&quot;&gt;
+			&lt;p class&#x3D;&quot;title-code&quot;&gt;Code snippet:&lt;/p&gt;
+			&lt;pre class&#x3D;&quot;language-markup&quot;&gt;
+				&lt;code class&#x3D;&quot;language-markup&quot;&gt;&amp;lt;button class&#x3D;&quot;button&quot;&amp;gt;default&amp;lt;/button&amp;gt;&lt;/code&gt;&lt;br&gt;
+				&lt;code class&#x3D;&quot;language-markup&quot;&gt;&amp;lt;button class&#x3D;&quot;waves-effect waves-light button&quot;&amp;gt;default with ripple&amp;lt;/button&amp;gt;&lt;/code&gt;
+			&lt;/pre&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="buttons.disabled-buttons">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Disabled Buttons</h3>
+				<div class="f-item-controls" style="display: none;">
+					
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div>
+<div class="f-item-preview">
+	<div class="row">
+	<div class="col s12">
+		<p>To use, place the following class <code>.buton-disabled</code> or add attribute <code>disbaled</code> in the button.</p>
+	</div>
+	<div class="col s12">
+		<div class="preview">
+			<p class="title-code">Example:</p>
+			<button class="button-disabled">disabled</button> <br /><br />
+			<button class="button" disabled>disabled</button>
+		</div>
+		<div class="code-snippet">
+			<p class="title-code">Code snippet:</p>
+			<pre class="language-markup">
+				<code class="language-markup">&lt;button class="button-disabled"&gt;disabled&lt;/button&gt;</code><br/>
+				<code class="language-markup">&lt;button class="button" disabled&gt;disabled&lt;/button&gt;</code>
+			</pre>
+		</div>
+	</div>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class&#x3D;&quot;row&quot;&gt;
+	&lt;div class&#x3D;&quot;col s12&quot;&gt;
+		&lt;p&gt;To use, place the following class &lt;code&gt;.buton-disabled&lt;/code&gt; or add attribute &lt;code&gt;disbaled&lt;/code&gt; in the button.&lt;/p&gt;
+	&lt;/div&gt;
+	&lt;div class&#x3D;&quot;col s12&quot;&gt;
+		&lt;div class&#x3D;&quot;preview&quot;&gt;
+			&lt;p class&#x3D;&quot;title-code&quot;&gt;Example:&lt;/p&gt;
+			&lt;button class&#x3D;&quot;button-disabled&quot;&gt;disabled&lt;/button&gt; &lt;br /&gt;&lt;br /&gt;
+			&lt;button class&#x3D;&quot;button&quot; disabled&gt;disabled&lt;/button&gt;
+		&lt;/div&gt;
+		&lt;div class&#x3D;&quot;code-snippet&quot;&gt;
+			&lt;p class&#x3D;&quot;title-code&quot;&gt;Code snippet:&lt;/p&gt;
+			&lt;pre class&#x3D;&quot;language-markup&quot;&gt;
+				&lt;code class&#x3D;&quot;language-markup&quot;&gt;&amp;lt;button class&#x3D;&quot;button-disabled&quot;&amp;gt;disabled&amp;lt;/button&amp;gt;&lt;/code&gt;&lt;br/&gt;
+				&lt;code class&#x3D;&quot;language-markup&quot;&gt;&amp;lt;button class&#x3D;&quot;button&quot; disabled&amp;gt;disabled&amp;lt;/button&amp;gt;&lt;/code&gt;
+			&lt;/pre&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="buttons.secondary-button">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Secondary Button</h3>
+				<div class="f-item-controls" style="display: none;">
+					
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div>
+<div class="f-item-preview">
+	<div class="row">
+	<div class="col s12">
+		<p>
+			If you want to secondary button disable button place the following class <code>.secondary-button-disabled</code> and use <code>.secondary-button</code> to have the hover behaviour.
+		</p>
+	</div>
+	<div class="col s12">
+		<div class="preview">
+			<p class="title-code">Example:</p>
+			<button class="waves-effect waves-light secondary-button-disabled">Secondary</button><br /><br />
+			<button class="waves-effect waves-light secondary-button">label</button>
+		</div>
+		<div class="code-snippet">
+			<p class="title-code">Code snippet:</p>
+			<pre class="language-markup">
+				<code class="language-markup">&lt;button class="waves-effect waves-light secondary-button"&gt;large&lt;/button&gt;</code><br>
+				<code class="language-markup">&lt;button class="waves-effect waves-light button-large-disabled"&gt;button-large-disabled&lt;/button&gt;</code>
+			</pre>
+		</div>
+	</div>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class&#x3D;&quot;row&quot;&gt;
+	&lt;div class&#x3D;&quot;col s12&quot;&gt;
+		&lt;p&gt;
+			If you want to secondary button disable button place the following class &lt;code&gt;.secondary-button-disabled&lt;/code&gt; and use &lt;code&gt;.secondary-button&lt;/code&gt; to have the hover behaviour.
+		&lt;/p&gt;
+	&lt;/div&gt;
+	&lt;div class&#x3D;&quot;col s12&quot;&gt;
+		&lt;div class&#x3D;&quot;preview&quot;&gt;
+			&lt;p class&#x3D;&quot;title-code&quot;&gt;Example:&lt;/p&gt;
+			&lt;button class&#x3D;&quot;waves-effect waves-light secondary-button-disabled&quot;&gt;Secondary&lt;/button&gt;&lt;br /&gt;&lt;br /&gt;
+			&lt;button class&#x3D;&quot;waves-effect waves-light secondary-button&quot;&gt;label&lt;/button&gt;
+		&lt;/div&gt;
+		&lt;div class&#x3D;&quot;code-snippet&quot;&gt;
+			&lt;p class&#x3D;&quot;title-code&quot;&gt;Code snippet:&lt;/p&gt;
+			&lt;pre class&#x3D;&quot;language-markup&quot;&gt;
+				&lt;code class&#x3D;&quot;language-markup&quot;&gt;&amp;lt;button class&#x3D;&quot;waves-effect waves-light secondary-button&quot;&amp;gt;large&amp;lt;/button&amp;gt;&lt;/code&gt;&lt;br&gt;
+				&lt;code class&#x3D;&quot;language-markup&quot;&gt;&amp;lt;button class&#x3D;&quot;waves-effect waves-light button-large-disabled&quot;&amp;gt;button-large-disabled&amp;lt;/button&amp;gt;&lt;/code&gt;
+			&lt;/pre&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="buttons.small-button">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Small Button</h3>
+				<div class="f-item-controls" style="display: none;">
+					
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div>
+<div class="f-item-preview">
+	<div class="row">
+	<div class="col s12">
+		<p>To use, place the following class <code>.buton-disabled</code> or add attribute <code>disbaled</code> in the button.</p>
+	</div>
+	<div class="col s12">
+		<div class="preview">
+			<p class="title-code">Example:</p>
+			<button class="waves-effect waves-light button-small">small</button> <br /><br />
+			<button class="waves-effect waves-light button-small-disabled" disabled>Small disabled</button>
+		</div>
+		<div class="code-snippet">
+			<p class="title-code">Code snippet:</p>
+			<pre class="language-markup">
+				<code class="language-markup">&lt;button class="waves-effect waves-light button-small"&gt;small&lt;/button&gt;</code><br>
+				<code class="language-markup">&lt;button class="waves-effect waves-light button-small-disabled"&gt;button-small-disabled&lt;/button&gt;</code>
+			</pre>
+		</div>
+	</div>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class&#x3D;&quot;row&quot;&gt;
+	&lt;div class&#x3D;&quot;col s12&quot;&gt;
+		&lt;p&gt;To use, place the following class &lt;code&gt;.buton-disabled&lt;/code&gt; or add attribute &lt;code&gt;disbaled&lt;/code&gt; in the button.&lt;/p&gt;
+	&lt;/div&gt;
+	&lt;div class&#x3D;&quot;col s12&quot;&gt;
+		&lt;div class&#x3D;&quot;preview&quot;&gt;
+			&lt;p class&#x3D;&quot;title-code&quot;&gt;Example:&lt;/p&gt;
+			&lt;button class&#x3D;&quot;waves-effect waves-light button-small&quot;&gt;small&lt;/button&gt; &lt;br /&gt;&lt;br /&gt;
+			&lt;button class&#x3D;&quot;waves-effect waves-light button-small-disabled&quot; disabled&gt;Small disabled&lt;/button&gt;
+		&lt;/div&gt;
+		&lt;div class&#x3D;&quot;code-snippet&quot;&gt;
+			&lt;p class&#x3D;&quot;title-code&quot;&gt;Code snippet:&lt;/p&gt;
+			&lt;pre class&#x3D;&quot;language-markup&quot;&gt;
+				&lt;code class&#x3D;&quot;language-markup&quot;&gt;&amp;lt;button class&#x3D;&quot;waves-effect waves-light button-small&quot;&amp;gt;small&amp;lt;/button&amp;gt;&lt;/code&gt;&lt;br&gt;
+				&lt;code class&#x3D;&quot;language-markup&quot;&gt;&amp;lt;button class&#x3D;&quot;waves-effect waves-light button-small-disabled&quot;&amp;gt;button-small-disabled&amp;lt;/button&amp;gt;&lt;/code&gt;
+			&lt;/pre&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="buttons.tiny-button">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Tiny Button</h3>
+				<div class="f-item-controls" style="display: none;">
+					
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div>
+<div class="f-item-preview">
+	<div class="row">
+	<div class="col s12">
+		<p>
+			To use, place the following class <code>.button-tiny</code> or add attribute disbaled in the button.
+		</p>
 	</div>
 	<div class="col s12">
 		<div class="preview">
@@ -282,119 +474,9 @@
 <div class="f-item-code f-item-hidden" data-f-toggle="code">
 	<pre><code class="language-markup">&lt;div class&#x3D;&quot;row&quot;&gt;
 	&lt;div class&#x3D;&quot;col s12&quot;&gt;
-		&lt;h4&gt;Default Button&lt;/h4&gt;
 		&lt;p&gt;
-			To use, place the following class &lt;code&gt;.button&lt;/code&gt; and will be dispalyed the default button without effects. This button has a larger height for buttons that need more attention.
+			To use, place the following class &lt;code&gt;.button-tiny&lt;/code&gt; or add attribute disbaled in the button.
 		&lt;/p&gt;
-		&lt;p&gt;
-			If you want a ripple effect, you can add &lt;code&gt;waves-effect&lt;/code&gt; and &lt;code&gt;waves-light&lt;/code&gt; and will appear on click action.
-		&lt;/p&gt;
-	&lt;/div&gt;
-	&lt;div class&#x3D;&quot;col s12&quot;&gt;
-		&lt;div class&#x3D;&quot;preview&quot;&gt;
-			&lt;p class&#x3D;&quot;title-code&quot;&gt;Example:&lt;/p&gt;
-			&lt;button class&#x3D;&quot;button&quot;&gt;default without ripple&lt;/button&gt;
-			&lt;button class&#x3D;&quot;waves-effect waves-light button&quot;&gt;default with ripple&lt;/button&gt;
-		&lt;/div&gt;
-		&lt;div class&#x3D;&quot;code-snippet&quot;&gt;
-			&lt;p class&#x3D;&quot;title-code&quot;&gt;Code snippet:&lt;/p&gt;
-			&lt;pre class&#x3D;&quot;language-markup&quot;&gt;
-				&lt;code class&#x3D;&quot;language-markup&quot;&gt;&amp;lt;button class&#x3D;&quot;button&quot;&amp;gt;default&amp;lt;/button&amp;gt;&lt;/code&gt;&lt;br&gt;
-				&lt;code class&#x3D;&quot;language-markup&quot;&gt;&amp;lt;button class&#x3D;&quot;waves-effect waves-light button&quot;&amp;gt;default with ripple&amp;lt;/button&amp;gt;&lt;/code&gt;
-			&lt;/pre&gt;
-		&lt;/div&gt;
-	&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class&#x3D;&quot;row&quot;&gt;
-	&lt;div class&#x3D;&quot;col s12&quot;&gt;
-		&lt;h4&gt;Disabled Button&lt;/h4&gt;
-		&lt;p&gt;To use, place the following class &lt;code&gt;.buton-disabled&lt;/code&gt; or add attribute &lt;code&gt;disbaled&lt;/code&gt; in the button.&lt;/p&gt;
-	&lt;/div&gt;
-	&lt;div class&#x3D;&quot;col s12&quot;&gt;
-		&lt;div class&#x3D;&quot;preview&quot;&gt;
-			&lt;p class&#x3D;&quot;title-code&quot;&gt;Example:&lt;/p&gt;
-			&lt;button class&#x3D;&quot;button-disabled&quot;&gt;disabled&lt;/button&gt;
-			&lt;button class&#x3D;&quot;button&quot; disabled&gt;disabled&lt;/button&gt;
-		&lt;/div&gt;
-		&lt;div class&#x3D;&quot;code-snippet&quot;&gt;
-			&lt;p class&#x3D;&quot;title-code&quot;&gt;Code snippet:&lt;/p&gt;
-			&lt;pre class&#x3D;&quot;language-markup&quot;&gt;
-				&lt;code class&#x3D;&quot;language-markup&quot;&gt;&amp;lt;button class&#x3D;&quot;button-disabled&quot;&amp;gt;disabled&amp;lt;/button&amp;gt;&lt;/code&gt;&lt;br/&gt;
-				&lt;code class&#x3D;&quot;language-markup&quot;&gt;&amp;lt;button class&#x3D;&quot;button&quot; disabled&amp;gt;disabled&amp;lt;/button&amp;gt;&lt;/code&gt;
-			&lt;/pre&gt;
-		&lt;/div&gt;
-	&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class&#x3D;&quot;row&quot;&gt;
-	&lt;div class&#x3D;&quot;col s12&quot;&gt;
-		&lt;h4&gt;Small Button&lt;/h4&gt;
-		&lt;p&gt;To use, place the following class &lt;code&gt;.buton-disabled&lt;/code&gt; or add attribute &lt;code&gt;disbaled&lt;/code&gt; in the button&lt;/p&gt;
-	&lt;/div&gt;
-	&lt;div class&#x3D;&quot;col s12&quot;&gt;
-		&lt;div class&#x3D;&quot;preview&quot;&gt;
-			&lt;p class&#x3D;&quot;title-code&quot;&gt;Example:&lt;/p&gt;
-			&lt;button class&#x3D;&quot;waves-effect waves-light button-small&quot;&gt;small&lt;/button&gt;
-			&lt;button class&#x3D;&quot;waves-effect waves-light button-small-disabled&quot; disabled&gt;Small disabled&lt;/button&gt;
-		&lt;/div&gt;
-		&lt;div class&#x3D;&quot;code-snippet&quot;&gt;
-			&lt;p class&#x3D;&quot;title-code&quot;&gt;Code snippet:&lt;/p&gt;
-			&lt;pre class&#x3D;&quot;language-markup&quot;&gt;
-				&lt;code class&#x3D;&quot;language-markup&quot;&gt;&amp;lt;button class&#x3D;&quot;waves-effect waves-light button-small&quot;&amp;gt;small&amp;lt;/button&amp;gt;&lt;/code&gt;&lt;br&gt;
-				&lt;code class&#x3D;&quot;language-markup&quot;&gt;&amp;lt;button class&#x3D;&quot;waves-effect waves-light button-small-disabled&quot;&amp;gt;button-small-disabled&amp;lt;/button&amp;gt;&lt;/code&gt;
-			&lt;/pre&gt;
-		&lt;/div&gt;
-	&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class&#x3D;&quot;row&quot;&gt;
-	&lt;div class&#x3D;&quot;col s12&quot;&gt;
-		&lt;h4&gt;Secondary Button&lt;/h4&gt;
-		&lt;p&gt;To use, place the following class &lt;code&gt;.buton-disabled&lt;/code&gt; or add attribute &lt;code&gt;disbaled&lt;/code&gt; in the button&lt;/p&gt;
-	&lt;/div&gt;
-	&lt;div class&#x3D;&quot;col s12&quot;&gt;
-		&lt;div class&#x3D;&quot;preview&quot;&gt;
-			&lt;p class&#x3D;&quot;title-code&quot;&gt;Example:&lt;/p&gt;
-			&lt;button class&#x3D;&quot;waves-effect waves-light secondary-button-disabled&quot;&gt;Secondary&lt;/button&gt;
-			&lt;button class&#x3D;&quot;waves-effect waves-light secondary-button&quot;&gt;label&lt;/button&gt;
-		&lt;/div&gt;
-		&lt;div class&#x3D;&quot;code-snippet&quot;&gt;
-			&lt;p class&#x3D;&quot;title-code&quot;&gt;Code snippet:&lt;/p&gt;
-			&lt;pre class&#x3D;&quot;language-markup&quot;&gt;
-				&lt;code class&#x3D;&quot;language-markup&quot;&gt;&amp;lt;button class&#x3D;&quot;waves-effect waves-light secondary-button&quot;&amp;gt;large&amp;lt;/button&amp;gt;&lt;/code&gt;&lt;br&gt;
-				&lt;code class&#x3D;&quot;language-markup&quot;&gt;&amp;lt;button class&#x3D;&quot;waves-effect waves-light button-large-disabled&quot;&amp;gt;button-large-disabled&amp;lt;/button&amp;gt;&lt;/code&gt;
-			&lt;/pre&gt;
-		&lt;/div&gt;
-	&lt;/div&gt;
-&lt;/div&gt;
-
-
-&lt;div class&#x3D;&quot;row&quot;&gt;
-	&lt;div class&#x3D;&quot;col s12&quot;&gt;
-		&lt;h4&gt;Button with Icon&lt;/h4&gt;
-	&lt;/div&gt;
-	&lt;div class&#x3D;&quot;col s12&quot;&gt;
-		&lt;div class&#x3D;&quot;preview&quot;&gt;
-			&lt;p class&#x3D;&quot;title-code&quot;&gt;Example:&lt;/p&gt;
-			&lt;button class&#x3D;&quot;button waves-effect waves-light&quot;&gt;Default button with icon&lt;i class&#x3D;&quot;icon-copy left&quot;&gt;&lt;/i&gt;&lt;/button&gt;
-			&lt;button class&#x3D;&quot;secondary-button-disabled waves-effect waves-light&quot;&gt;Disabled button&lt;i class&#x3D;&quot;icon-copy left&quot;&gt;&lt;/i&gt;&lt;/button&gt;
-			&lt;button class&#x3D;&quot;secondary-button waves-effect waves-light&quot;&gt;Secondary Button&lt;i class&#x3D;&quot;icon-copy left&quot;&gt;&lt;/i&gt;&lt;/button&gt;
-		&lt;/div&gt;
-		&lt;div class&#x3D;&quot;code-snippet&quot;&gt;
-			&lt;p class&#x3D;&quot;title-code&quot;&gt;Code snippet:&lt;/p&gt;
-			&lt;pre class&#x3D;&quot;language-markup&quot;&gt;
-				&lt;code class&#x3D;&quot;language-markup&quot;&gt;&amp;lt;button class&#x3D;&quot;button waves-effect waves-light&quot;&amp;gt;Default button with icon&amp;lt;/button&amp;gt;&lt;/code&gt;&lt;br&gt;
-				&lt;code class&#x3D;&quot;language-markup&quot;&gt;&amp;lt;button class&#x3D;&quot;secondary-button-disabled waves-effect waves-light&quot;&amp;gt;Disabled button&amp;lt;/button&amp;gt;&lt;/code&gt;&lt;br&gt;
-				&lt;code class&#x3D;&quot;language-markup&quot;&gt;&amp;lt;button class&#x3D;&quot;secondary-button waves-effect waves-light&quot;&amp;gt;Secondary Button&amp;lt;/button&amp;gt;&lt;/code&gt;&lt;br&gt;
-			&lt;/pre&gt;
-		&lt;/div&gt;
-	&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class&#x3D;&quot;row&quot;&gt;
-	&lt;div class&#x3D;&quot;col s12&quot;&gt;
-		&lt;h4&gt;Button Tiny&lt;/h4&gt;
 	&lt;/div&gt;
 	&lt;div class&#x3D;&quot;col s12&quot;&gt;
 		&lt;div class&#x3D;&quot;preview&quot;&gt;
@@ -411,6 +493,7 @@
 &lt;/div&gt;</code></pre>
 </div>
 
+		</div>
 
 </div>
 
@@ -564,183 +647,8 @@
 	</div>
 </div>
 
-<div class="row">
-	<div class="col s12">
-		<h4>Input Disabled</h4>
-		<p></p>
-		<div class="preview">
-			<p class="title-code">Example:</p>
-			<div class="row">
-				<div class="input-field col s12">
-					<input id="full_name" type="text" disabled>
-					<label for="full_name">Full Name</label>
-				</div>
-			</div>
-		</div>
-		<div class="code-snippet">
-			<p class="title-code">Code snippet:</p>
-			<pre class="language-markup">
-				<code class="language-markup">&lt;div&gt;</code><br>
-				&nbsp;<code class="language-markup">&lt;input id="full_name" type="text" disabled&gt;</code><br>
-				&nbsp;<code class="language-markup">&lt;label for="full_name"&gt;Full Name&lt;/label&gt;</code><br>
-				<code class="language-markup">&lt;/div&gt;</code>
-			</pre>
-		</div>
-	</div>
-</div>
-
-<div class="row">
-	<div class="col s12">
-		<h4>Input With Validation</h4>
-		<p>
-			The validate class leverages HTML5 validation and will add a <code>valid</code> and <code>invalid</code> class accordingly. If you don't want the Green and Red validation states, just remove the validate class from your inputs.
-		</p>
-		<div class="preview">
-			<p class="title-code">Example:</p>
-			<div class="row">
-				<div class="input-field col s12">
-					<input id="full_name" type="text" class="validate">
-					<label for="full_name">Full Name</label>
-
-					<div class="feedback valid">
-						<div class="row">
-							<div class="col no-padding">
-								<i class="icon-checked"></i>
-							</div>
-							<div class="col s11 no-padding">
-								<span class="message">
-	  	        		Valid name ;P
-								</span>
-							</div>
-						</div>
-					</div>
-
-					<div class="feedback error">
-						<div class="row">
-							<div class="col no-padding">
-								<i class="icon-error"></i>
-							</div>
-							<div class="col s11 no-padding">
-								<span class="message">
-		          		Wrong name format
-								</span>
-							</div>
-						</div>
-					</div>
-					<div class="feedback warning">
-						<div class="row">
-							<div class="col no-padding">
-								<i class="icon-exclamation"></i>
-							</div>
-							<div>
-								<span class="message">
-          				Name cannot contain number
-								</span>
-							</div>
-						</div>
-					</div>
-					<div class="feedback tip">
-						<div class="row">
-							<div class="col s12 no-padding">
-								<span class="tip-message">
-		          		Recusandae voluptatibus consequuntur eius. Fugit saepe ex, porro laudantium molestiae laborum dolore vel doloribus, pariatur, quis eligendi. Excepturi itaque quo, dolorum tempore?
-								</span>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="code-snippet">
-			<p class="title-code">Code snippet:</p>
-			<pre class="language-markup">
-				<code class="language-markup">&lt;div&gt;</code><br>
-				&nbsp;<code class="language-markup">&lt;input id="full_name" type="text" class="validate"&gt;</code><br>
-				&nbsp;<code class="language-markup">&lt;label for="full_name"&gt;Full Name&lt;/label&gt;</code><br>
-				<code class="language-markup">&lt;/div&gt;</code>
-			</pre>
-		</div>
-	</div>
-</div>
-
-<div class="row">
-	<div class="col s12">
-		<h4>Input button inside</h4>
-		<p>
-			The validate class leverages HTML5 validation and will add a <code>valid</code> and <code>invalid</code> class accordingly. If you don't want the Green and Red validation states, just remove the validate class from your inputs.
-		</p>
-		<div class="preview">
-			<p class="title-code">Example:</p>
-			<div class="row">
-				<div class="input-field button-inside col s12">
-					<input id="full_name" type="text" class="sibling-button validate">
-					<label for="full_name">Full Name</label>
-					<div class="input-on">
-						<button type="submit" class="waves-effect waves-light">submit</button>
-					</div>
-
-					<div class="feedback valid">
-						<div class="row">
-							<div class="col no-padding">
-								<i class="icon-checked"></i>
-							</div>
-							<div class="col s11 no-padding">
-								<span class="message">
-	  	        		Valid name ;P
-								</span>
-							</div>
-						</div>
-					</div>
-
-					<div class="feedback error">
-						<div class="row">
-							<div class="col no-padding">
-								<i class="icon-error"></i>
-							</div>
-							<div class="col s11 no-padding">
-								<span class="message">
-		          		Wrong name format
-								</span>
-							</div>
-						</div>
-					</div>
-					<div class="feedback warning">
-						<div class="row">
-							<div class="col no-padding">
-								<i class="icon-exclamation"></i>
-							</div>
-							<div>
-								<span class="message">
-          				Name cannot contain number
-								</span>
-							</div>
-						</div>
-					</div>
-					<div class="feedback tip">
-						<div class="row">
-							<div class="col s12 no-padding">
-								<span class="tip-message">
-		          		Recusandae voluptatibus consequuntur eius. Fugit saepe ex, porro laudantium molestiae laborum dolore vel doloribus, pariatur, quis eligendi. Excepturi itaque quo, dolorum tempore?
-								</span>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="code-snippet">
-			<p class="title-code">Code snippet:</p>
-			<pre class="language-markup">
-				<code class="language-markup">&lt;div&gt;</code><br>
-				&nbsp;<code class="language-markup">&lt;input id="full_name" type="text" class="validate"&gt;</code><br>
-				&nbsp;<code class="language-markup">&lt;label for="full_name"&gt;Full Name&lt;/label&gt;</code><br>
-				<code class="language-markup">&lt;/div&gt;</code>
-			</pre>
-		</div>
 
 
-	</div>
-</div>
 
 <div class="row">
 	<div class="col s12">
@@ -820,8 +728,6 @@
 
 	</div>
 </div>
-
-
 
 <div class="row">
 	<div class="col s12">
@@ -913,183 +819,8 @@
 	&lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div class&#x3D;&quot;row&quot;&gt;
-	&lt;div class&#x3D;&quot;col s12&quot;&gt;
-		&lt;h4&gt;Input Disabled&lt;/h4&gt;
-		&lt;p&gt;&lt;/p&gt;
-		&lt;div class&#x3D;&quot;preview&quot;&gt;
-			&lt;p class&#x3D;&quot;title-code&quot;&gt;Example:&lt;/p&gt;
-			&lt;div class&#x3D;&quot;row&quot;&gt;
-				&lt;div class&#x3D;&quot;input-field col s12&quot;&gt;
-					&lt;input id&#x3D;&quot;full_name&quot; type&#x3D;&quot;text&quot; disabled&gt;
-					&lt;label for&#x3D;&quot;full_name&quot;&gt;Full Name&lt;/label&gt;
-				&lt;/div&gt;
-			&lt;/div&gt;
-		&lt;/div&gt;
-		&lt;div class&#x3D;&quot;code-snippet&quot;&gt;
-			&lt;p class&#x3D;&quot;title-code&quot;&gt;Code snippet:&lt;/p&gt;
-			&lt;pre class&#x3D;&quot;language-markup&quot;&gt;
-				&lt;code class&#x3D;&quot;language-markup&quot;&gt;&amp;lt;div&amp;gt;&lt;/code&gt;&lt;br&gt;
-				&amp;nbsp;&lt;code class&#x3D;&quot;language-markup&quot;&gt;&amp;lt;input id&#x3D;&quot;full_name&quot; type&#x3D;&quot;text&quot; disabled&amp;gt;&lt;/code&gt;&lt;br&gt;
-				&amp;nbsp;&lt;code class&#x3D;&quot;language-markup&quot;&gt;&amp;lt;label for&#x3D;&quot;full_name&quot;&amp;gt;Full Name&amp;lt;/label&amp;gt;&lt;/code&gt;&lt;br&gt;
-				&lt;code class&#x3D;&quot;language-markup&quot;&gt;&amp;lt;/div&amp;gt;&lt;/code&gt;
-			&lt;/pre&gt;
-		&lt;/div&gt;
-	&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class&#x3D;&quot;row&quot;&gt;
-	&lt;div class&#x3D;&quot;col s12&quot;&gt;
-		&lt;h4&gt;Input With Validation&lt;/h4&gt;
-		&lt;p&gt;
-			The validate class leverages HTML5 validation and will add a &lt;code&gt;valid&lt;/code&gt; and &lt;code&gt;invalid&lt;/code&gt; class accordingly. If you don&#x27;t want the Green and Red validation states, just remove the validate class from your inputs.
-		&lt;/p&gt;
-		&lt;div class&#x3D;&quot;preview&quot;&gt;
-			&lt;p class&#x3D;&quot;title-code&quot;&gt;Example:&lt;/p&gt;
-			&lt;div class&#x3D;&quot;row&quot;&gt;
-				&lt;div class&#x3D;&quot;input-field col s12&quot;&gt;
-					&lt;input id&#x3D;&quot;full_name&quot; type&#x3D;&quot;text&quot; class&#x3D;&quot;validate&quot;&gt;
-					&lt;label for&#x3D;&quot;full_name&quot;&gt;Full Name&lt;/label&gt;
-
-					&lt;div class&#x3D;&quot;feedback valid&quot;&gt;
-						&lt;div class&#x3D;&quot;row&quot;&gt;
-							&lt;div class&#x3D;&quot;col no-padding&quot;&gt;
-								&lt;i class&#x3D;&quot;icon-checked&quot;&gt;&lt;/i&gt;
-							&lt;/div&gt;
-							&lt;div class&#x3D;&quot;col s11 no-padding&quot;&gt;
-								&lt;span class&#x3D;&quot;message&quot;&gt;
-	  	        		Valid name ;P
-								&lt;/span&gt;
-							&lt;/div&gt;
-						&lt;/div&gt;
-					&lt;/div&gt;
-
-					&lt;div class&#x3D;&quot;feedback error&quot;&gt;
-						&lt;div class&#x3D;&quot;row&quot;&gt;
-							&lt;div class&#x3D;&quot;col no-padding&quot;&gt;
-								&lt;i class&#x3D;&quot;icon-error&quot;&gt;&lt;/i&gt;
-							&lt;/div&gt;
-							&lt;div class&#x3D;&quot;col s11 no-padding&quot;&gt;
-								&lt;span class&#x3D;&quot;message&quot;&gt;
-		          		Wrong name format
-								&lt;/span&gt;
-							&lt;/div&gt;
-						&lt;/div&gt;
-					&lt;/div&gt;
-					&lt;div class&#x3D;&quot;feedback warning&quot;&gt;
-						&lt;div class&#x3D;&quot;row&quot;&gt;
-							&lt;div class&#x3D;&quot;col no-padding&quot;&gt;
-								&lt;i class&#x3D;&quot;icon-exclamation&quot;&gt;&lt;/i&gt;
-							&lt;/div&gt;
-							&lt;div&gt;
-								&lt;span class&#x3D;&quot;message&quot;&gt;
-          				Name cannot contain number
-								&lt;/span&gt;
-							&lt;/div&gt;
-						&lt;/div&gt;
-					&lt;/div&gt;
-					&lt;div class&#x3D;&quot;feedback tip&quot;&gt;
-						&lt;div class&#x3D;&quot;row&quot;&gt;
-							&lt;div class&#x3D;&quot;col s12 no-padding&quot;&gt;
-								&lt;span class&#x3D;&quot;tip-message&quot;&gt;
-		          		Recusandae voluptatibus consequuntur eius. Fugit saepe ex, porro laudantium molestiae laborum dolore vel doloribus, pariatur, quis eligendi. Excepturi itaque quo, dolorum tempore?
-								&lt;/span&gt;
-							&lt;/div&gt;
-						&lt;/div&gt;
-					&lt;/div&gt;
-				&lt;/div&gt;
-			&lt;/div&gt;
-		&lt;/div&gt;
-		&lt;div class&#x3D;&quot;code-snippet&quot;&gt;
-			&lt;p class&#x3D;&quot;title-code&quot;&gt;Code snippet:&lt;/p&gt;
-			&lt;pre class&#x3D;&quot;language-markup&quot;&gt;
-				&lt;code class&#x3D;&quot;language-markup&quot;&gt;&amp;lt;div&amp;gt;&lt;/code&gt;&lt;br&gt;
-				&amp;nbsp;&lt;code class&#x3D;&quot;language-markup&quot;&gt;&amp;lt;input id&#x3D;&quot;full_name&quot; type&#x3D;&quot;text&quot; class&#x3D;&quot;validate&quot;&amp;gt;&lt;/code&gt;&lt;br&gt;
-				&amp;nbsp;&lt;code class&#x3D;&quot;language-markup&quot;&gt;&amp;lt;label for&#x3D;&quot;full_name&quot;&amp;gt;Full Name&amp;lt;/label&amp;gt;&lt;/code&gt;&lt;br&gt;
-				&lt;code class&#x3D;&quot;language-markup&quot;&gt;&amp;lt;/div&amp;gt;&lt;/code&gt;
-			&lt;/pre&gt;
-		&lt;/div&gt;
-	&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class&#x3D;&quot;row&quot;&gt;
-	&lt;div class&#x3D;&quot;col s12&quot;&gt;
-		&lt;h4&gt;Input button inside&lt;/h4&gt;
-		&lt;p&gt;
-			The validate class leverages HTML5 validation and will add a &lt;code&gt;valid&lt;/code&gt; and &lt;code&gt;invalid&lt;/code&gt; class accordingly. If you don&#x27;t want the Green and Red validation states, just remove the validate class from your inputs.
-		&lt;/p&gt;
-		&lt;div class&#x3D;&quot;preview&quot;&gt;
-			&lt;p class&#x3D;&quot;title-code&quot;&gt;Example:&lt;/p&gt;
-			&lt;div class&#x3D;&quot;row&quot;&gt;
-				&lt;div class&#x3D;&quot;input-field button-inside col s12&quot;&gt;
-					&lt;input id&#x3D;&quot;full_name&quot; type&#x3D;&quot;text&quot; class&#x3D;&quot;sibling-button validate&quot;&gt;
-					&lt;label for&#x3D;&quot;full_name&quot;&gt;Full Name&lt;/label&gt;
-					&lt;div class&#x3D;&quot;input-on&quot;&gt;
-						&lt;button type&#x3D;&quot;submit&quot; class&#x3D;&quot;waves-effect waves-light&quot;&gt;submit&lt;/button&gt;
-					&lt;/div&gt;
-
-					&lt;div class&#x3D;&quot;feedback valid&quot;&gt;
-						&lt;div class&#x3D;&quot;row&quot;&gt;
-							&lt;div class&#x3D;&quot;col no-padding&quot;&gt;
-								&lt;i class&#x3D;&quot;icon-checked&quot;&gt;&lt;/i&gt;
-							&lt;/div&gt;
-							&lt;div class&#x3D;&quot;col s11 no-padding&quot;&gt;
-								&lt;span class&#x3D;&quot;message&quot;&gt;
-	  	        		Valid name ;P
-								&lt;/span&gt;
-							&lt;/div&gt;
-						&lt;/div&gt;
-					&lt;/div&gt;
-
-					&lt;div class&#x3D;&quot;feedback error&quot;&gt;
-						&lt;div class&#x3D;&quot;row&quot;&gt;
-							&lt;div class&#x3D;&quot;col no-padding&quot;&gt;
-								&lt;i class&#x3D;&quot;icon-error&quot;&gt;&lt;/i&gt;
-							&lt;/div&gt;
-							&lt;div class&#x3D;&quot;col s11 no-padding&quot;&gt;
-								&lt;span class&#x3D;&quot;message&quot;&gt;
-		          		Wrong name format
-								&lt;/span&gt;
-							&lt;/div&gt;
-						&lt;/div&gt;
-					&lt;/div&gt;
-					&lt;div class&#x3D;&quot;feedback warning&quot;&gt;
-						&lt;div class&#x3D;&quot;row&quot;&gt;
-							&lt;div class&#x3D;&quot;col no-padding&quot;&gt;
-								&lt;i class&#x3D;&quot;icon-exclamation&quot;&gt;&lt;/i&gt;
-							&lt;/div&gt;
-							&lt;div&gt;
-								&lt;span class&#x3D;&quot;message&quot;&gt;
-          				Name cannot contain number
-								&lt;/span&gt;
-							&lt;/div&gt;
-						&lt;/div&gt;
-					&lt;/div&gt;
-					&lt;div class&#x3D;&quot;feedback tip&quot;&gt;
-						&lt;div class&#x3D;&quot;row&quot;&gt;
-							&lt;div class&#x3D;&quot;col s12 no-padding&quot;&gt;
-								&lt;span class&#x3D;&quot;tip-message&quot;&gt;
-		          		Recusandae voluptatibus consequuntur eius. Fugit saepe ex, porro laudantium molestiae laborum dolore vel doloribus, pariatur, quis eligendi. Excepturi itaque quo, dolorum tempore?
-								&lt;/span&gt;
-							&lt;/div&gt;
-						&lt;/div&gt;
-					&lt;/div&gt;
-				&lt;/div&gt;
-			&lt;/div&gt;
-		&lt;/div&gt;
-		&lt;div class&#x3D;&quot;code-snippet&quot;&gt;
-			&lt;p class&#x3D;&quot;title-code&quot;&gt;Code snippet:&lt;/p&gt;
-			&lt;pre class&#x3D;&quot;language-markup&quot;&gt;
-				&lt;code class&#x3D;&quot;language-markup&quot;&gt;&amp;lt;div&amp;gt;&lt;/code&gt;&lt;br&gt;
-				&amp;nbsp;&lt;code class&#x3D;&quot;language-markup&quot;&gt;&amp;lt;input id&#x3D;&quot;full_name&quot; type&#x3D;&quot;text&quot; class&#x3D;&quot;validate&quot;&amp;gt;&lt;/code&gt;&lt;br&gt;
-				&amp;nbsp;&lt;code class&#x3D;&quot;language-markup&quot;&gt;&amp;lt;label for&#x3D;&quot;full_name&quot;&amp;gt;Full Name&amp;lt;/label&amp;gt;&lt;/code&gt;&lt;br&gt;
-				&lt;code class&#x3D;&quot;language-markup&quot;&gt;&amp;lt;/div&amp;gt;&lt;/code&gt;
-			&lt;/pre&gt;
-		&lt;/div&gt;
 
 
-	&lt;/div&gt;
-&lt;/div&gt;
 
 &lt;div class&#x3D;&quot;row&quot;&gt;
 	&lt;div class&#x3D;&quot;col s12&quot;&gt;
@@ -1169,8 +900,6 @@
 
 	&lt;/div&gt;
 &lt;/div&gt;
-
-
 
 &lt;div class&#x3D;&quot;row&quot;&gt;
 	&lt;div class&#x3D;&quot;col s12&quot;&gt;
@@ -1253,6 +982,419 @@
 &lt;/div&gt;</code></pre>
 </div>
 
+
+</div>
+
+
+<div class="f-item-group" id="inputs">
+
+	<div class="f-item-heading-group">
+		<h2 class="f-item-heading" data-f-toggle="labels">Inputs</h2>
+	</div>
+		<div class="f-item-group" id="inputs.input-button-inside">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Input Button Inside</h3>
+				<div class="f-item-controls" style="display: none;">
+					
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div>
+<div class="f-item-preview">
+	<div class="row">
+	<div class="col s12">
+		<h4>Input button inside</h4>
+		<p>
+			The validate class leverages HTML5 validation and will add a <code>valid</code> and <code>invalid</code> class accordingly. If you don't want the Green and Red validation states, just remove the validate class from your inputs.
+		</p>
+		<div class="preview">
+			<p class="title-code">Example:</p>
+			<div class="row">
+				<div class="input-field button-inside col s12">
+					<input id="full_name" type="text" class="sibling-button validate">
+					<label for="full_name">Full Name</label>
+					<div class="input-on">
+						<button type="submit" class="waves-effect waves-light">submit</button>
+					</div>
+
+					<div class="feedback valid">
+						<div class="row">
+							<div class="col no-padding">
+								<i class="icon-checked"></i>
+							</div>
+							<div class="col s11 no-padding">
+								<span class="message">
+	  	        		Valid name ;P
+								</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="feedback error">
+						<div class="row">
+							<div class="col no-padding">
+								<i class="icon-error"></i>
+							</div>
+							<div class="col s11 no-padding">
+								<span class="message">
+		          		Wrong name format
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="feedback warning">
+						<div class="row">
+							<div class="col no-padding">
+								<i class="icon-exclamation"></i>
+							</div>
+							<div>
+								<span class="message">
+          				Name cannot contain number
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="feedback tip">
+						<div class="row">
+							<div class="col s12 no-padding">
+								<span class="tip-message">
+		          		Recusandae voluptatibus consequuntur eius. Fugit saepe ex, porro laudantium molestiae laborum dolore vel doloribus, pariatur, quis eligendi. Excepturi itaque quo, dolorum tempore?
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="code-snippet">
+			<p class="title-code">Code snippet:</p>
+			<pre class="language-markup">
+				<code class="language-markup">&lt;div&gt;</code><br>
+				&nbsp;<code class="language-markup">&lt;input id="full_name" type="text" class="validate"&gt;</code><br>
+				&nbsp;<code class="language-markup">&lt;label for="full_name"&gt;Full Name&lt;/label&gt;</code><br>
+				<code class="language-markup">&lt;/div&gt;</code>
+			</pre>
+		</div>
+
+
+	</div>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class&#x3D;&quot;row&quot;&gt;
+	&lt;div class&#x3D;&quot;col s12&quot;&gt;
+		&lt;h4&gt;Input button inside&lt;/h4&gt;
+		&lt;p&gt;
+			The validate class leverages HTML5 validation and will add a &lt;code&gt;valid&lt;/code&gt; and &lt;code&gt;invalid&lt;/code&gt; class accordingly. If you don&#x27;t want the Green and Red validation states, just remove the validate class from your inputs.
+		&lt;/p&gt;
+		&lt;div class&#x3D;&quot;preview&quot;&gt;
+			&lt;p class&#x3D;&quot;title-code&quot;&gt;Example:&lt;/p&gt;
+			&lt;div class&#x3D;&quot;row&quot;&gt;
+				&lt;div class&#x3D;&quot;input-field button-inside col s12&quot;&gt;
+					&lt;input id&#x3D;&quot;full_name&quot; type&#x3D;&quot;text&quot; class&#x3D;&quot;sibling-button validate&quot;&gt;
+					&lt;label for&#x3D;&quot;full_name&quot;&gt;Full Name&lt;/label&gt;
+					&lt;div class&#x3D;&quot;input-on&quot;&gt;
+						&lt;button type&#x3D;&quot;submit&quot; class&#x3D;&quot;waves-effect waves-light&quot;&gt;submit&lt;/button&gt;
+					&lt;/div&gt;
+
+					&lt;div class&#x3D;&quot;feedback valid&quot;&gt;
+						&lt;div class&#x3D;&quot;row&quot;&gt;
+							&lt;div class&#x3D;&quot;col no-padding&quot;&gt;
+								&lt;i class&#x3D;&quot;icon-checked&quot;&gt;&lt;/i&gt;
+							&lt;/div&gt;
+							&lt;div class&#x3D;&quot;col s11 no-padding&quot;&gt;
+								&lt;span class&#x3D;&quot;message&quot;&gt;
+	  	        		Valid name ;P
+								&lt;/span&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+
+					&lt;div class&#x3D;&quot;feedback error&quot;&gt;
+						&lt;div class&#x3D;&quot;row&quot;&gt;
+							&lt;div class&#x3D;&quot;col no-padding&quot;&gt;
+								&lt;i class&#x3D;&quot;icon-error&quot;&gt;&lt;/i&gt;
+							&lt;/div&gt;
+							&lt;div class&#x3D;&quot;col s11 no-padding&quot;&gt;
+								&lt;span class&#x3D;&quot;message&quot;&gt;
+		          		Wrong name format
+								&lt;/span&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+					&lt;div class&#x3D;&quot;feedback warning&quot;&gt;
+						&lt;div class&#x3D;&quot;row&quot;&gt;
+							&lt;div class&#x3D;&quot;col no-padding&quot;&gt;
+								&lt;i class&#x3D;&quot;icon-exclamation&quot;&gt;&lt;/i&gt;
+							&lt;/div&gt;
+							&lt;div&gt;
+								&lt;span class&#x3D;&quot;message&quot;&gt;
+          				Name cannot contain number
+								&lt;/span&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+					&lt;div class&#x3D;&quot;feedback tip&quot;&gt;
+						&lt;div class&#x3D;&quot;row&quot;&gt;
+							&lt;div class&#x3D;&quot;col s12 no-padding&quot;&gt;
+								&lt;span class&#x3D;&quot;tip-message&quot;&gt;
+		          		Recusandae voluptatibus consequuntur eius. Fugit saepe ex, porro laudantium molestiae laborum dolore vel doloribus, pariatur, quis eligendi. Excepturi itaque quo, dolorum tempore?
+								&lt;/span&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class&#x3D;&quot;code-snippet&quot;&gt;
+			&lt;p class&#x3D;&quot;title-code&quot;&gt;Code snippet:&lt;/p&gt;
+			&lt;pre class&#x3D;&quot;language-markup&quot;&gt;
+				&lt;code class&#x3D;&quot;language-markup&quot;&gt;&amp;lt;div&amp;gt;&lt;/code&gt;&lt;br&gt;
+				&amp;nbsp;&lt;code class&#x3D;&quot;language-markup&quot;&gt;&amp;lt;input id&#x3D;&quot;full_name&quot; type&#x3D;&quot;text&quot; class&#x3D;&quot;validate&quot;&amp;gt;&lt;/code&gt;&lt;br&gt;
+				&amp;nbsp;&lt;code class&#x3D;&quot;language-markup&quot;&gt;&amp;lt;label for&#x3D;&quot;full_name&quot;&amp;gt;Full Name&amp;lt;/label&amp;gt;&lt;/code&gt;&lt;br&gt;
+				&lt;code class&#x3D;&quot;language-markup&quot;&gt;&amp;lt;/div&amp;gt;&lt;/code&gt;
+			&lt;/pre&gt;
+		&lt;/div&gt;
+
+
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="inputs.input-disabled">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Input Disabled</h3>
+				<div class="f-item-controls" style="display: none;">
+					
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div>
+<div class="f-item-preview">
+	<div class="row">
+	<div class="col s12">
+		<h4>Input Disabled</h4>
+		<p></p>
+		<div class="preview">
+			<p class="title-code">Example:</p>
+			<div class="row">
+				<div class="input-field col s12">
+					<input id="full_name" type="text" disabled>
+					<label for="full_name">Full Name</label>
+				</div>
+			</div>
+		</div>
+		<div class="code-snippet">
+			<p class="title-code">Code snippet:</p>
+			<pre class="language-markup">
+				<code class="language-markup">&lt;div&gt;</code><br>
+				&nbsp;<code class="language-markup">&lt;input id="full_name" type="text" disabled&gt;</code><br>
+				&nbsp;<code class="language-markup">&lt;label for="full_name"&gt;Full Name&lt;/label&gt;</code><br>
+				<code class="language-markup">&lt;/div&gt;</code>
+			</pre>
+		</div>
+	</div>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class&#x3D;&quot;row&quot;&gt;
+	&lt;div class&#x3D;&quot;col s12&quot;&gt;
+		&lt;h4&gt;Input Disabled&lt;/h4&gt;
+		&lt;p&gt;&lt;/p&gt;
+		&lt;div class&#x3D;&quot;preview&quot;&gt;
+			&lt;p class&#x3D;&quot;title-code&quot;&gt;Example:&lt;/p&gt;
+			&lt;div class&#x3D;&quot;row&quot;&gt;
+				&lt;div class&#x3D;&quot;input-field col s12&quot;&gt;
+					&lt;input id&#x3D;&quot;full_name&quot; type&#x3D;&quot;text&quot; disabled&gt;
+					&lt;label for&#x3D;&quot;full_name&quot;&gt;Full Name&lt;/label&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class&#x3D;&quot;code-snippet&quot;&gt;
+			&lt;p class&#x3D;&quot;title-code&quot;&gt;Code snippet:&lt;/p&gt;
+			&lt;pre class&#x3D;&quot;language-markup&quot;&gt;
+				&lt;code class&#x3D;&quot;language-markup&quot;&gt;&amp;lt;div&amp;gt;&lt;/code&gt;&lt;br&gt;
+				&amp;nbsp;&lt;code class&#x3D;&quot;language-markup&quot;&gt;&amp;lt;input id&#x3D;&quot;full_name&quot; type&#x3D;&quot;text&quot; disabled&amp;gt;&lt;/code&gt;&lt;br&gt;
+				&amp;nbsp;&lt;code class&#x3D;&quot;language-markup&quot;&gt;&amp;lt;label for&#x3D;&quot;full_name&quot;&amp;gt;Full Name&amp;lt;/label&amp;gt;&lt;/code&gt;&lt;br&gt;
+				&lt;code class&#x3D;&quot;language-markup&quot;&gt;&amp;lt;/div&amp;gt;&lt;/code&gt;
+			&lt;/pre&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="inputs.input-with-validation">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Input With Validation</h3>
+				<div class="f-item-controls" style="display: none;">
+					
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div>
+<div class="f-item-preview">
+	<div class="row">
+	<div class="col s12">
+		<h4>Input With Validation</h4>
+		<p>
+			The validate class leverages HTML5 validation and will add a <code>valid</code> and <code>invalid</code> class accordingly. If you don't want the Green and Red validation states, just remove the validate class from your inputs.
+		</p>
+		<div class="preview">
+			<p class="title-code">Example:</p>
+			<div class="row">
+				<div class="input-field col s12">
+					<input id="full_name" type="text" class="validate">
+					<label for="full_name">Full Name</label>
+
+					<div class="feedback valid">
+						<div class="row">
+							<div class="col no-padding">
+								<i class="icon-checked"></i>
+							</div>
+							<div class="col s11 no-padding">
+								<span class="message">
+	  	        		Valid name ;P
+								</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="feedback error">
+						<div class="row">
+							<div class="col no-padding">
+								<i class="icon-error"></i>
+							</div>
+							<div class="col s11 no-padding">
+								<span class="message">
+		          		Wrong name format
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="feedback warning">
+						<div class="row">
+							<div class="col no-padding">
+								<i class="icon-exclamation"></i>
+							</div>
+							<div>
+								<span class="message">
+          				Name cannot contain number
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="feedback tip">
+						<div class="row">
+							<div class="col s12 no-padding">
+								<span class="tip-message">
+		          		Recusandae voluptatibus consequuntur eius. Fugit saepe ex, porro laudantium molestiae laborum dolore vel doloribus, pariatur, quis eligendi. Excepturi itaque quo, dolorum tempore?
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="code-snippet">
+			<p class="title-code">Code snippet:</p>
+			<pre class="language-markup">
+				<code class="language-markup">&lt;div&gt;</code><br>
+				&nbsp;<code class="language-markup">&lt;input id="full_name" type="text" class="validate"&gt;</code><br>
+				&nbsp;<code class="language-markup">&lt;label for="full_name"&gt;Full Name&lt;/label&gt;</code><br>
+				<code class="language-markup">&lt;/div&gt;</code>
+			</pre>
+		</div>
+	</div>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class&#x3D;&quot;row&quot;&gt;
+	&lt;div class&#x3D;&quot;col s12&quot;&gt;
+		&lt;h4&gt;Input With Validation&lt;/h4&gt;
+		&lt;p&gt;
+			The validate class leverages HTML5 validation and will add a &lt;code&gt;valid&lt;/code&gt; and &lt;code&gt;invalid&lt;/code&gt; class accordingly. If you don&#x27;t want the Green and Red validation states, just remove the validate class from your inputs.
+		&lt;/p&gt;
+		&lt;div class&#x3D;&quot;preview&quot;&gt;
+			&lt;p class&#x3D;&quot;title-code&quot;&gt;Example:&lt;/p&gt;
+			&lt;div class&#x3D;&quot;row&quot;&gt;
+				&lt;div class&#x3D;&quot;input-field col s12&quot;&gt;
+					&lt;input id&#x3D;&quot;full_name&quot; type&#x3D;&quot;text&quot; class&#x3D;&quot;validate&quot;&gt;
+					&lt;label for&#x3D;&quot;full_name&quot;&gt;Full Name&lt;/label&gt;
+
+					&lt;div class&#x3D;&quot;feedback valid&quot;&gt;
+						&lt;div class&#x3D;&quot;row&quot;&gt;
+							&lt;div class&#x3D;&quot;col no-padding&quot;&gt;
+								&lt;i class&#x3D;&quot;icon-checked&quot;&gt;&lt;/i&gt;
+							&lt;/div&gt;
+							&lt;div class&#x3D;&quot;col s11 no-padding&quot;&gt;
+								&lt;span class&#x3D;&quot;message&quot;&gt;
+	  	        		Valid name ;P
+								&lt;/span&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+
+					&lt;div class&#x3D;&quot;feedback error&quot;&gt;
+						&lt;div class&#x3D;&quot;row&quot;&gt;
+							&lt;div class&#x3D;&quot;col no-padding&quot;&gt;
+								&lt;i class&#x3D;&quot;icon-error&quot;&gt;&lt;/i&gt;
+							&lt;/div&gt;
+							&lt;div class&#x3D;&quot;col s11 no-padding&quot;&gt;
+								&lt;span class&#x3D;&quot;message&quot;&gt;
+		          		Wrong name format
+								&lt;/span&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+					&lt;div class&#x3D;&quot;feedback warning&quot;&gt;
+						&lt;div class&#x3D;&quot;row&quot;&gt;
+							&lt;div class&#x3D;&quot;col no-padding&quot;&gt;
+								&lt;i class&#x3D;&quot;icon-exclamation&quot;&gt;&lt;/i&gt;
+							&lt;/div&gt;
+							&lt;div&gt;
+								&lt;span class&#x3D;&quot;message&quot;&gt;
+          				Name cannot contain number
+								&lt;/span&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+					&lt;div class&#x3D;&quot;feedback tip&quot;&gt;
+						&lt;div class&#x3D;&quot;row&quot;&gt;
+							&lt;div class&#x3D;&quot;col s12 no-padding&quot;&gt;
+								&lt;span class&#x3D;&quot;tip-message&quot;&gt;
+		          		Recusandae voluptatibus consequuntur eius. Fugit saepe ex, porro laudantium molestiae laborum dolore vel doloribus, pariatur, quis eligendi. Excepturi itaque quo, dolorum tempore?
+								&lt;/span&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class&#x3D;&quot;code-snippet&quot;&gt;
+			&lt;p class&#x3D;&quot;title-code&quot;&gt;Code snippet:&lt;/p&gt;
+			&lt;pre class&#x3D;&quot;language-markup&quot;&gt;
+				&lt;code class&#x3D;&quot;language-markup&quot;&gt;&amp;lt;div&amp;gt;&lt;/code&gt;&lt;br&gt;
+				&amp;nbsp;&lt;code class&#x3D;&quot;language-markup&quot;&gt;&amp;lt;input id&#x3D;&quot;full_name&quot; type&#x3D;&quot;text&quot; class&#x3D;&quot;validate&quot;&amp;gt;&lt;/code&gt;&lt;br&gt;
+				&amp;nbsp;&lt;code class&#x3D;&quot;language-markup&quot;&gt;&amp;lt;label for&#x3D;&quot;full_name&quot;&amp;gt;Full Name&amp;lt;/label&amp;gt;&lt;/code&gt;&lt;br&gt;
+				&lt;code class&#x3D;&quot;language-markup&quot;&gt;&amp;lt;/div&amp;gt;&lt;/code&gt;
+			&lt;/pre&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
 
 </div>
 

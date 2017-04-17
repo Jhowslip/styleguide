@@ -1,0 +1,19 @@
+<div class="row">
+	<div class="col s12">
+		<p>To use, place the following class <code>.buton-disabled</code> or add attribute <code>disbaled</code> in the button.</p>
+	</div>
+	<div class="col s12">
+		<div class="preview">
+			<p class="title-code">Example:</p>
+			<button class="button-disabled">disabled</button>	<br /><br />			
+			<button class="button" disabled>disabled</button>				
+		</div>
+		<div class="code-snippet">
+			<p class="title-code">Code snippet:</p>
+			<pre class="language-markup">
+				<code class="language-markup">&lt;button class="button-disabled"&gt;disabled&lt;/button&gt;</code><br/>
+				<code class="language-markup">&lt;button class="button" disabled&gt;disabled&lt;/button&gt;</code>
+			</pre>
+		</div>
+	</div>
+</div>
