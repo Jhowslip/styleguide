@@ -1,8 +1,8 @@
 .f-item-group {
 	@include clearfix;
-	margin-top: 3rem;
-	margin-bottom: 3rem;
-	padding-bottom: 3rem;
+	// margin-top: 3rem;
+	// margin-bottom: 3rem;
+	// padding-bottom: 3rem;
 	border-bottom: 1px solid map-get($colors, light);
 
 	&:last-child {
@@ -30,6 +30,20 @@
 	}
 }
 
+.f-item-group-single {
+	@extend .f-item-group;
+	
+	.f-item-heading-group {
+		border: none;
+		margin-bottom: 0;
+		padding-bottom: 0;
+
+		.f-item-heading {
+			font-size: 18px;
+		}
+	}
+}
+
 .f-item-code {
 	margin-top: 2rem;
 }
@@ -44,18 +58,28 @@
 
 .f-item-heading-group {
 	@include clearfix;
-	margin-bottom: 2rem;
+	border-bottom: 1px solid #d9d9d9;
+	padding-bottom: 10px;
+	margin-bottom: 1.5rem;
 	vertical-align: middle;
 }
+
 
 .f-item-heading {
-	margin-top: 0;
-	margin-bottom: 0;
+	color: #838383;
 	display: inline-block;
-	vertical-align: middle;
+	font: normal 500 24px/1 Poppins,sans-serif;
 	line-height: 1;
+	margin-bottom: 0;
+	margin-top: 0;
+	vertical-align: middle;
 }
 
+.f-item-heading-single {
+	@extend .f-item-heading;
+	border: none;			
+	font-size: 18px;
+}
 
 .f-item-controls {
 	display: inline-block;

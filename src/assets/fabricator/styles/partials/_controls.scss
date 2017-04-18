@@ -1,3 +1,10 @@
+.heading-main {
+	font-size: 28px;
+	font-family: Poppins, arial, sans-serif;
+	line-height: 1.2;
+	font-weight: 500;
+}
+
 .f-controls {
 	@include clearfix;
 	@include border-box;
