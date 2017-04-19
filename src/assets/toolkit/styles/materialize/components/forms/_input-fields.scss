@@ -337,7 +337,8 @@ textarea.materialize-textarea {
   &[class^="icon-"], 
   &[class*=" icon-"] {
     color: $input-label-color;
-    display: inline-block;
+    cursor: pointer;
+    display: none;
     font-size: rem(32);
     margin: 0;
     min-width: 60px;
@@ -347,7 +348,9 @@ textarea.materialize-textarea {
     top: - rem(6);
   }
   
-  
+ .active ~ & { 
+     display: block;
+  }
   .wink {
     margin: -2px 0 0;
     font-family: $input-label-font-family;

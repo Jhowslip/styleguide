@@ -1,13 +1,12 @@
 <div class="row">
 	<div class="col s12">
-		<h4>Input Disabled</h4>
-		<p></p>
+		<p>To use, place the following attribute <code>disbaled</code>.</p>
 		<div class="preview">
 			<p class="title-code">Example:</p>
 			<div class="row">
         <div class="input-field col s12">
-          <input id="full_name" type="text" disabled>
-          <label for="full_name">Full Name</label>
+          <input id="name_disabled" type="text" disabled>
+          <label for="name_disabled">Name</label>
         </div>
       </div>				
 		</div>
@@ -15,8 +14,8 @@
 			<p class="title-code">Code snippet:</p>
 			<pre class="language-markup">
 				<code class="language-markup">&lt;div&gt;</code><br>
-				&nbsp;<code class="language-markup">&lt;input id="full_name" type="text" disabled&gt;</code><br>
-				&nbsp;<code class="language-markup">&lt;label for="full_name"&gt;Full Name&lt;/label&gt;</code><br>
+				&nbsp;<code class="language-markup">&lt;input id="name_disabled" type="text" disabled&gt;</code><br>
+				&nbsp;<code class="language-markup">&lt;label for="name_disabled"&gt;Name&lt;/label&gt;</code><br>
 				<code class="language-markup">&lt;/div&gt;</code>
 			</pre>
 		</div>
