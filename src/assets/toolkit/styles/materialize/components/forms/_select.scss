@@ -86,6 +86,9 @@ select:disabled {
   color: $select-disabled-color;
 }
 
+.select-dropdown li.disabled > i {
+  margin: 0;
+}
 .select-dropdown li.disabled,
 .select-dropdown li.disabled > span,
 .select-dropdown li.disabled > i,

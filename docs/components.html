@@ -544,86 +544,181 @@
 
 <div class="f-item-group" id="dropdown">
 
-	<div class="f-item-heading-group" data-f-toggle="labels">
-		<h2 class="f-item-heading">Dropdown</h2>
-		<div class="f-item-controls" style="display: none;">
-			<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
-				<svg>
-					<use xlink:href="#f-icon-notes" />
-				</svg>
-			</span>
-			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
-				<svg>
-					<use xlink:href="#f-icon-code" />
-				</svg>
-			</span>
-		</div>
-	</div><div class="f-item-notes" data-f-toggle="notes">
-	<p>These are notes associated with this <code>select</code> component.</p>
-
-</div>
+	<div class="f-item-heading-group">
+		<h2 class="f-item-heading" data-f-toggle="labels">Dropdown</h2>
+	</div>
+		<div class="f-item-group-single" id="dropdown.dropdown-selec-with-icon">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<div class="row">
+					<div class="col s12">
+						<h3 class="f-item-heading">Dropdown Selec With Icon</h3>
+					</div>
+				</div>
+					<div class="f-item-controls" style="display: none;">
+						
+						<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+							<svg>
+								<use xlink:href="#f-icon-code" />
+							</svg>
+						</span>
+					</div>
+				</div>
 <div class="row">
 	
 <div class="f-item-preview">
 	<div class="col s12">
-	<h4>Dropdown Select</h4>
-	<div class="input-field col s12 m6">
-		<select class="icons">
-      <option value="" disabled selected>Choose your option</option>
-      <option value="">example 1</option>
-      <option value="">example 2</option>
-      <option value="">example 3</option>
-    </select>
+	<p>
+		Select allows user input through specified options. Make sure you wrap it in a .input-field for proper alignment with other text fields. Remember that this is a jQuery plugin so make sure you initialize this in your document ready.
+	</p>
+	<div class="preview">
+		<p class="title-code">Example:</p>
+		<div class="row">
+			<div class="input-field col s12">
+				<select>
+          <option value="" data-graph="icon-interrogation" disabled selected>Choose your option</option>
+          <option value="1" data-graph="icon-delivery-truck">Option 1</option>
+          <option value="2" data-graph="icon-acessocard">Option 2</option>
+          <option value="3" data-graph="icon-acessocard">Option 3</option>
+        </select>
+			</div>
+		</div>
 	</div>
-</div>
-
-<br>
-<br>
-<br>
-<div class="col s12 m6">
-	<h4>Dropdown Select with icon</h4>
-
-	<div class="input-field col s12">
-		<select>
-      <option value="" data-graph="icon-interrogation" disabled selected>Choose your option</option>
-      <option value="1" data-graph="icon-delivery-truck">Option 1</option>
-      <option value="2" data-graph="icon-acessocard">Option 2</option>
-      <option value="3" data-graph="icon-acessocard">Option 3</option>
-    </select>
+	<div class="code-snippet">
+		<p class="title-code">Code snippet:</p>
+		<pre class="language-markup">
+      <code class="language-markup">&lt;div class="input-field"&gt;</code><br>
+      &nbsp;<code class="language-markup">&lt;select&gt;</code><br>
+      &nbsp;&nbsp;<code class="language-markup">&lt;option value="" data-graph="icon-interrogation" disabled selected&gt;Choose your option&lt;/option&gt;</code><br>
+      &nbsp;&nbsp;<code class="language-markup">&lt;option value="" data-graph="icon-delivery-truck"&gt;option 1&lt;/option&gt;</code><br>
+      &nbsp;&nbsp;<code class="language-markup">&lt;option value="" data-graph="icon-acessocard"&gt;option 2&lt;/option&gt;</code><br>
+      &nbsp;&nbsp;<code class="language-markup">&lt;option value="" data-graph="icon-acessocard"&gt;option 3&lt;/option&gt;</code><br>
+      &nbsp;<code class="language-markup">&lt;/select&gt;</code><br>
+      <code class="language-markup">&lt;/div&gt;</code>
+    </pre>
 	</div>
 </div>
 </div>
 </div>
 <div class="f-item-code f-item-hidden" data-f-toggle="code">
 	<pre><code class="language-markup">&lt;div class&#x3D;&quot;col s12&quot;&gt;
-	&lt;h4&gt;Dropdown Select&lt;/h4&gt;
-	&lt;div class&#x3D;&quot;input-field col s12 m6&quot;&gt;
-		&lt;select class&#x3D;&quot;icons&quot;&gt;
-      &lt;option value&#x3D;&quot;&quot; disabled selected&gt;Choose your option&lt;/option&gt;
-      &lt;option value&#x3D;&quot;&quot;&gt;example 1&lt;/option&gt;
-      &lt;option value&#x3D;&quot;&quot;&gt;example 2&lt;/option&gt;
-      &lt;option value&#x3D;&quot;&quot;&gt;example 3&lt;/option&gt;
-    &lt;/select&gt;
+	&lt;p&gt;
+		Select allows user input through specified options. Make sure you wrap it in a .input-field for proper alignment with other text fields. Remember that this is a jQuery plugin so make sure you initialize this in your document ready.
+	&lt;/p&gt;
+	&lt;div class&#x3D;&quot;preview&quot;&gt;
+		&lt;p class&#x3D;&quot;title-code&quot;&gt;Example:&lt;/p&gt;
+		&lt;div class&#x3D;&quot;row&quot;&gt;
+			&lt;div class&#x3D;&quot;input-field col s12&quot;&gt;
+				&lt;select&gt;
+          &lt;option value&#x3D;&quot;&quot; data-graph&#x3D;&quot;icon-interrogation&quot; disabled selected&gt;Choose your option&lt;/option&gt;
+          &lt;option value&#x3D;&quot;1&quot; data-graph&#x3D;&quot;icon-delivery-truck&quot;&gt;Option 1&lt;/option&gt;
+          &lt;option value&#x3D;&quot;2&quot; data-graph&#x3D;&quot;icon-acessocard&quot;&gt;Option 2&lt;/option&gt;
+          &lt;option value&#x3D;&quot;3&quot; data-graph&#x3D;&quot;icon-acessocard&quot;&gt;Option 3&lt;/option&gt;
+        &lt;/select&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
 	&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;br&gt;
-&lt;br&gt;
-&lt;br&gt;
-&lt;div class&#x3D;&quot;col s12 m6&quot;&gt;
-	&lt;h4&gt;Dropdown Select with icon&lt;/h4&gt;
-
-	&lt;div class&#x3D;&quot;input-field col s12&quot;&gt;
-		&lt;select&gt;
-      &lt;option value&#x3D;&quot;&quot; data-graph&#x3D;&quot;icon-interrogation&quot; disabled selected&gt;Choose your option&lt;/option&gt;
-      &lt;option value&#x3D;&quot;1&quot; data-graph&#x3D;&quot;icon-delivery-truck&quot;&gt;Option 1&lt;/option&gt;
-      &lt;option value&#x3D;&quot;2&quot; data-graph&#x3D;&quot;icon-acessocard&quot;&gt;Option 2&lt;/option&gt;
-      &lt;option value&#x3D;&quot;3&quot; data-graph&#x3D;&quot;icon-acessocard&quot;&gt;Option 3&lt;/option&gt;
-    &lt;/select&gt;
+	&lt;div class&#x3D;&quot;code-snippet&quot;&gt;
+		&lt;p class&#x3D;&quot;title-code&quot;&gt;Code snippet:&lt;/p&gt;
+		&lt;pre class&#x3D;&quot;language-markup&quot;&gt;
+      &lt;code class&#x3D;&quot;language-markup&quot;&gt;&amp;lt;div class&#x3D;&quot;input-field&quot;&amp;gt;&lt;/code&gt;&lt;br&gt;
+      &amp;nbsp;&lt;code class&#x3D;&quot;language-markup&quot;&gt;&amp;lt;select&amp;gt;&lt;/code&gt;&lt;br&gt;
+      &amp;nbsp;&amp;nbsp;&lt;code class&#x3D;&quot;language-markup&quot;&gt;&amp;lt;option value&#x3D;&quot;&quot; data-graph&#x3D;&quot;icon-interrogation&quot; disabled selected&amp;gt;Choose your option&amp;lt;/option&amp;gt;&lt;/code&gt;&lt;br&gt;
+      &amp;nbsp;&amp;nbsp;&lt;code class&#x3D;&quot;language-markup&quot;&gt;&amp;lt;option value&#x3D;&quot;&quot; data-graph&#x3D;&quot;icon-delivery-truck&quot;&amp;gt;option 1&amp;lt;/option&amp;gt;&lt;/code&gt;&lt;br&gt;
+      &amp;nbsp;&amp;nbsp;&lt;code class&#x3D;&quot;language-markup&quot;&gt;&amp;lt;option value&#x3D;&quot;&quot; data-graph&#x3D;&quot;icon-acessocard&quot;&amp;gt;option 2&amp;lt;/option&amp;gt;&lt;/code&gt;&lt;br&gt;
+      &amp;nbsp;&amp;nbsp;&lt;code class&#x3D;&quot;language-markup&quot;&gt;&amp;lt;option value&#x3D;&quot;&quot; data-graph&#x3D;&quot;icon-acessocard&quot;&amp;gt;option 3&amp;lt;/option&amp;gt;&lt;/code&gt;&lt;br&gt;
+      &amp;nbsp;&lt;code class&#x3D;&quot;language-markup&quot;&gt;&amp;lt;/select&amp;gt;&lt;/code&gt;&lt;br&gt;
+      &lt;code class&#x3D;&quot;language-markup&quot;&gt;&amp;lt;/div&amp;gt;&lt;/code&gt;
+    &lt;/pre&gt;
 	&lt;/div&gt;
 &lt;/div&gt;</code></pre>
 </div>
 
+		</div>
+		<div class="f-item-group-single" id="dropdown.dropdown">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<div class="row">
+					<div class="col s12">
+						<h3 class="f-item-heading">Dropdown</h3>
+					</div>
+				</div>
+					<div class="f-item-controls" style="display: none;">
+						
+						<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+							<svg>
+								<use xlink:href="#f-icon-code" />
+							</svg>
+						</span>
+					</div>
+				</div>
+<div class="row">
+	
+<div class="f-item-preview">
+	<div class="col s12">
+	<p>
+		Select allows user input through specified options. Make sure you wrap it in a .input-field for proper alignment with other text fields. Remember that this is a jQuery plugin so make sure you initialize this in your document ready.
+	</p>
+	<div class="preview">
+		<p class="title-code">Example:</p>
+		<div class="row">
+			<div class="input-field col s12 m6">
+				<select>
+          <option value="" disabled selected>Choose your option</option>
+          <option value="">example 1</option>
+          <option value="">example 2</option>
+          <option value="">example 3</option>
+        </select>
+			</div>
+		</div>
+	</div>
+	<div class="code-snippet">
+		<p class="title-code">Code snippet:</p>
+		<pre class="language-markup">
+      <code class="language-markup">&lt;div class="input-field"&gt;</code><br>
+      &nbsp;<code class="language-markup">&lt;select&gt;</code><br>
+      &nbsp;&nbsp;<code class="language-markup">&lt;option value=""&gt;example 1&lt;/option&gt;</code><br>
+      &nbsp;&nbsp;<code class="language-markup">&lt;option value=""&gt;example 2&lt;/option&gt;</code><br>
+      &nbsp;&nbsp;<code class="language-markup">&lt;option value=""&gt;example 3&lt;/option&gt;</code><br>
+      &nbsp;<code class="language-markup">&lt;/select&gt;</code><br>
+      <code class="language-markup">&lt;/div&gt;</code>
+    </pre>
+	</div>
+</div>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class&#x3D;&quot;col s12&quot;&gt;
+	&lt;p&gt;
+		Select allows user input through specified options. Make sure you wrap it in a .input-field for proper alignment with other text fields. Remember that this is a jQuery plugin so make sure you initialize this in your document ready.
+	&lt;/p&gt;
+	&lt;div class&#x3D;&quot;preview&quot;&gt;
+		&lt;p class&#x3D;&quot;title-code&quot;&gt;Example:&lt;/p&gt;
+		&lt;div class&#x3D;&quot;row&quot;&gt;
+			&lt;div class&#x3D;&quot;input-field col s12 m6&quot;&gt;
+				&lt;select&gt;
+          &lt;option value&#x3D;&quot;&quot; disabled selected&gt;Choose your option&lt;/option&gt;
+          &lt;option value&#x3D;&quot;&quot;&gt;example 1&lt;/option&gt;
+          &lt;option value&#x3D;&quot;&quot;&gt;example 2&lt;/option&gt;
+          &lt;option value&#x3D;&quot;&quot;&gt;example 3&lt;/option&gt;
+        &lt;/select&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class&#x3D;&quot;code-snippet&quot;&gt;
+		&lt;p class&#x3D;&quot;title-code&quot;&gt;Code snippet:&lt;/p&gt;
+		&lt;pre class&#x3D;&quot;language-markup&quot;&gt;
+      &lt;code class&#x3D;&quot;language-markup&quot;&gt;&amp;lt;div class&#x3D;&quot;input-field&quot;&amp;gt;&lt;/code&gt;&lt;br&gt;
+      &amp;nbsp;&lt;code class&#x3D;&quot;language-markup&quot;&gt;&amp;lt;select&amp;gt;&lt;/code&gt;&lt;br&gt;
+      &amp;nbsp;&amp;nbsp;&lt;code class&#x3D;&quot;language-markup&quot;&gt;&amp;lt;option value&#x3D;&quot;&quot;&amp;gt;example 1&amp;lt;/option&amp;gt;&lt;/code&gt;&lt;br&gt;
+      &amp;nbsp;&amp;nbsp;&lt;code class&#x3D;&quot;language-markup&quot;&gt;&amp;lt;option value&#x3D;&quot;&quot;&amp;gt;example 2&amp;lt;/option&amp;gt;&lt;/code&gt;&lt;br&gt;
+      &amp;nbsp;&amp;nbsp;&lt;code class&#x3D;&quot;language-markup&quot;&gt;&amp;lt;option value&#x3D;&quot;&quot;&amp;gt;example 3&amp;lt;/option&amp;gt;&lt;/code&gt;&lt;br&gt;
+      &amp;nbsp;&lt;code class&#x3D;&quot;language-markup&quot;&gt;&amp;lt;/select&amp;gt;&lt;/code&gt;&lt;br&gt;
+      &lt;code class&#x3D;&quot;language-markup&quot;&gt;&amp;lt;/div&amp;gt;&lt;/code&gt;
+    &lt;/pre&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
 
 </div>
 
