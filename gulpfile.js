@@ -27,8 +27,8 @@ var config = {
 			toolkit: './src/assets/toolkit/scripts/toolkit.js',
 		},
 		styles: {
-			fabricator: 'src/assets/fabricator/styles/fabricator.scss',
-			toolkit: 'src/assets/toolkit/styles/toolkit.scss'
+			fabricator: './src/assets/fabricator/styles/fabricator.scss',
+			toolkit: './src/assets/toolkit/styles/toolkit.scss'
 		},
 		images: 'src/assets/toolkit/images/**/*',
 		fonts: './src/assets/toolkit/fonts/**/*',
