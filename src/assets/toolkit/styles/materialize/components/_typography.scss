@@ -1,4 +1,3 @@
-
 a {
   text-decoration: none;
 }
@@ -31,6 +30,7 @@ h1, h2, h3, h4, h5, h6 {
 p {
   font-weight: 400;
   font-size: rem(18);
+  margin: rem(8) 0;
 }
 
 // Header Styles
@@ -47,11 +47,11 @@ em { font-style: italic; }
 strong { font-weight: 500; }
 small { font-size: 75%; }
 .light { font-weight: 300; }
-.thin { font-weight: 200; }
+.thin { font-weight: 300; }
 
 
 .flow-text{
-  font-weight: 300;
+  font-weight: 400;
   $i: 0;
   @while $i <= $intervals {
     @media only screen and (min-width : 360 + ($i * $interval-size)) {
