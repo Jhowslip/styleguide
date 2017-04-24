@@ -37,7 +37,7 @@ $primary-color: color("azure", "base") !default;
 $primary-color-light: lighten($primary-color, 15%) !default;
 $primary-color-dark: darken($primary-color, 15%) !default;
 
-$secondary-color: color("teal", "lighten-1") !default;
+$secondary-color: color("squash", "base") !default;
 $success-color: color("frog", "base") !default;
 $error-color: color("vermillion", "base") !default;
 $warning-color: color("squash", "base") !default;
