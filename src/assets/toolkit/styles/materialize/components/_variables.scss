@@ -77,6 +77,9 @@ $button-shadow-color-hover: $primary-color !default;
 $button-secondary-background-hover: lighten(#79ddff, 0) !default;
 $button-secondary-shadow-color-hover: lighten(#13c3ff, 0) !default;
 
+$grad-default-button-background-hover: lighten(#f9b456, 5%) !default;
+$grad-default-button-color-hover: lighten(#df8a17, 10%) !default;
+
 
 // Raised buttons
 $button-raised-background: $primary-color !default;

@@ -172,20 +172,23 @@
   border: 1px solid $button-secondary-background-hover;
   box-shadow: 0 3px 0 0 $button-secondary-shadow-color-hover;
   color: #fff;
-
   i {
     color: #fff;
   }
-
 }
+
 .no-hover-effect-secondary {
   background: #ffffff;
 }
 
+.hover-effect-grad-default {
+  box-shadow: 0 3px 0 0 $grad-default-button-color-hover;
+  background-color: $grad-default-button-background-hover;
+  background-image: none;
+}
+
 // Secondary Button 
 // ==========================================================================================================
-
-
 .secondary-button {
   @extend .button-default;
   background: #fff;
@@ -238,6 +241,20 @@
     @extend .no-hover-effect;
   }
 
+}
+
+
+.grad-default-button {
+  @extend .button-default;
+  background-color: #f9a22c;
+  background-image: linear-gradient(to bottom, #f9b456, #f9a22c);
+  color: #fff;
+  box-shadow: 0 3px 0 0 #df8a17;
+
+  &:hover,
+  &:focus {
+    @extend .hover-effect-grad-default;
+  }
 }
 
 // Floating button
