@@ -244,6 +244,24 @@
 }
 
 
+//
+// 
+.ghost-button {
+  @extend .button-default;
+  background: transparent;
+  border: 1px solid $primary-color;
+  color: $primary-color;
+
+   &:hover,
+   &:focus  {
+    @extend .hover-effect-secondary;
+    box-shadow: none;
+  }
+
+}
+
+// Buttons with grandient background
+// ============================================================================
 .grad-default-button {
   @extend .button-default;
   background-color: #f9a22c;
