@@ -1,0 +1,15 @@
+$breakpoints: ( 'sm': ( min-width: 48em), 'md': ( min-width: 64em), 'large': (min-width: 75em));
+
+// Cria um media query correspondente ao breakpoint informado
+@mixin respond-to($name) {
+  // Verifica se a change está dentro do mapa
+  @if map-has-key($breakpoints, $name) {
+    // Imprime um media query baseado no mapa
+    @media #{inspect(map-get($breakpoints, $name))} {
+      @content;
+    }
+  }  @else {
+    // se a change não existir no mapa
+    @warn 'Unfortunately, no value could be retrieved from `#{$breakpoint}`. Please make sure it is defined in `$breakpoints` map.';
+  }
+}

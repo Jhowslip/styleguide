@@ -1,0 +1,14 @@
+//Módulos externos
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,700|Roboto:300,400,500,700');
+@import './node_modules/flexboxgrid/dist/flexboxgrid';
+
+//Módulos locais
+
+//1 - Variáveis
+
+//2 - Mixins
+@import './modules/mixins/font-size';
+@import './modules/mixins/respond-to';
+
+//3 - Módulos
+@import './modules/typography/typography';
