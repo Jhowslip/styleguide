@@ -730,6 +730,12 @@ body {
       padding-left: 2rem;
       padding-right: 2rem; } }
 
+.visible-xs {
+  display: block; }
+  @media (min-width: 48em) {
+    .visible-xs {
+      display: none; } }
+
 .header {
   font-size: 14px;
   font-size: 0.875rem;
