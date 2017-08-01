@@ -697,20 +697,83 @@
     -ms-flex-order: 1;
     order: 1; } }
 
+html, body {
+  font-size: 16px; }
+
 .page-title {
   font-family: Poppins;
   font-size: 22px;
-  font-size: 2.2rem;
+  font-size: 1.375rem;
   font-weight: 500;
   text-align: center; }
+  @media (min-width: 48em) {
+    .page-title {
+      font-size: 28px;
+      font-size: 1.75rem;
+      text-align: left; } }
 
-.page-title {
-  font-size: 22px;
-  font-size: 2.2rem;
+.page-subtitle {
+  font-family: Roboto;
+  font-size: 16px;
+  font-size: 1rem;
+  font-weight: 300;
   text-align: center; }
+  @media (min-width: 48em) {
+    .page-subtitle {
+      font-size: 20px;
+      font-size: 1.25rem;
+      text-align: left; } }
 
-@media (min-width: 48em) {
-  .page-title {
-    font-size: 28px;
-    font-size: 2.8rem;
-    text-align: left; } }
+.btn {
+  font-family: Poppins;
+  text-align: center;
+  color: #FFFFFF;
+  border-radius: 5px;
+  width: 100%;
+  height: 40px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  font-size: 18px;
+  font-size: 1.125rem; }
+  @media (min-width: 48em) {
+    .btn {
+      font-size: 20px;
+      font-size: 1.25rem; } }
+  .btn[disabled], .btn.disabled {
+    background-color: #d9d9d9;
+    box-shadow: 0 3px 0 0 #c0c0c0; }
+  .btn:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.5);
+    opacity: 0;
+    border-radius: 100%;
+    transform: scale(1, 1) translate(-50%);
+    transform-origin: 50% 50%;
+    visibility: hidden; }
+  .btn:focus:not(:active)::after {
+    animation: ripple 1s ease-out; }
+  .btn:focus:after {
+    visibility: visible; }
+
+@keyframes ripple {
+  from {
+    transform: scale(1);
+    opacity: 0.4; }
+  to {
+    transform: scale(100);
+    opacity: 0; } }
+
+.btn.btn-primary:not([disabled]) {
+  background-color: #00A6DF;
+  box-shadow: 0 3px 0 0 #25779f;
+  transition: background-color 0.5s; }
+  .btn.btn-primary:not([disabled]):hover, .btn.btn-primary:not([disabled]).hover {
+    background-color: #00b9f9;
+    box-shadow: 0 3px 0 0 #2f96c8; }

@@ -1,0 +1,12 @@
+.btn {
+  &.btn-primary:not([disabled]) {
+    background-color: $primary-color;
+    box-shadow: 0 3px 0 0 $primary-shadow-color;
+    transition: background-color 0.5s;
+    &:hover, &.hover {
+      $color: lighten($primary-color, 5%);
+      background-color: $color;
+      box-shadow: 0 3px 0 0 lighten($primary-shadow-color, 10%);
+    }
+  }
+}

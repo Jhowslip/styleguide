@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "node-sass --include-path scss styleguide.scss dist/styleguide.css && node-sass --include-path scss styleguide.scss dist/styleguide.min.css --output-style compressed",
     "watch": "nodemon -e scss -x \"npm run build\"",
-    "start": "browser-sync start --server --index \"ui/index.html\" --files \"dist/*.css, ui/*.html\""
+    "start": "browser-sync start --server --index \"docs/index.html\" --files \"dist/*.css, docs/*.html, docs/*.css\""
   },
   "repository": {
     "type": "git",
