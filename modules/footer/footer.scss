@@ -1,8 +1,4 @@
 .footer {
-  // @include respond-to(sm) {
-  //   bottom: 0;
-  //   position: absolute;
-  // }
   background-color: $footer-background-color;
   color: $footer-color;
   overflow: hidden;
@@ -14,20 +10,33 @@
     }
   }
   .footer-middle {
-    padding: 20px 0;
     background-color: $primary-color;
+    padding: 20px 0;
     ul {
       line-height: 2.5;
       list-style: none;
+      @include respond-to(sm) {
+        display: flex;
+        justify-content: space-between;
+        li {
+          display: inline-block;
+        }
+      }
+    }
+    a {
+      color: $footer-color;
+      &::before {
+        background-color: $footer-color;
+      }
     }
     .warning {
-      color: $footer-color;
       * {
         padding: 7.5px 0;
       }
       .warning-text {
         @include font-size(16px);
         font-weight: 300;
+        padding: 0;
       }
       p {
         @include font-size(14px);
@@ -36,12 +45,12 @@
     }
   }
   .footer-bottom {
-    background-color: $footer-copyright-color;
     @include font-size(14px);
+    background-color: $footer-copyright-color;
     padding: 20px 0;
     p {
       line-height: 1.5;
-      padding: 3px 25px;
+      padding: 3px 0;
     }
   }
 }
