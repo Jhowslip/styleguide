@@ -1,0 +1,13 @@
+.header {
+  @include font-size(14px);
+  background-color: $header-background-color;
+  border-top: solid 4px $primary-color;
+  color: $header-color;
+  font-family: Poppins;
+  margin-bottom: 30px;
+  max-height: 60px;
+  padding: 10px 0;
+  .security {
+    text-align: right;
+  }
+}

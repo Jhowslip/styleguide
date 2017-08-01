@@ -19,3 +19,21 @@
     text-align: left;
   }
 }
+
+.hr-section {
+  align-items: center;
+  color: inherit;
+  display: flex;
+  flex-basis: 100%;
+  margin: 8px 0;
+  &::before,
+  &::after {
+    background-color: #fff;
+    content: '';
+    flex-grow: 1;
+    font-size: 0;
+    height: 1px;
+    line-height: 0;
+    margin: 0 8px;
+  }
+}

@@ -1,4 +1,4 @@
-$breakpoints: ( 'sm': ( min-width: 48em), 'md': ( min-width: 64em), 'large': (min-width: 75em));
+$breakpoints: ( 'sm': ( min-width: 48em), 'md': ( min-width: 64em), 'lg': (min-width: 75em));
 
 // Cria um media query correspondente ao breakpoint informado
 @mixin respond-to($name) {
