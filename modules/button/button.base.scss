@@ -3,6 +3,8 @@
   @include respond-to(sm) {
     @include font-size(20px);
   }
+
+
   border: 0;
   border-radius: 5px;
   color: $button-text-color;
@@ -14,40 +16,50 @@
   position: relative;
   text-align: center;
   width: 100%;
+
   &[disabled],
   &.disabled {
     background-color: $disabled-color;
     box-shadow: 0 3px 0 0 $disabled-shadow-color;
+    cursor: not-allowed;
   }
-  &:after {
+
+  &::after {
+    background: $button-after-color;
+    border-radius: 100%;
     content: '';
+    height: 5px;
+    left: 50%;
+    opacity: 0;
     position: absolute;
     top: 50%;
-    left: 50%;
-    width: 5px;
-    height: 5px;
-    background: rgba(255, 255, 255, .5);
-    opacity: 0;
-    border-radius: 100%;
     transform: scale(1, 1) translate(-50%);
     transform-origin: 50% 50%;
     visibility: hidden;
+    width: 5px;
   }
-  &:focus:not(:active)::after {
-    animation: ripple 1s ease-out;
-  }
-  &:focus:after {
-    visibility: visible;
+
+  &:focus {
+    &::after {
+      visibility: visible;
+    }
+
+    &:not(:active) {
+      &::after {
+        animation: ripple 1s ease-out;
+      }
+    }
   }
 }
 
 @keyframes ripple {
   from {
+    opacity: .4;
     transform: scale(1);
-    opacity: 0.4;
   }
+
   to {
-    transform: scale(100);
     opacity: 0;
+    transform: scale(100);
   }
 }

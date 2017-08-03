@@ -740,7 +740,7 @@ body {
   font-size: 14px;
   font-size: 0.875rem;
   background-color: #fff;
-  border-top: solid 4px #00A6DF;
+  border-top: solid 4px #00a6df;
   color: #838383;
   font-family: Poppins;
   margin-bottom: 30px;
@@ -758,7 +758,7 @@ body {
   .footer .footer-top img {
     vertical-align: bottom; }
   .footer .footer-middle {
-    background-color: #00A6DF;
+    background-color: #00a6df;
     padding: 20px 0; }
     .footer .footer-middle ul {
       line-height: 2.5;
@@ -794,9 +794,9 @@ body {
       padding: 3px 0; }
 
 .page-title {
-  font-family: Poppins;
   font-size: 22px;
   font-size: 1.375rem;
+  font-family: Poppins;
   font-weight: 500;
   text-align: center; }
   @media (min-width: 48em) {
@@ -806,9 +806,9 @@ body {
       text-align: left; } }
 
 .page-subtitle {
-  font-family: Roboto;
   font-size: 16px;
   font-size: 1rem;
+  font-family: Roboto;
   font-weight: 300;
   text-align: center; }
   @media (min-width: 48em) {
@@ -823,7 +823,7 @@ body {
   display: flex;
   flex-basis: 100%; }
   .hr-section::before, .hr-section::after {
-    background-color: #fff;
+    background-color: currentColor;
     content: '';
     flex-grow: 1;
     font-size: 0;
@@ -851,57 +851,59 @@ body {
       font-size: 1.25rem; } }
   .btn[disabled], .btn.disabled {
     background-color: #d9d9d9;
-    box-shadow: 0 3px 0 0 #c0c0c0; }
-  .btn:after {
+    box-shadow: 0 3px 0 0 #c0c0c0;
+    cursor: not-allowed; }
+  .btn::after {
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 100%;
     content: '';
+    height: 5px;
+    left: 50%;
+    opacity: 0;
     position: absolute;
     top: 50%;
-    left: 50%;
-    width: 5px;
-    height: 5px;
-    background: rgba(255, 255, 255, 0.5);
-    opacity: 0;
-    border-radius: 100%;
     transform: scale(1, 1) translate(-50%);
     transform-origin: 50% 50%;
-    visibility: hidden; }
+    visibility: hidden;
+    width: 5px; }
+  .btn:focus::after {
+    visibility: visible; }
   .btn:focus:not(:active)::after {
     animation: ripple 1s ease-out; }
-  .btn:focus:after {
-    visibility: visible; }
 
 @keyframes ripple {
   from {
-    transform: scale(1);
-    opacity: 0.4; }
+    opacity: .4;
+    transform: scale(1); }
   to {
-    transform: scale(100);
-    opacity: 0; } }
+    opacity: 0;
+    transform: scale(100); } }
 
 .btn.btn-primary:not([disabled]) {
-  background-color: #00A6DF;
+  background-color: #00a6df;
   box-shadow: 0 3px 0 0 #25779f;
-  transition: background-color 0.5s; }
+  transition: background-color .5s; }
   .btn.btn-primary:not([disabled]):hover, .btn.btn-primary:not([disabled]).hover {
     background-color: #00b9f9;
     box-shadow: 0 3px 0 0 #2f96c8; }
 
 a {
-  color: #00A6DF;
+  color: #00a6df;
   cursor: pointer;
   position: relative;
   text-decoration: none; }
   a[disabled] {
-    color: #d9d9d9; }
+    color: #d9d9d9;
+    cursor: not-allowed; }
   a:not([disabled])::before {
-    background-color: #00A6DF;
+    background-color: #00a6df;
     bottom: 0;
     content: '';
     height: 2px;
     left: 0;
     position: absolute;
     transform: scaleX(0);
-    transition: all .2s ease-in-out 0s;
+    transition: transform .2s ease-in-out 0s;
     visibility: hidden;
     width: 100%; }
   a:not([disabled]):hover::before {
@@ -909,11 +911,11 @@ a {
     visibility: visible; }
 
 .panel {
+  background-color: #fff;
   border: solid 1px #d4d4d4;
   border-radius: 4px;
-  background-color: #fff;
-  padding: 10px 8px;
-  color: #838383; }
+  color: #838383;
+  padding: 10px 8px; }
   .panel .panel-header {
     margin-bottom: 10px; }
     .panel .panel-header .title {
@@ -922,13 +924,12 @@ a {
       color: #000;
       font-family: Poppins;
       font-weight: 500;
-      text-align: center;
-      margin: 0; }
-      .panel .panel-header .title:not(.title ~ .subtitle) {
-        border-bottom: solid 1 #fff; }
+      line-height: 1.5;
+      margin: 0;
+      text-align: center; }
     .panel .panel-header .subtitle {
       font-size: 12px;
       font-size: 0.75rem;
-      color: #00A6DF;
+      color: #00a6df;
       font-weight: 500;
       text-align: center; }

@@ -1,9 +1,11 @@
-@function calculateRem($size) {
-  $remSize: $size / 16px;
-  @return #{$remSize}rem;
+@function calculate-rem($size) {
+  $rem-size: $size / 16px;
+
+  @return #{$rem-size}rem;
 }
 
 @mixin font-size($size) {
-  font-size: $size; //Fallback in px
-  font-size: calculateRem($size);
+  // sass-lint:disable-block no-duplicate-properties
+  font-size: $size;
+  font-size: calculate-rem($size);
 }
