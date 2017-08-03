@@ -1,19 +1,24 @@
 {
   "name": "acessocard-styleguide",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "",
-  "main": "dist/styleguide.css",
+  "main": "dist/styleguide.min.css",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "sass-lint modules/**/*.scss -v -q",
-    "build": "npm run lint && node-sass --include-path scss styleguide.scss dist/styleguide.css && node-sass --include-path scss styleguide.scss dist/styleguide.min.css --output-style compressed",
-    "watch": "nodemon -e scss -x \"npm run build\"",
-    "start": "browser-sync start --server --index \"docs/index.html\" --files \"dist/*.css, docs/*.html, docs/*.css\""
+    "lint": "gulp sass:lint",
+    "build": "gulp dist",
+    "prepublish": "npm run build",
+    "watch": "gulp sass:watch",
+    "start": "gulp serve"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/acessocard/styleguide.git"
   },
+  "files": [
+    "dist",
+    "dist"
+  ],
   "author": "",
   "license": "ISC",
   "bugs": {
@@ -21,12 +26,12 @@
   },
   "homepage": "https://github.com/acessocard/styleguide#readme",
   "devDependencies": {
+    "flexboxgrid": "^6.3.1",
     "browser-sync": "^2.18.13",
-    "node-sass": "^4.5.3",
-    "nodemon": "^1.11.0",
-    "sass-lint": "^1.10.2"
+    "gulp": "^3.9.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sass-lint": "^1.3.2"
   },
-  "dependencies": {
-    "flexboxgrid": "^6.3.1"
-  }
+  "unpkg": "dist/styleguide.min.css"
 }
