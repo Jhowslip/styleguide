@@ -20,8 +20,7 @@ gulp.task('dist', ['sass']);
 gulp.task('serve', ['sass:lint', 'sass:docs', 'sass:watch'], function () {
 
     browserSync.init({
-        server: './',
-        index: 'docs/index.html'
+        server: './docs',
     });
 
     gulp.watch("docs/*.css").on('change', browserSync.reload);
