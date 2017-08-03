@@ -6,7 +6,7 @@ var lint = require('gulp-sass-lint');
 var rename = require('gulp-rename');
 var browserSync = require('browser-sync').create();
 
-const paths = {
+var paths = {
     modules: './modules',
     sassFiles: 'modules/**/*.s+(a|c)ss',
     dist: './dist',
