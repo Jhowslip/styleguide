@@ -9,3 +9,8 @@ h1 {
 .section {
   margin-bottom: 40px;
 }
+
+.icon-container {
+  margin: 10px 0;
+  text-align: center;
+}

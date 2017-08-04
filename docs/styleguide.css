@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,700|Roboto:300,400,500,700");
 .container-fluid,
 .container {
@@ -991,3 +992,170 @@ a {
     .panel .panel-header .page-title,
     .panel .panel-header .page-subtitle {
       text-align: inherit; }
+
+@font-face {
+  font-family: 'acesso';
+  font-style: normal;
+  font-weight: normal;
+  src: url("https://acessocdn.azureedge.net/cdn/style/acesso.eot") format("embedded-opentype"), url("https://acessocdn.azureedge.net/cdn/style/acesso.ttf") format("truetype"), url("https://acessocdn.azureedge.net/cdn/style/acesso.woff") format("woff"), url("https://acessocdn.azureedge.net/cdn/style/acesso.svg") format("svg"); }
+
+[class^='icon-'],
+[class*=' icon-'] {
+  font-size: 16px;
+  font-size: 1rem;
+  display: inline-block;
+  color: currentColor;
+  font-family: 'acesso';
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+  text-transform: none; }
+  [class^='icon-'].icon-2x,
+  [class*=' icon-'].icon-2x {
+    font-size: 20px;
+    font-size: 1.25rem; }
+  [class^='icon-'].icon-3x,
+  [class*=' icon-'].icon-3x {
+    font-size: 24px;
+    font-size: 1.5rem; }
+  [class^='icon-'].icon-4x,
+  [class*=' icon-'].icon-4x {
+    font-size: 28px;
+    font-size: 1.75rem; }
+  [class^='icon-'].icon-5x,
+  [class*=' icon-'].icon-5x {
+    font-size: 32px;
+    font-size: 2rem; }
+  [class^='icon-'].spin,
+  [class*=' icon-'].spin {
+    animation: spin 1s linear infinite; }
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(359deg); } }
+
+.icon-acessocard::before {
+  content: ""; }
+
+.icon-advantages-info::before {
+  content: ""; }
+
+.icon-arrow::before {
+  content: ""; }
+
+.icon-checked::before {
+  content: ""; }
+
+.icon-checked-1::before {
+  content: ""; }
+
+.icon-circle-dolar::before {
+  content: ""; }
+
+.icon-close::before {
+  content: ""; }
+
+.icon-copy::before {
+  content: ""; }
+
+.icon-coupon-info::before {
+  content: ""; }
+
+.icon-cvc::before {
+  content: ""; }
+
+.icon-cvc-amex::before {
+  content: ""; }
+
+.icon-delivery-truck::before {
+  content: ""; }
+
+.icon-dolar-sign::before {
+  content: ""; }
+
+.icon-email::before {
+  content: ""; }
+
+.icon-email-sent::before {
+  content: ""; }
+
+.icon-error::before {
+  content: ""; }
+
+.icon-exclamation::before {
+  content: ""; }
+
+.icon-factory::before {
+  content: ""; }
+
+.icon-flag-success::before {
+  content: ""; }
+
+.icon-happy-cellphone::before {
+  content: ""; }
+
+.icon-happy-desktop::before {
+  content: ""; }
+
+.icon-happy-exclamation::before {
+  content: ""; }
+
+.icon-happy-padlock::before {
+  content: ""; }
+
+.icon-hide-password::before {
+  content: ""; }
+
+.icon-interrogation::before {
+  content: ""; }
+
+.icon-limits-info::before {
+  content: ""; }
+
+.icon-loading::before {
+  content: ""; }
+
+.icon-padlock::before {
+  content: ""; }
+
+.icon-padlock-success::before {
+  content: ""; }
+
+.icon-payment-bill::before {
+  content: ""; }
+
+.icon-payment-card::before {
+  content: ""; }
+
+.icon-printer::before {
+  content: ""; }
+
+.icon-reminder::before {
+  content: ""; }
+
+.icon-shopping-cart::before {
+  content: ""; }
+
+.icon-show-password::before {
+  content: ""; }
+
+.icon-sms-sent::before {
+  content: ""; }
+
+.icon-status-happy-card::before {
+  content: ""; }
+
+.icon-tax-info::before {
+  content: ""; }
+
+.icon-user-info::before {
+  content: ""; }
+
+.icon-user-status::before {
+  content: ""; }
+
+.icon-x::before {
+  content: ""; }

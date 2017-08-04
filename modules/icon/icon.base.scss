@@ -1,0 +1,50 @@
+@font-face {
+  font-family: 'acesso';
+  font-style: normal;
+  font-weight: normal;
+  src: url('#{$icon-font-path}/acesso.eot') format('embedded-opentype'), url('#{$icon-font-path}/acesso.ttf') format('truetype'), url('#{$icon-font-path}/acesso.woff') format('woff'), url('#{$icon-font-path}/acesso.svg') format('svg');
+}
+
+[class^='icon-'],
+[class*=' icon-'] {
+  @include font-size(16px);
+
+  display: inline-block;
+  color: currentColor;
+  font-family: 'acesso';
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+  text-transform: none;
+
+  &.icon-2x {
+    @include font-size(20px);
+  }
+
+  &.icon-3x {
+    @include font-size(24px);
+  }
+
+  &.icon-4x {
+    @include font-size(28px);
+  }
+
+  &.icon-5x {
+    @include font-size(32px);
+  }
+
+  &.spin {
+    animation: spin 1s linear infinite;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(359deg);
+  }
+}
