@@ -43,7 +43,7 @@ gulp.task('sass:docs', function () {
 });
 
 gulp.task('sass:watch', function () {
-    gulp.watch(paths.sassFiles, ['sass:lint, sass:docs']);
+    gulp.watch(paths.sassFiles, ['sass:lint', 'sass:docs']);
 });
 
 function compileSass(dest) {
@@ -55,7 +55,7 @@ function compileSass(dest) {
 
     var minifiedTask =
         gulp.src('./styleguide.scss')
-            .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+            .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
             .pipe(rename('styleguide.min.css'))
             .pipe(gulp.dest(dest))
             .pipe(browserSync.stream());

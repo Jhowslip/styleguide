@@ -1,0 +1,72 @@
+.panel {
+  @include respond-to(sm) {
+    padding: 24px;
+  }
+
+
+  background-color: $panel-background-color;
+  border: solid 1px $panel-border-color;
+  border-radius: 4px;
+  color: $panel-color;
+  margin: 5px 0;
+  padding: 10px 8px;
+
+  .panel-header {
+    margin-bottom: 10px;
+    text-align: left;
+
+    &.center {
+      text-align: center;
+    }
+
+    .page-title {
+      line-height: .7;
+      margin: 0;
+    }
+
+    .title {
+      @include font-size(18px);
+      @include respond-to(sm) {
+        @include font-size(20px);
+      }
+
+
+      color: $panel-title-color;
+      font-family: Poppins;
+      font-weight: 500;
+      line-height: 1.5;
+      margin: 0;
+
+      &:last-child {
+        @include font-size(20px);
+        @include respond-to(sm) {
+          @include font-size(24px);
+        }
+
+
+        border-bottom: solid 1px $panel-title-border-bottom-color;
+        padding-bottom: 10px;
+      }
+    }
+
+    .subtitle,
+    .page-subtitle {
+      color: $panel-subtitle-color;
+      font-weight: 500;
+    }
+
+    .subtitle {
+      @include font-size(12px);
+      @include respond-to(sm) {
+        @include font-size(14px);
+      }
+    }
+
+    .page-title,
+    .page-subtitle {
+      text-align: inherit;
+    }
+  }
+
+  .panel-content {}
+}

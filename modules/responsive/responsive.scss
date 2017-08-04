@@ -2,5 +2,16 @@
   @include respond-to(sm) {
     display: none;
   }
+
+
   display: block;
+}
+
+.hidden-xs {
+  @include respond-to(sm) {
+    display: block;
+  }
+
+
+  display: none;
 }

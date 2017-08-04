@@ -736,6 +736,12 @@ body {
     .visible-xs {
       display: none; } }
 
+.hidden-xs {
+  display: none; }
+  @media (min-width: 48em) {
+    .hidden-xs {
+      display: block; } }
+
 .header {
   font-size: 14px;
   font-size: 0.875rem;
@@ -755,8 +761,10 @@ body {
   overflow: hidden;
   text-align: center;
   width: 100%; }
-  .footer .footer-top img {
-    vertical-align: bottom; }
+  .footer .footer-top {
+    padding-top: 20px; }
+    .footer .footer-top img {
+      vertical-align: bottom; }
   .footer .footer-middle {
     background-color: #00a6df;
     padding: 20px 0; }
@@ -792,6 +800,19 @@ body {
     .footer .footer-bottom p {
       line-height: 1.5;
       padding: 3px 0; }
+  .footer .hr-section {
+    align-items: center;
+    color: inherit;
+    display: flex;
+    flex-basis: 100%; }
+    .footer .hr-section::before, .footer .hr-section::after {
+      background-color: currentColor;
+      content: '';
+      flex-grow: 1;
+      font-size: 0;
+      height: 1px;
+      line-height: 0;
+      margin: 0 5px; }
 
 .page-title {
   font-size: 22px;
@@ -817,19 +838,19 @@ body {
       font-size: 1.25rem;
       text-align: left; } }
 
-.hr-section {
-  align-items: center;
-  color: inherit;
-  display: flex;
-  flex-basis: 100%; }
-  .hr-section::before, .hr-section::after {
-    background-color: currentColor;
-    content: '';
-    flex-grow: 1;
-    font-size: 0;
-    height: 1px;
-    line-height: 0;
-    margin: 0 5px; }
+strong {
+  font-family: Roboto;
+  font-weight: 700; }
+
+blockquote {
+  font-size: 16px;
+  font-size: 1rem;
+  background-color: #f3f3f3;
+  border-radius: 3px;
+  color: #838383;
+  margin: 5px 0;
+  padding: 10px;
+  text-align: left; }
 
 .btn {
   font-size: 18px;
@@ -883,9 +904,16 @@ body {
   background-color: #00a6df;
   box-shadow: 0 3px 0 0 #25779f;
   transition: background-color .5s; }
+  .btn.btn-primary:not([disabled]).btn-ghost {
+    background-color: #fff;
+    border: solid 1px #00a6df;
+    box-shadow: 0 3px 0 0 #00a6df;
+    color: #00a6df;
+    transition: background-color .7s, color .7s; }
   .btn.btn-primary:not([disabled]):hover, .btn.btn-primary:not([disabled]).hover {
     background-color: #00b9f9;
-    box-shadow: 0 3px 0 0 #2f96c8; }
+    box-shadow: 0 3px 0 0 #2f96c8;
+    color: #fff; }
 
 a {
   color: #00a6df;
@@ -914,10 +942,20 @@ a {
   background-color: #fff;
   border: solid 1px #d4d4d4;
   border-radius: 4px;
-  color: #838383;
+  color: #000;
+  margin: 5px 0;
   padding: 10px 8px; }
+  @media (min-width: 48em) {
+    .panel {
+      padding: 24px; } }
   .panel .panel-header {
-    margin-bottom: 10px; }
+    margin-bottom: 10px;
+    text-align: left; }
+    .panel .panel-header.center {
+      text-align: center; }
+    .panel .panel-header .page-title {
+      line-height: .7;
+      margin: 0; }
     .panel .panel-header .title {
       font-size: 18px;
       font-size: 1.125rem;
@@ -925,11 +963,31 @@ a {
       font-family: Poppins;
       font-weight: 500;
       line-height: 1.5;
-      margin: 0;
-      text-align: center; }
+      margin: 0; }
+      @media (min-width: 48em) {
+        .panel .panel-header .title {
+          font-size: 20px;
+          font-size: 1.25rem; } }
+      .panel .panel-header .title:last-child {
+        font-size: 20px;
+        font-size: 1.25rem;
+        border-bottom: solid 1px #d9d9d9;
+        padding-bottom: 10px; }
+        @media (min-width: 48em) {
+          .panel .panel-header .title:last-child {
+            font-size: 24px;
+            font-size: 1.5rem; } }
+    .panel .panel-header .subtitle,
+    .panel .panel-header .page-subtitle {
+      color: #00a6df;
+      font-weight: 500; }
     .panel .panel-header .subtitle {
       font-size: 12px;
-      font-size: 0.75rem;
-      color: #00a6df;
-      font-weight: 500;
-      text-align: center; }
+      font-size: 0.75rem; }
+      @media (min-width: 48em) {
+        .panel .panel-header .subtitle {
+          font-size: 14px;
+          font-size: 0.875rem; } }
+    .panel .panel-header .page-title,
+    .panel .panel-header .page-subtitle {
+      text-align: inherit; }

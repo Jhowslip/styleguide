@@ -5,12 +5,21 @@
       box-shadow: 0 3px 0 0 $primary-shadow-color;
       transition: background-color .5s;
 
+      &.btn-ghost {
+        background-color: $button-ghost-background-color;
+        border: solid 1px $primary-color;
+        box-shadow: 0 3px 0 0 $primary-color;
+        color: $primary-color;
+        transition: background-color .7s, color .7s;
+      }
+
       &:hover,
       &.hover {
         $color: lighten($primary-color, 5%);
 
         background-color: $color;
         box-shadow: 0 3px 0 0 lighten($primary-shadow-color, 10%);
+        color: $button-text-color;
       }
     }
   }
