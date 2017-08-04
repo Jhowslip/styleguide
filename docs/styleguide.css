@@ -1003,8 +1003,8 @@ a {
 [class*=' icon-'] {
   font-size: 16px;
   font-size: 1rem;
-  display: inline-block;
   color: currentColor;
+  display: inline-block;
   font-family: 'acesso';
   font-style: normal;
   font-variant: normal;
@@ -1159,3 +1159,74 @@ a {
 
 .icon-x::before {
   content: ""; }
+
+.modal-overlay {
+  background-color: rgba(0, 0, 0, 0.8);
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0; }
+
+.modal {
+  background-color: #fff;
+  border-radius: 7px;
+  left: 50%;
+  padding: 10px 8px;
+  position: absolute;
+  top: 15%;
+  transform: translate(-50%, -15%);
+  width: 300px; }
+  @media (min-width: 48em) {
+    .modal {
+      padding: 20px 25px;
+      width: 520px; } }
+  .modal .modal-header {
+    text-align: center; }
+    .modal .modal-header .title {
+      font-size: 20px;
+      font-size: 1.25rem;
+      font-family: Poppins;
+      font-weight: 500;
+      line-height: .9;
+      text-align: center; }
+      @media (min-width: 48em) {
+        .modal .modal-header .title {
+          font-size: 28px;
+          font-size: 1.75rem;
+          line-height: .6; } }
+    .modal .modal-header .subtitle {
+      font-size: 16px;
+      font-size: 1rem;
+      color: #00a6df;
+      font-family: Roboto;
+      font-weight: 500; }
+      @media (min-width: 48em) {
+        .modal .modal-header .subtitle {
+          font-size: 20px;
+          font-size: 1.25rem; } }
+    .modal .modal-header .close {
+      color: #c0bbbb;
+      cursor: pointer;
+      margin: 10px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      transition: color .5s; }
+      @media (min-width: 48em) {
+        .modal .modal-header .close {
+          margin: 20px; } }
+      .modal .modal-header .close:hover {
+        color: #00a6df; }
+      .modal .modal-header .close [class^='icon-'],
+      .modal .modal-header .close [class*=' icon-'] {
+        font-size: 24px;
+        font-size: 1.5rem; }
+  .modal .modal-content {
+    margin-top: 20px; }
+    @media (min-width: 48em) {
+      .modal .modal-content {
+        font-size: 18px;
+        font-size: 1.125rem; } }
+  .modal .modal-footer {
+    margin-top: 20px; }

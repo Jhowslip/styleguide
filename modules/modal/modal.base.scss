@@ -1,0 +1,95 @@
+.modal-overlay {
+  background-color: $modal-overlay-background-color;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+
+.modal {
+  @include respond-to(sm) {
+    padding: 20px 25px;
+    width: 520px;
+  }
+
+
+  background-color: $modal-background-color;
+  border-radius: 7px;
+  left: 50%;
+  padding: 10px 8px;
+  position: absolute;
+  top: 15%;
+  transform: translate(-50%, -15%);
+  width: 300px;
+
+  .modal-header {
+    text-align: center;
+
+    .title {
+      @include respond-to(sm) {
+        @include font-size(28px);
+
+        line-height: .6;
+      }
+
+
+      @include font-size(20px);
+
+      font-family: Poppins;
+      font-weight: 500;
+      line-height: .9;
+      text-align: center;
+    }
+
+    .subtitle {
+      @include respond-to(sm) {
+        @include font-size(20px);
+      }
+
+
+      @include font-size(16px);
+
+      color: $primary-color;
+      font-family: Roboto;
+      font-weight: 500;
+    }
+
+    .close {
+      @include respond-to(sm) {
+        margin: 20px;
+      }
+
+
+      color: $modal-close-color;
+      cursor: pointer;
+      margin: 10px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      transition: color .5s;
+
+      &:hover {
+        color: $primary-color;
+      }
+
+      [class^='icon-'],
+      [class*=' icon-'] {
+        @include font-size(24px);
+      }
+    }
+  }
+
+  .modal-content {
+    @include respond-to(sm) {
+      @include font-size(18px);
+    }
+
+
+    margin-top: 20px;
+  }
+
+  .modal-footer {
+    margin-top: 20px;
+  }
+}
