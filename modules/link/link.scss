@@ -11,7 +11,7 @@ a {
 
   &:not([disabled]) {
     &::before {
-      background-color: $primary-color;
+      background-color: currentColor;
       bottom: 0;
       content: '';
       height: 2px;
@@ -23,11 +23,17 @@ a {
       width: 100%;
     }
 
-    &:hover {
+    &:hover,
+    &.hover {
       &::before {
         transform: scaleX(1);
         visibility: visible;
       }
     }
+  }
+
+  [class^='icon-'],
+  [class*=' icon-'] {
+    margin-right: 5px;
   }
 }

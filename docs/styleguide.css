@@ -721,6 +721,8 @@ body {
   @media (min-width: 48em) {
     .page {
       height: 100vh; } }
+  .page .content {
+    margin: 20px 0; }
 
 .container-fluid {
   max-width: 1200px;
@@ -839,6 +841,12 @@ body {
       font-size: 1.25rem;
       text-align: left; } }
 
+.section-title {
+  font-size: 20px;
+  font-size: 1.25rem;
+  font-family: Poppins;
+  font-weight: 500; }
+
 strong {
   font-family: Roboto;
   font-weight: 700; }
@@ -916,6 +924,36 @@ blockquote {
     box-shadow: 0 3px 0 0 #2f96c8;
     color: #fff; }
 
+.btn.btn-link {
+  font-size: 16px;
+  font-size: 1rem;
+  background-color: transparent;
+  box-shadow: none;
+  height: auto;
+  width: auto; }
+  @media (min-width: 48em) {
+    .btn.btn-link {
+      font-size: 18px;
+      font-size: 1.125rem; } }
+  .btn.btn-link:not([disabled]) {
+    color: #8d8d8d; }
+    .btn.btn-link:not([disabled])::before {
+      background-color: currentColor;
+      bottom: 0;
+      content: '';
+      height: 2px;
+      left: 0;
+      position: absolute;
+      transform: scaleX(0);
+      transition: transform .2s ease-in-out 0s;
+      visibility: hidden;
+      width: 100%; }
+    .btn.btn-link:not([disabled]):hover::before, .btn.btn-link:not([disabled]).hover::before {
+      transform: scaleX(1);
+      visibility: visible; }
+  .btn.btn-link[disabled] {
+    color: #d9d9d9; }
+
 a {
   color: #00a6df;
   cursor: pointer;
@@ -925,7 +963,7 @@ a {
     color: #d9d9d9;
     cursor: not-allowed; }
   a:not([disabled])::before {
-    background-color: #00a6df;
+    background-color: currentColor;
     bottom: 0;
     content: '';
     height: 2px;
@@ -935,9 +973,12 @@ a {
     transition: transform .2s ease-in-out 0s;
     visibility: hidden;
     width: 100%; }
-  a:not([disabled]):hover::before {
+  a:not([disabled]):hover::before, a:not([disabled]).hover::before {
     transform: scaleX(1);
     visibility: visible; }
+  a [class^='icon-'],
+  a [class*=' icon-'] {
+    margin-right: 5px; }
 
 .panel {
   background-color: #fff;

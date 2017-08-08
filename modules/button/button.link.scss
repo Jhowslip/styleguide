@@ -1,0 +1,43 @@
+.btn {
+  &.btn-link {
+    @include font-size(16px);
+    @include respond-to(sm) {
+      @include font-size(18px);
+    }
+
+
+    background-color: transparent;
+    box-shadow: none;
+    height: auto;
+    width: auto;
+
+    &:not([disabled]) {
+      color: $button-link-text-color;
+
+      &::before {
+        background-color: currentColor;
+        bottom: 0;
+        content: '';
+        height: 2px;
+        left: 0;
+        position: absolute;
+        transform: scaleX(0);
+        transition: transform .2s ease-in-out 0s;
+        visibility: hidden;
+        width: 100%;
+      }
+
+      &:hover,
+      &.hover {
+        &::before {
+          transform: scaleX(1);
+          visibility: visible;
+        }
+      }
+    }
+
+    &[disabled] {
+      color: $disabled-color;
+    }
+  }
+}

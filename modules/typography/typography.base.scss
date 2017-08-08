@@ -26,6 +26,14 @@
   text-align: center;
 }
 
+.section-title {
+  @include font-size(20px);
+
+  font-family: Poppins;
+  font-weight: 500;
+  text-align: left;
+}
+
 strong {
   font-family: Roboto;
   font-weight: 700;
