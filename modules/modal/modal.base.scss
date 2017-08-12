@@ -17,6 +17,7 @@
   background-color: $modal-background-color;
   border-radius: 7px;
   left: 50%;
+  outline: 0;
   padding: 10px 8px;
   position: absolute;
   top: 15%;
@@ -36,7 +37,7 @@
 
       @include font-size(20px);
 
-      font-family: Poppins;
+      font-family: Poppins, Arial;
       font-weight: 500;
       line-height: .9;
       text-align: center;
@@ -51,7 +52,7 @@
       @include font-size(16px);
 
       color: $primary-color;
-      font-family: Roboto;
+      font-family: Roboto, Arial;
       font-weight: 500;
     }
 
