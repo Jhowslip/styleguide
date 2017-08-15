@@ -1,0 +1,186 @@
+.input-container {
+  margin-top: 16px;
+  position: relative;
+
+  .hint {
+    color: $hint-color;
+    display: none;
+    opacity: 0;
+  }
+
+  label {
+    @include respond-to(sm) {
+      @include font-size(20px);
+    }
+
+
+    @include font-size(18px);
+
+    color: $input-color;
+    cursor: pointer;
+    font-family: Poppins, Arial;
+    font-weight: 500;
+    left: 0;
+    position: absolute;
+    top: .8rem;
+    transition: .2s ease-out;
+  }
+
+  input {
+    @include respond-to(sm) {
+      @include font-size(20px);
+    }
+
+
+    @include font-size(18px);
+
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px solid $input-color;
+    border-radius: 0;
+    box-shadow: none;
+    box-sizing: content-box;
+    cursor: pointer;
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    height: 40px;
+    margin: 0 0 6px;
+    outline: none;
+    padding: 0;
+    transition: border-bottom-color .5s ease-out;
+    width: 100%;
+
+    &:not(disabled) {
+      &:focus,
+      &:not([value='']) {
+        border-bottom-color: $focus-color;
+
+        & + label {
+          @include respond-to(sm) {
+            @include font-size(18px);
+          }
+
+
+          @include font-size(16px);
+
+          color: $focus-color;
+          transform: translateY(-130%);
+        }
+
+        & ~ .hint {
+          display: inline-block;
+          opacity: 1;
+          transition: opacity .5s ease-out;
+        }
+      }
+    }
+
+    &:disabled {
+      border-bottom-color: $input-color;
+      cursor: not-allowed;
+    }
+  }
+
+  &.valid {
+    //Quando houver feedback de validação o texto de ajuda não deve ser mostrado
+    .hint {
+      //sass-lint:disable-block no-important
+      display: none !important;
+      opacity: 0 !important;
+    }
+
+    .validation {
+      color: $valid-color;
+
+      &::before {
+        content: '\e903';
+        font-family: 'acesso';
+        margin-right: 5px;
+      }
+    }
+
+    label {
+      color: $valid-color;
+    }
+
+    input {
+      &,
+      &:focus {
+        border-bottom-color: $valid-color;
+        color: $valid-color;
+
+        & + label {
+          color: $valid-color;
+        }
+      }
+    }
+  }
+
+  &.invalid {
+    .hint {
+      //sass-lint:disable-block no-important
+      display: none !important;
+      opacity: 0 !important;
+    }
+
+    .validation {
+      color: $invalid-color;
+
+      &::before {
+        content: '\e90f';
+        font-family: 'acesso';
+        margin-right: 5px;
+      }
+    }
+
+    label {
+      color: $invalid-color;
+    }
+
+    input {
+      &,
+      &:focus {
+        border-bottom-color: $invalid-color;
+        color: $invalid-color;
+
+        & + label {
+          color: $invalid-color;
+        }
+      }
+    }
+  }
+
+  &.warning {
+    .hint {
+      //sass-lint:disable-block no-important
+      display: none !important;
+      opacity: 0 !important;
+    }
+
+    .validation {
+      color: $warning-color;
+
+      &::before {
+        content: '\e910';
+        font-family: 'acesso';
+        margin-right: 5px;
+      }
+    }
+
+    label {
+      color: $warning-color;
+    }
+
+    input {
+      &,
+      &:focus {
+        border-bottom-color: $warning-color;
+        color: $warning-color;
+
+        & + label {
+          color: $warning-color;
+        }
+      }
+    }
+  }
+}

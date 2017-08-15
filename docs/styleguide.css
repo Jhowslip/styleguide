@@ -880,6 +880,19 @@ blockquote {
     .btn {
       font-size: 20px;
       font-size: 1.25rem; } }
+  .btn.btn-small {
+    font-size: 14px;
+    font-size: 0.875rem;
+    font-family: Roboto, Arial;
+    font-weight: 500;
+    height: 24px;
+    line-height: 24px;
+    padding: 0 20px;
+    width: auto; }
+    @media (min-width: 48em) {
+      .btn.btn-small {
+        font-size: 16px;
+        font-size: 1rem; } }
   .btn[disabled], .btn.disabled {
     background-color: #d9d9d9;
     box-shadow: 0 3px 0 0 #c0c0c0;
@@ -1386,3 +1399,114 @@ a {
       .track-step .step.done::after {
         background-color: #33a4dc !important;
         transition: background-color 1s; }
+
+.input-container {
+  margin-top: 16px;
+  position: relative; }
+  .input-container .hint {
+    color: #838383;
+    display: none;
+    opacity: 0; }
+  .input-container label {
+    font-size: 18px;
+    font-size: 1.125rem;
+    color: #d9d9d9;
+    cursor: pointer;
+    font-family: Poppins, Arial;
+    font-weight: 500;
+    left: 0;
+    position: absolute;
+    top: .8rem;
+    transition: .2s ease-out; }
+    @media (min-width: 48em) {
+      .input-container label {
+        font-size: 20px;
+        font-size: 1.25rem; } }
+  .input-container input {
+    font-size: 18px;
+    font-size: 1.125rem;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px solid #d9d9d9;
+    border-radius: 0;
+    box-shadow: none;
+    box-sizing: content-box;
+    cursor: pointer;
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    height: 40px;
+    margin: 0 0 6px;
+    outline: none;
+    padding: 0;
+    transition: border-bottom-color .5s ease-out;
+    width: 100%; }
+    @media (min-width: 48em) {
+      .input-container input {
+        font-size: 20px;
+        font-size: 1.25rem; } }
+    .input-container input:not(disabled):focus, .input-container input:not(disabled):not([value='']) {
+      border-bottom-color: #00a6df; }
+      .input-container input:not(disabled):focus + label, .input-container input:not(disabled):not([value='']) + label {
+        font-size: 16px;
+        font-size: 1rem;
+        color: #00a6df;
+        transform: translateY(-130%); }
+        @media (min-width: 48em) {
+          .input-container input:not(disabled):focus + label, .input-container input:not(disabled):not([value='']) + label {
+            font-size: 18px;
+            font-size: 1.125rem; } }
+      .input-container input:not(disabled):focus ~ .hint, .input-container input:not(disabled):not([value='']) ~ .hint {
+        display: inline-block;
+        opacity: 1;
+        transition: opacity .5s ease-out; }
+    .input-container input:disabled {
+      border-bottom-color: #d9d9d9;
+      cursor: not-allowed; }
+  .input-container.valid .hint {
+    display: none !important;
+    opacity: 0 !important; }
+  .input-container.valid .validation {
+    color: #67c004; }
+    .input-container.valid .validation::before {
+      content: '\e903';
+      font-family: 'acesso';
+      margin-right: 5px; }
+  .input-container.valid label {
+    color: #67c004; }
+  .input-container.valid input, .input-container.valid input:focus {
+    border-bottom-color: #67c004;
+    color: #67c004; }
+    .input-container.valid input + label, .input-container.valid input:focus + label {
+      color: #67c004; }
+  .input-container.invalid .hint {
+    display: none !important;
+    opacity: 0 !important; }
+  .input-container.invalid .validation {
+    color: #d71010; }
+    .input-container.invalid .validation::before {
+      content: '\e90f';
+      font-family: 'acesso';
+      margin-right: 5px; }
+  .input-container.invalid label {
+    color: #d71010; }
+  .input-container.invalid input, .input-container.invalid input:focus {
+    border-bottom-color: #d71010;
+    color: #d71010; }
+    .input-container.invalid input + label, .input-container.invalid input:focus + label {
+      color: #d71010; }
+  .input-container.warning .hint {
+    display: none !important;
+    opacity: 0 !important; }
+  .input-container.warning .validation {
+    color: #f4a81d; }
+    .input-container.warning .validation::before {
+      content: '\e910';
+      font-family: 'acesso';
+      margin-right: 5px; }
+  .input-container.warning label {
+    color: #f4a81d; }
+  .input-container.warning input, .input-container.warning input:focus {
+    border-bottom-color: #f4a81d;
+    color: #f4a81d; }
+    .input-container.warning input + label, .input-container.warning input:focus + label {
+      color: #f4a81d; }
