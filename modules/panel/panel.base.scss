@@ -19,7 +19,7 @@
       text-align: center;
     }
 
-    .page-title {
+    .flow-title {
       line-height: .7;
       margin: 0;
     }
@@ -50,7 +50,7 @@
     }
 
     .subtitle,
-    .page-subtitle {
+    .flow-subtitle {
       color: $panel-subtitle-color;
       font-weight: 500;
     }
@@ -62,8 +62,8 @@
       }
     }
 
-    .page-title,
-    .page-subtitle {
+    .flow-title,
+    .flow-subtitle {
       text-align: inherit;
     }
   }
