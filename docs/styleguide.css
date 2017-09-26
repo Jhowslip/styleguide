@@ -704,7 +704,7 @@
 
 html,
 body {
-  background-color: #f9f9f9;
+  background-color: #fff;
   box-sizing: border-box;
   font-family: Roboto, Arial;
   font-size: 16px;
@@ -750,6 +750,7 @@ body {
   font-size: 0.875rem;
   background-color: #fff;
   border-top: solid 4px #00a6df;
+  box-shadow: 0 1px 0 0 #eff2f3;
   color: #838383;
   font-family: Poppins, Arial;
   margin-bottom: 30px;
@@ -1033,7 +1034,7 @@ a {
     text-align: left; }
     .panel .panel-header.center {
       text-align: center; }
-    .panel .panel-header .page-title {
+    .panel .panel-header .flow-title {
       line-height: .7;
       margin: 0; }
     .panel .panel-header .title {
@@ -1057,7 +1058,8 @@ a {
           .panel .panel-header .title:last-child {
             font-size: 24px;
             font-size: 1.5rem; } }
-    .panel .panel-header .subtitle {
+    .panel .panel-header .subtitle,
+    .panel .panel-header .flow-subtitle {
       color: #00a6df;
       font-weight: 500; }
     .panel .panel-header .subtitle {
@@ -1067,8 +1069,8 @@ a {
         .panel .panel-header .subtitle {
           font-size: 14px;
           font-size: 0.875rem; } }
-    .panel .panel-header .page-title,
-    .panel .panel-header .page-subtitle {
+    .panel .panel-header .flow-title,
+    .panel .panel-header .flow-subtitle {
       text-align: inherit; }
 
 @font-face {
@@ -1533,3 +1535,58 @@ a {
     color: #f4a81d; }
     .input-container.warning input + label, .input-container.warning input:focus + label {
       color: #f4a81d; }
+
+input[type='radio']:checked, input[type='radio']:not(:checked) {
+  display: none; }
+  input[type='radio']:checked + label, input[type='radio']:not(:checked) + label {
+    font-size: 18px;
+    font-size: 1.125rem;
+    color: #838383;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Roboto', Arial;
+    line-height: 20px;
+    padding-left: 28px;
+    position: relative; }
+    @media (min-width: 48em) {
+      input[type='radio']:checked + label, input[type='radio']:not(:checked) + label {
+        font-size: 20px;
+        font-size: 1.25rem; } }
+    input[type='radio']:checked + label::before, input[type='radio']:not(:checked) + label::before {
+      background: #fff;
+      border: 1px solid #838383;
+      border-radius: 100%;
+      content: '';
+      height: 18px;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 18px; }
+    input[type='radio']:checked + label::after, input[type='radio']:not(:checked) + label::after {
+      background: #00a6df;
+      border-radius: 100%;
+      content: '';
+      height: 12px;
+      left: 4px;
+      position: absolute;
+      top: 4px;
+      transition: .2s ease;
+      width: 12px; }
+
+input[type='radio']:not(:checked) + label::after {
+  opacity: 0;
+  transform: scale(0); }
+
+input[type='radio']:checked + label {
+  color: #00a6df;
+  font-weight: 500; }
+  input[type='radio']:checked + label::before {
+    border-color: #00a6df; }
+  input[type='radio']:checked + label::after {
+    opacity: 1;
+    transform: scale(1); }
+
+input[type='radio']:disabled + label {
+  color: #d9d9d9; }
+  input[type='radio']:disabled + label::before {
+    border-color: #d9d9d9; }
