@@ -745,6 +745,22 @@ body {
     .hidden-xs {
       display: block !important; } }
 
+[class^='icon-'].visible-xs,
+[class*=' icon-'].visible-xs {
+  display: inline-block !important; }
+  @media (min-width: 48em) {
+    [class^='icon-'].visible-xs,
+    [class*=' icon-'].visible-xs {
+      display: none !important; } }
+
+[class^='icon-'].hidden-xs,
+[class*=' icon-'].hidden-xs {
+  display: none !important; }
+  @media (min-width: 48em) {
+    [class^='icon-'].hidden-xs,
+    [class*=' icon-'].hidden-xs {
+      display: inline-block !important; } }
+
 .header {
   font-size: 14px;
   font-size: 0.875rem;
@@ -1546,12 +1562,18 @@ input[type='radio']:checked, input[type='radio']:not(:checked) {
     display: inline-block;
     font-family: 'Roboto', Arial;
     line-height: 20px;
+    margin: 10px;
     padding-left: 28px;
     position: relative; }
     @media (min-width: 48em) {
       input[type='radio']:checked + label, input[type='radio']:not(:checked) + label {
         font-size: 20px;
         font-size: 1.25rem; } }
+    input[type='radio']:checked + label small, input[type='radio']:not(:checked) + label small {
+      display: block; }
+      @media (min-width: 48em) {
+        input[type='radio']:checked + label small, input[type='radio']:not(:checked) + label small {
+          display: inline-block; } }
     input[type='radio']:checked + label::before, input[type='radio']:not(:checked) + label::before {
       background: #fff;
       border: 1px solid #838383;
@@ -1560,7 +1582,8 @@ input[type='radio']:checked, input[type='radio']:not(:checked) {
       height: 18px;
       left: 0;
       position: absolute;
-      top: 0;
+      top: 50%;
+      transform: translate(0, -50%);
       width: 18px; }
     input[type='radio']:checked + label::after, input[type='radio']:not(:checked) + label::after {
       background: #00a6df;
@@ -1569,7 +1592,7 @@ input[type='radio']:checked, input[type='radio']:not(:checked) {
       height: 12px;
       left: 4px;
       position: absolute;
-      top: 4px;
+      top: calc(50% - 6px);
       transition: .2s ease;
       width: 12px; }
 
@@ -1590,3 +1613,9 @@ input[type='radio']:disabled + label {
   color: #d9d9d9; }
   input[type='radio']:disabled + label::before {
     border-color: #d9d9d9; }
+
+.radio-group .radio-group-item.selected {
+  background-color: #f4f4f4; }
+
+.radio-group.inline .radio-group-item {
+  display: inline-block; }

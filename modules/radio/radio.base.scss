@@ -17,8 +17,18 @@ input {
         display: inline-block;
         font-family: 'Roboto', Arial;
         line-height: 20px;
+        margin: 10px;
         padding-left: 28px;
         position: relative;
+
+        & small {
+          @include respond-to(sm) {
+            display: inline-block;
+          }
+
+
+          display: block;
+        }
 
         &::before {
           background: $radio-background-color;
@@ -28,7 +38,8 @@ input {
           height: 18px;
           left: 0;
           position: absolute;
-          top: 0;
+          top: 50%;
+          transform: translate(0, -50%);
           width: 18px;
         }
 
@@ -39,7 +50,7 @@ input {
           height: 12px;
           left: 4px;
           position: absolute;
-          top: 4px;
+          top: calc(50% - 6px);
           transition: .2s ease;
           width: 12px;
         }

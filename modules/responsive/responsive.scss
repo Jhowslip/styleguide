@@ -16,3 +16,24 @@
 
   display: none !important;
 }
+
+[class^='icon-'],
+[class*=' icon-'] {
+  &.visible-xs {
+    @include respond-to(sm) {
+      display: none !important;
+    }
+
+
+    display: inline-block !important;
+  }
+
+  &.hidden-xs {
+    @include respond-to(sm) {
+      display: inline-block !important;
+    }
+
+
+    display: none !important;
+  }
+}

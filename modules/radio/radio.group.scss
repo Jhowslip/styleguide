@@ -1,0 +1,14 @@
+.radio-group {
+  & .radio-group-item {
+
+    &.selected {
+      background-color: $radio-group-item-selected-background-color;
+    }
+  }
+
+  &.inline {
+    & .radio-group-item {
+      display: inline-block;
+    }
+  }
+}
