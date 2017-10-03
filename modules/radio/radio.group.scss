@@ -1,6 +1,9 @@
 .radio-group {
-  & .radio-group-item {
+  border-bottom: solid 1px $radio-group-border-bottom-color;
+  padding-bottom: 30px;
+  padding-top: 20px;
 
+  & .radio-group-item {
     &.selected {
       background-color: $radio-group-item-selected-background-color;
     }

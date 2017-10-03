@@ -887,6 +887,7 @@ body {
   font-size: 1.25rem;
   font-family: Poppins, Arial;
   font-weight: 500;
+  margin-bottom: 40px;
   text-align: left; }
 
 strong {
@@ -1088,6 +1089,13 @@ a {
     .panel .panel-header .flow-title,
     .panel .panel-header .flow-subtitle {
       text-align: inherit; }
+  .panel .panel-content {
+    margin-top: 15px; }
+    @media (min-width: 48em) {
+      .panel .panel-content {
+        font-size: 18px;
+        font-size: 1.125rem;
+        margin-top: 60px; } }
 
 @font-face {
   font-family: 'acesso';
@@ -1123,6 +1131,10 @@ a {
   [class*=' icon-'].icon-5x {
     font-size: 32px;
     font-size: 2rem; }
+  [class^='icon-'].icon-6x,
+  [class*=' icon-'].icon-6x {
+    font-size: 36px;
+    font-size: 2.25rem; }
   [class^='icon-'].spin,
   [class*=' icon-'].spin {
     animation: spin 1s linear infinite; }
@@ -1373,12 +1385,14 @@ a {
         display: inline;
         font-weight: 500;
         line-height: 32px;
+        margin-left: 10px;
         vertical-align: bottom; }
         @media (min-width: 48em) {
           .track-step .step.active .step-text {
             font-size: 18px;
             font-size: 1.125rem;
-            line-height: 55px; } }
+            line-height: 55px;
+            margin-left: 20px; } }
       .track-step .step.active:not(:first-child) {
         margin: 0 16px; }
         @media (min-width: 48em) {
@@ -1501,8 +1515,10 @@ a {
         opacity: 1;
         transition: opacity .5s ease-out; }
     .input-container input:disabled {
-      border-bottom-color: #d9d9d9;
-      cursor: not-allowed; }
+      border-bottom-color: #d9d9d9; }
+      .input-container input:disabled,
+      .input-container input:disabled + label {
+        cursor: not-allowed; }
   .input-container.valid .hint {
     display: none !important;
     opacity: 0 !important; }
@@ -1551,6 +1567,62 @@ a {
     color: #f4a81d; }
     .input-container.warning input + label, .input-container.warning input:focus + label {
       color: #f4a81d; }
+  .input-container.loading,
+  .input-container.loading input,
+  .input-container.loading label {
+    cursor: progress; }
+  .input-container.loading .hint {
+    display: none !important;
+    opacity: 0 !important; }
+  .input-container.loading .loading::before {
+    animation: spin 1s linear infinite;
+    color: #00a6df;
+    content: '\e91a';
+    display: inline-block;
+    font-family: 'acesso';
+    margin-right: 5px; }
+
+.input-group {
+  position: relative; }
+  .input-group .btn {
+    display: none;
+    height: 32px;
+    padding: 0 5px;
+    position: absolute;
+    right: 0;
+    top: 3px;
+    width: auto; }
+  .input-group .btn-icon {
+    color: #d9d9d9;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 3px;
+    width: auto; }
+    .input-group .btn-icon .icon {
+      font-size: 28px;
+      font-size: 1.75rem;
+      display: block; }
+    .input-group .btn-icon .text {
+      font-size: 12px;
+      font-size: 0.75rem;
+      display: block;
+      line-height: .3;
+      text-align: center; }
+  .input-group input:not(:disabled):not([value='']) ~ label ~ .btn, .input-group input:not(:disabled):focus ~ label ~ .btn {
+    display: inline-block; }
+  .input-group input:not(:disabled):not([value='']) ~ label ~ .btn-icon {
+    color: #838383; }
+  .input-group input:disabled ~ label ~ .btn {
+    background-color: #d9d9d9;
+    box-shadow: 0 3px 0 0 #c0c0c0;
+    cursor: not-allowed;
+    display: inline-block;
+    pointer-events: none; }
+  .input-group input:disabled ~ label ~ .btn-icon {
+    cursor: not-allowed;
+    display: none;
+    pointer-events: none; }
 
 input[type='radio']:checked, input[type='radio']:not(:checked) {
   display: none; }
@@ -1614,8 +1686,11 @@ input[type='radio']:disabled + label {
   input[type='radio']:disabled + label::before {
     border-color: #d9d9d9; }
 
-.radio-group .radio-group-item.selected {
-  background-color: #f4f4f4; }
-
-.radio-group.inline .radio-group-item {
-  display: inline-block; }
+.radio-group {
+  border-bottom: solid 1px #d4d4d4;
+  padding-bottom: 30px;
+  padding-top: 20px; }
+  .radio-group .radio-group-item.selected {
+    background-color: #f4f4f4; }
+  .radio-group.inline .radio-group-item {
+    display: inline-block; }

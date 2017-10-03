@@ -68,5 +68,14 @@
     }
   }
 
-  // .panel-content {}
+  .panel-content {
+    @include respond-to(sm) {
+      @include font-size(18px);
+
+      margin-top: 60px;
+    }
+
+
+    margin-top: 15px;
+  }
 }

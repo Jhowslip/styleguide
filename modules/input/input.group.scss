@@ -1,0 +1,70 @@
+.input-group {
+  position: relative;
+
+  .btn {
+    display: none;
+    height: 32px;
+    padding: 0 5px;
+    position: absolute;
+    right: 0;
+    top: 3px;
+    width: auto;
+  }
+
+  .btn-icon {
+    color: $input-color;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 3px;
+    width: auto;
+
+    .icon {
+      @include font-size(28px);
+
+      display: block;
+      text-align: center;
+    }
+
+    .text {
+      @include font-size(12px);
+
+      display: block;
+      line-height: .3;
+      text-align: center;
+    }
+  }
+
+  input {
+    &:not(:disabled) {
+      &:not([value='']),
+      &:focus {
+        & ~ label ~ .btn {
+          display: inline-block;
+        }
+      }
+
+      &:not([value='']) {
+        & ~ label ~ .btn-icon {
+          color: $hint-color;
+        }
+      }
+    }
+
+    &:disabled {
+      & ~ label ~ .btn {
+        background-color: $disabled-color;
+        box-shadow: 0 3px 0 0 $disabled-shadow-color;
+        cursor: not-allowed;
+        display: inline-block;
+        pointer-events: none;
+      }
+
+      & ~ label ~ .btn-icon {
+        cursor: not-allowed;
+        display: none;
+        pointer-events: none;
+      }
+    }
+  }
+}

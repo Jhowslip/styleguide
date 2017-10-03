@@ -13,6 +13,7 @@
       @include font-size(20px);
     }
 
+
     @include font-size(18px);
 
     color: $input-color;
@@ -76,7 +77,11 @@
 
     &:disabled {
       border-bottom-color: $input-color;
-      cursor: not-allowed;
+
+      &,
+      & + label {
+        cursor: not-allowed;
+      }
     }
   }
 
@@ -179,6 +184,31 @@
         & + label {
           color: $warning-color;
         }
+      }
+    }
+  }
+
+  &.loading {
+    &,
+    input,
+    label {
+      cursor: progress;
+    }
+
+    .hint {
+      //sass-lint:disable-block no-important
+      display: none !important;
+      opacity: 0 !important;
+    }
+
+    .loading {
+      &::before {
+        animation: spin 1s linear infinite;
+        color: $primary-color;
+        content: '\e91a';
+        display: inline-block;
+        font-family: 'acesso';
+        margin-right: 5px;
       }
     }
   }
