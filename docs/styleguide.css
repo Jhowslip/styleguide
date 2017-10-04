@@ -704,7 +704,7 @@
 
 html,
 body {
-  background-color: #fff;
+  background-color: #f9f9f9;
   box-sizing: border-box;
   font-family: Roboto, Arial;
   font-size: 16px;
@@ -1070,11 +1070,13 @@ a {
         font-size: 20px;
         font-size: 1.25rem;
         border-bottom: solid 1px #d9d9d9;
+        margin-bottom: 15px;
         padding-bottom: 10px; }
         @media (min-width: 48em) {
           .panel .panel-header .title:last-child {
             font-size: 24px;
-            font-size: 1.5rem; } }
+            font-size: 1.5rem;
+            margin-bottom: 60px; } }
     .panel .panel-header .subtitle,
     .panel .panel-header .flow-subtitle {
       color: #00a6df;
@@ -1602,7 +1604,8 @@ a {
     .input-group .btn-icon .icon {
       font-size: 28px;
       font-size: 1.75rem;
-      display: block; }
+      display: block;
+      text-align: center; }
     .input-group .btn-icon .text {
       font-size: 12px;
       font-size: 0.75rem;

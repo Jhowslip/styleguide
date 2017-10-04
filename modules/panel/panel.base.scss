@@ -41,10 +41,13 @@
         @include font-size(20px);
         @include respond-to(sm) {
           @include font-size(24px);
+
+          margin-bottom: 60px;
         }
 
 
         border-bottom: solid 1px $panel-title-border-bottom-color;
+        margin-bottom: 15px;
         padding-bottom: 10px;
       }
     }
@@ -66,16 +69,5 @@
     .flow-subtitle {
       text-align: inherit;
     }
-  }
-
-  .panel-content {
-    @include respond-to(sm) {
-      @include font-size(18px);
-
-      margin-top: 60px;
-    }
-
-
-    margin-top: 15px;
   }
 }
