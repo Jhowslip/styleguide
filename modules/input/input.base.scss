@@ -97,7 +97,7 @@
       color: $valid-color;
 
       &::before {
-        content: '\e903';
+        content: '\e963';
         font-family: 'acesso';
         margin-right: 5px;
       }
@@ -131,7 +131,7 @@
       color: $invalid-color;
 
       &::before {
-        content: '\e90f';
+        content: '\e95d';
         font-family: 'acesso';
         margin-right: 5px;
       }
@@ -165,7 +165,7 @@
       color: $warning-color;
 
       &::before {
-        content: '\e910';
+        content: '\e94b';
         font-family: 'acesso';
         margin-right: 5px;
       }
@@ -205,7 +205,7 @@
       &::before {
         animation: spin 1s linear infinite;
         color: $primary-color;
-        content: '\e91a';
+        content: '\e932';
         display: inline-block;
         font-family: 'acesso';
         margin-right: 5px;
