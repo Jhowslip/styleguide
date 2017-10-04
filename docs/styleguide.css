@@ -890,6 +890,13 @@ body {
   margin-bottom: 40px;
   text-align: left; }
 
+.section-subtitle {
+  font-size: 18px;
+  font-size: 1.125rem;
+  font-family: Poppins, Arial;
+  font-weight: 300;
+  text-align: left; }
+
 strong {
   font-family: Roboto, Arial;
   font-weight: 700; }
@@ -908,7 +915,6 @@ ul li {
   font-size: 18px;
   font-size: 1.125rem;
   font-weight: 300;
-  line-height: 1.5;
   list-style: none;
   margin-left: 10px; }
   ul li::before {
@@ -1109,6 +1115,25 @@ a {
     .panel .panel-header .flow-title,
     .panel .panel-header .flow-subtitle {
       text-align: inherit; }
+  .panel .panel-content .section-title {
+    font-size: 24px;
+    font-size: 1.5rem;
+    color: #00a6df;
+    line-height: .5;
+    margin-bottom: 0;
+    margin-top: 20px; }
+    @media (min-width: 48em) {
+      .panel .panel-content .section-title {
+        font-size: 34px;
+        font-size: 2.125rem; } }
+  .panel .panel-content .section-subtitle {
+    font-size: 18px;
+    font-size: 1.125rem;
+    color: #00a6df; }
+    @media (min-width: 48em) {
+      .panel .panel-content .section-subtitle {
+        font-size: 26px;
+        font-size: 1.625rem; } }
 
 @font-face {
   font-family: 'acesso';
@@ -1365,7 +1390,11 @@ a {
   position: relative; }
   .track-step .step {
     color: #d8d8d8;
+    font-size: unset;
+    margin: 0;
     transition: color 1s; }
+    .track-step .step::before {
+      content: none; }
     .track-step .step.active {
       color: #33a4dc; }
       .track-step .step.active:first-child {

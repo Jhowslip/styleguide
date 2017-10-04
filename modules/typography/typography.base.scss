@@ -61,6 +61,14 @@
   text-align: left;
 }
 
+.section-subtitle {
+  @include font-size(18px);
+
+  font-family: Poppins, Arial;
+  font-weight: 300;
+  text-align: left;
+}
+
 strong {
   font-family: Roboto, Arial;
   font-weight: 700;
