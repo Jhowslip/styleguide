@@ -897,6 +897,28 @@ body {
   font-weight: 300;
   text-align: left; }
 
+.congratulations {
+  font-size: 24px;
+  font-size: 1.5rem;
+  color: #00a6df;
+  font-family: Poppins, Arial;
+  font-weight: 500;
+  line-height: 1;
+  margin: 20px 0; }
+  @media (min-width: 48em) {
+    .congratulations {
+      font-size: 34px;
+      font-size: 2.125rem; } }
+  .congratulations small {
+    font-size: 18px;
+    font-size: 1.125rem;
+    display: block;
+    font-weight: 300; }
+    @media (min-width: 48em) {
+      .congratulations small {
+        font-size: 26px;
+        font-size: 1.625rem; } }
+
 strong {
   font-family: Roboto, Arial;
   font-weight: 700; }
@@ -1115,25 +1137,6 @@ a {
     .panel .panel-header .flow-title,
     .panel .panel-header .flow-subtitle {
       text-align: inherit; }
-  .panel .panel-content .section-title {
-    font-size: 24px;
-    font-size: 1.5rem;
-    color: #00a6df;
-    line-height: .5;
-    margin-bottom: 0;
-    margin-top: 20px; }
-    @media (min-width: 48em) {
-      .panel .panel-content .section-title {
-        font-size: 34px;
-        font-size: 2.125rem; } }
-  .panel .panel-content .section-subtitle {
-    font-size: 18px;
-    font-size: 1.125rem;
-    color: #00a6df; }
-    @media (min-width: 48em) {
-      .panel .panel-content .section-subtitle {
-        font-size: 26px;
-        font-size: 1.625rem; } }
 
 @font-face {
   font-family: 'acesso';

@@ -1,6 +1,6 @@
 {
   "name": "acessocard-styleguide",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "description": "",
   "engines": {
     "node": ">=8.0.0",
