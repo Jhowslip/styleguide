@@ -904,6 +904,24 @@ blockquote {
   padding: 10px;
   text-align: left; }
 
+ul li {
+  font-size: 18px;
+  font-size: 1.125rem;
+  font-weight: 300;
+  line-height: 1.5;
+  list-style: none;
+  margin-left: 10px; }
+  ul li::before {
+    font-size: 36px;
+    font-size: 2.25rem;
+    color: #33a4dc;
+    content: '\2022';
+    left: -10px;
+    max-height: 0;
+    max-width: 0;
+    position: relative;
+    top: 5px; }
+
 .btn {
   font-size: 18px;
   font-size: 1.125rem;
@@ -1091,13 +1109,6 @@ a {
     .panel .panel-header .flow-title,
     .panel .panel-header .flow-subtitle {
       text-align: inherit; }
-  .panel .panel-content {
-    margin-top: 15px; }
-    @media (min-width: 48em) {
-      .panel .panel-content {
-        font-size: 18px;
-        font-size: 1.125rem;
-        margin-top: 60px; } }
 
 @font-face {
   font-family: 'acesso';
@@ -1339,6 +1350,11 @@ a {
       .modal .modal-content {
         font-size: 18px;
         font-size: 1.125rem; } }
+    .modal .modal-content .section-title {
+      font-size: 22px;
+      font-size: 1.375rem;
+      color: #00a6df;
+      margin-bottom: 20px; }
   .modal .modal-footer {
     margin-top: 20px; }
 

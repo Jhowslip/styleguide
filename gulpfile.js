@@ -24,7 +24,8 @@ gulp.task('serve', ['sass:lint', 'sass:docs', 'sass:watch'], function () {
     });
 
     gulp.watch("docs/*.css").on('change', browserSync.reload);
-    gulp.watch("docs/*.html").on('change', browserSync.reload);
+    gulp.watch("docs/**/*.html").on('change', browserSync.reload);
+    gulp.watch("docs/*.js").on('change', browserSync.reload);
 });
 
 gulp.task('sass', function () {

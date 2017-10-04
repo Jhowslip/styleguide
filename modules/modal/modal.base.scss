@@ -88,6 +88,13 @@
 
 
     margin-top: 20px;
+
+    .section-title {
+      @include font-size(22px);
+
+      color: $primary-color;
+      margin-bottom: 20px;
+    }
   }
 
   .modal-footer {
