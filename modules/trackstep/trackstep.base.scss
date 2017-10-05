@@ -6,7 +6,13 @@
 
   .step {
     color: $step-background-color;
+    font-size: unset;
+    margin: 0;
     transition: color 1s;
+
+    &::before {
+      content: none;
+    }
 
     &.active {
       color: $active-step-color;
