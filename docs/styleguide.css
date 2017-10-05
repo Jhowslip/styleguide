@@ -1242,6 +1242,9 @@ a {
 .icon-no-sun:before {
   content: ""; }
 
+.icon-padlock-success:before {
+  content: ""; }
+
 .icon-no-padlock:before {
   content: ""; }
 
@@ -1272,7 +1275,7 @@ a {
 .icon-mastercard:before {
   content: ""; }
 
-.icon-market:before {
+.icon-shopping-cart:before {
   content: ""; }
 
 .icon-maplocation:before {
@@ -1301,6 +1304,9 @@ a {
 
 .icon-key:before {
   content: ""; }
+
+.icon-interrogation:before {
+  content: ""; }
 
 .icon-internet:before {
   content: ""; }
@@ -1331,6 +1337,9 @@ a {
 
 .icon-happy-padlock:before {
   content: ""; }
+
+.icon-happy-exclamation:before {
+  content: ""; }
 
 .icon-happy-desktop:before {
   content: ""; }
@@ -1368,6 +1377,9 @@ a {
 .icon-exclamation:before {
   content: ""; }
 
+.icon-error:before {
+  content: ""; }
+
 .icon-email-sent:before {
   content: ""; }
 
@@ -1380,7 +1392,7 @@ a {
 .icon-dog:before {
   content: ""; }
 
-.icon-documents:before {
+.icon-copy:before {
   content: ""; }
 
 .icon-document:before {
@@ -1418,9 +1430,6 @@ a {
 
 .icon-close-2:before {
   content: ""; }
-
-.icon-close:before {
-  content: ""; }
 
 .icon-clipboard:before {
   content: ""; }
@@ -1473,7 +1482,7 @@ a {
 .icon-bus:before {
   content: ""; }
 
-.icon-block:before {
+.icon-padlock:before {
   content: ""; }
 
 .icon-beauty:before {

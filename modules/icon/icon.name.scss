@@ -169,6 +169,11 @@
     content: $icon-no-sun;
   }
 }
+.icon-padlock-success {
+  &:before {
+    content: $icon-happy-padlock;
+  }
+}
 .icon-no-padlock {
   &:before {
     content: $icon-no-padlock;
@@ -219,9 +224,9 @@
     content: $icon-mastercard;
   }
 }
-.icon-market {
+.icon-shopping-cart {
   &:before {
-    content: $icon-market;
+    content: $icon-shopping-cart;
   }
 }
 .icon-maplocation {
@@ -267,6 +272,11 @@
 .icon-key {
   &:before {
     content: $icon-key;
+  }
+}
+.icon-interrogation {
+  &:before {
+    content: $icon-interrogation;
   }
 }
 .icon-internet {
@@ -317,6 +327,11 @@
 .icon-happy-padlock {
   &:before {
     content: $icon-happy-padlock;
+  }
+}
+.icon-happy-exclamation {
+  &:before {
+    content: $icon-happy-exclamation;
   }
 }
 .icon-happy-desktop {
@@ -379,6 +394,11 @@
     content: $icon-exclamation;
   }
 }
+.icon-error {
+  &:before {
+    content: $icon-error;
+  }
+}
 .icon-email-sent {
   &:before {
     content: $icon-email-sent;
@@ -399,9 +419,9 @@
     content: $icon-dog;
   }
 }
-.icon-documents {
+.icon-copy {
   &:before {
-    content: $icon-documents;
+    content: $icon-copy;
   }
 }
 .icon-document {
@@ -462,11 +482,6 @@
 .icon-close-2 {
   &:before {
     content: $icon-close-2;
-  }
-}
-.icon-close {
-  &:before {
-    content: $icon-close;
   }
 }
 .icon-clipboard {
@@ -554,9 +569,9 @@
     content: $icon-bus;
   }
 }
-.icon-block {
+.icon-padlock {
   &:before {
-    content: $icon-block;
+    content: $icon-padlock;
   }
 }
 .icon-beauty {
