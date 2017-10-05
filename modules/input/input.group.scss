@@ -35,6 +35,14 @@
     }
   }
 
+  a {
+    position: absolute;
+    right: 0;
+    top: -1.1rem;
+    width: auto;
+    color: $hint-color;
+  }
+
   input {
     &:not(:disabled) {
       &:not([value='']),
@@ -64,6 +72,11 @@
         cursor: not-allowed;
         display: none;
         pointer-events: none;
+      }
+
+      & ~ label ~ a {
+        cursor: not-allowed;
+        color: $input-color;
       }
     }
   }

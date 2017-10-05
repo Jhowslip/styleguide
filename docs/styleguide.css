@@ -1922,6 +1922,12 @@ a {
       display: block;
       line-height: .3;
       text-align: center; }
+  .input-group a {
+    position: absolute;
+    right: 0;
+    top: -1.1rem;
+    width: auto;
+    color: #838383; }
   .input-group input:not(:disabled):not([value='']) ~ label ~ .btn, .input-group input:not(:disabled):focus ~ label ~ .btn {
     display: inline-block; }
   .input-group input:not(:disabled):not([value='']) ~ label ~ .btn-icon {
@@ -1936,6 +1942,9 @@ a {
     cursor: not-allowed;
     display: none;
     pointer-events: none; }
+  .input-group input:disabled ~ label ~ a {
+    cursor: not-allowed;
+    color: #d9d9d9; }
 
 input[type='radio']:checked, input[type='radio']:not(:checked) {
   display: none; }
