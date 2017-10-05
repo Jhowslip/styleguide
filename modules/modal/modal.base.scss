@@ -10,6 +10,11 @@
 }
 
 .modal-dialog {
+  @include respond-to(sm) {
+    position: static;
+  }
+
+
   position: relative;
 
   .modal {

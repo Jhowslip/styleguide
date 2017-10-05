@@ -109,7 +109,8 @@
 
     input {
       &,
-      &:focus {
+      &:focus,
+      &:not([value='']) {
         border-bottom-color: $valid-color;
         color: $valid-color;
 
@@ -143,7 +144,8 @@
 
     input {
       &,
-      &:focus {
+      &:focus,
+      &:not([value='']) {
         border-bottom-color: $invalid-color;
         color: $invalid-color;
 
@@ -177,7 +179,8 @@
 
     input {
       &,
-      &:focus {
+      &:focus,
+      &:not([value='']) {
         border-bottom-color: $warning-color;
         color: $warning-color;
 

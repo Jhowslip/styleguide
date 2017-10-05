@@ -1567,6 +1567,9 @@ a {
 
 .modal-dialog {
   position: relative; }
+  @media (min-width: 48em) {
+    .modal-dialog {
+      position: static; } }
   .modal-dialog .modal {
     background-color: #fff;
     border-radius: 7px;
@@ -1832,10 +1835,10 @@ a {
       margin-right: 5px; }
   .input-container.valid label {
     color: #67c004; }
-  .input-container.valid input, .input-container.valid input:focus {
+  .input-container.valid input, .input-container.valid input:focus, .input-container.valid input:not([value='']) {
     border-bottom-color: #67c004;
     color: #67c004; }
-    .input-container.valid input + label, .input-container.valid input:focus + label {
+    .input-container.valid input + label, .input-container.valid input:focus + label, .input-container.valid input:not([value='']) + label {
       color: #67c004; }
   .input-container.invalid .hint {
     display: none !important;
@@ -1848,10 +1851,10 @@ a {
       margin-right: 5px; }
   .input-container.invalid label {
     color: #d71010; }
-  .input-container.invalid input, .input-container.invalid input:focus {
+  .input-container.invalid input, .input-container.invalid input:focus, .input-container.invalid input:not([value='']) {
     border-bottom-color: #d71010;
     color: #d71010; }
-    .input-container.invalid input + label, .input-container.invalid input:focus + label {
+    .input-container.invalid input + label, .input-container.invalid input:focus + label, .input-container.invalid input:not([value='']) + label {
       color: #d71010; }
   .input-container.warning .hint {
     display: none !important;
@@ -1864,10 +1867,10 @@ a {
       margin-right: 5px; }
   .input-container.warning label {
     color: #f4a81d; }
-  .input-container.warning input, .input-container.warning input:focus {
+  .input-container.warning input, .input-container.warning input:focus, .input-container.warning input:not([value='']) {
     border-bottom-color: #f4a81d;
     color: #f4a81d; }
-    .input-container.warning input + label, .input-container.warning input:focus + label {
+    .input-container.warning input + label, .input-container.warning input:focus + label, .input-container.warning input:not([value='']) + label {
       color: #f4a81d; }
   .input-container.loading,
   .input-container.loading input,
