@@ -11,7 +11,14 @@
     transition: color 1s;
 
     &::before {
-      content: none;
+      color: unset;
+      content: unset;
+      font-size: unset;
+      left: unset;
+      max-height: unset;
+      max-width: unset;
+      position: unset;
+      top: unset;
     }
 
     &.active {
