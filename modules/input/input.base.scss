@@ -82,6 +82,16 @@
       & + label {
         cursor: not-allowed;
       }
+
+      &:not([value='']) {
+        border-bottom-color: $disabled-color;
+        
+        &,
+        & + label {
+          cursor: not-allowed;
+          color: $disabled-color;
+        }
+      }
     }
   }
 
