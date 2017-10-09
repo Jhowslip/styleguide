@@ -1839,6 +1839,12 @@ a {
       .input-container input:disabled,
       .input-container input:disabled + label {
         cursor: not-allowed; }
+      .input-container input:disabled:not([value='']) {
+        border-bottom-color: #d9d9d9; }
+        .input-container input:disabled:not([value='']),
+        .input-container input:disabled:not([value='']) + label {
+          cursor: not-allowed;
+          color: #d9d9d9; }
   .input-container.valid .hint {
     display: none !important;
     opacity: 0 !important; }
