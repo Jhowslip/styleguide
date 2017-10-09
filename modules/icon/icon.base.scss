@@ -2,7 +2,11 @@
   font-family: 'acesso';
   font-style: normal;
   font-weight: normal;
-  src: url('#{$icon-font-path}/acesso.eot') format('embedded-opentype'), url('#{$icon-font-path}/acesso.ttf') format('truetype'), url('#{$icon-font-path}/acesso.woff') format('woff'), url('#{$icon-font-path}/acesso.svg') format('svg');
+  src: url('#{$icon-font-path}/acesso.eot') format('embedded-opentype'), 
+  url('#{$icon-font-path}/acesso.ttf') format('truetype'), 
+  url('#{$icon-font-path}/acesso.svg') format('svg'),
+  url('#{$icon-font-path}/acesso.woff') format('woff'), 
+  url('#{$icon-font-path}/acesso.woff2') format('woff2');
 }
 
 [class^='icon-'],

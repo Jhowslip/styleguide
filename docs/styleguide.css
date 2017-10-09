@@ -1142,7 +1142,7 @@ a {
   font-family: 'acesso';
   font-style: normal;
   font-weight: normal;
-  src: url("https://i.icomoon.io/public/f995540dd0/IconografiadaAcesso/acesso.eot") format("embedded-opentype"), url("https://i.icomoon.io/public/f995540dd0/IconografiadaAcesso/acesso.ttf") format("truetype"), url("https://i.icomoon.io/public/f995540dd0/IconografiadaAcesso/acesso.woff") format("woff"), url("https://i.icomoon.io/public/f995540dd0/IconografiadaAcesso/acesso.svg") format("svg"); }
+  src: url("https://i.icomoon.io/public/f995540dd0/IconografiadaAcesso/acesso.eot") format("embedded-opentype"), url("https://i.icomoon.io/public/f995540dd0/IconografiadaAcesso/acesso.ttf") format("truetype"), url("https://i.icomoon.io/public/f995540dd0/IconografiadaAcesso/acesso.svg") format("svg"), url("https://i.icomoon.io/public/f995540dd0/IconografiadaAcesso/acesso.woff") format("woff"), url("https://i.icomoon.io/public/f995540dd0/IconografiadaAcesso/acesso.woff2") format("woff2"); }
 
 [class^='icon-'],
 [class*=' icon-'] {
