@@ -1186,374 +1186,382 @@ a {
   100% {
     transform: rotate(359deg); } }
 
-.icon-world::before {
-  content: ""; }
-
-.icon-wifi::before {
-  content: ""; }
-
-.icon-user-status::before {
-  content: ""; }
-
-.icon-user-info::before {
-  content: ""; }
-
-.icon-unblock::before {
-  content: ""; }
-
-.icon-tv::before {
-  content: ""; }
-
-.icon-tshirt::before {
-  content: ""; }
-
-.icon-trophy::before {
-  content: ""; }
-
-.icon-transfer::before {
-  content: ""; }
-
-.icon-telecommunications::before {
-  content: ""; }
-
-.icon-ted-doc::before {
-  content: ""; }
-
-.icon-tax-info::before {
+.icon-acesso:before {
   content: ""; }
 
-.icon-sun::before {
-  content: ""; }
-
-.icon-status-happy-card::before {
-  content: ""; }
-
-.icon-sms-sent::before {
-  content: ""; }
-
-.icon-show-password::before {
-  content: ""; }
-
-.icon-share::before {
-  content: ""; }
-
-.icon-services::before {
-  content: ""; }
-
-.icon-school::before {
-  content: ""; }
-
-.icon-sad-card::before {
-  content: ""; }
-
-.icon-reminder::before {
-  content: ""; }
-
-.icon-recharge::before {
-  content: ""; }
-
-.icon-rates::before {
+.icon-change-password:before {
   content: ""; }
 
-.icon-printer::before {
-  content: ""; }
-
-.icon-plus2::before {
-  content: ""; }
-
-.icon-plus::before {
-  content: ""; }
-
-.icon-players::before {
-  content: ""; }
-
-.icon-plane::before {
-  content: ""; }
-
-.icon-phone::before {
-  content: ""; }
-
-.icon-payment-card::before {
-  content: ""; }
-
-.icon-payment-bill::before {
+.icon-chat:before {
   content: ""; }
 
-.icon-password::before {
-  content: ""; }
-
-.icon-number-card::before {
+.icon-checked-1:before {
   content: ""; }
 
-.icon-no-sun::before {
-  content: ""; }
-
-.icon-padlock-success::before {
-  content: ""; }
-
-.icon-no-padlock::before {
-  content: ""; }
-
-.icon-no-magnetic::before {
-  content: ""; }
-
-.icon-no-key::before {
-  content: ""; }
-
-.icon-no-clips::before {
-  content: ""; }
-
-.icon-newspaper::before {
-  content: ""; }
-
-.icon-music::before {
-  content: ""; }
-
-.icon-money-pig::before {
-  content: ""; }
-
-.icon-money::before {
+.icon-circle-dolar:before {
   content: ""; }
 
-.icon-medal::before {
-  content: ""; }
-
-.icon-mastercard::before {
-  content: ""; }
-
-.icon-shopping-cart::before {
-  content: ""; }
-
-.icon-maplocation::before {
-  content: ""; }
-
-.icon-magnetic::before {
-  content: ""; }
-
-.icon-lottery::before {
-  content: ""; }
-
-.icon-location-car::before {
+.icon-close-2:before {
   content: ""; }
 
-.icon-location::before {
-  content: ""; }
-
-.icon-loading::before {
+.icon-coupon-2:before {
   content: ""; }
 
-.icon-limits-info::before {
+.icon-coupon-info:before {
   content: ""; }
 
-.icon-limits::before {
-  content: ""; }
-
-.icon-key::before {
-  content: ""; }
-
-.icon-interrogation::before {
-  content: ""; }
-
-.icon-internet::before {
-  content: ""; }
-
-.icon-insert-card::before {
-  content: ""; }
-
-.icon-hotel::before {
-  content: ""; }
-
-.icon-home::before {
-  content: ""; }
-
-.icon-hide-password::before {
+.icon-delivery-truck:before {
   content: ""; }
 
-.icon-help::before {
-  content: ""; }
-
-.icon-healthy-heart::before {
-  content: ""; }
-
-.icon-happy-recharge::before {
-  content: ""; }
-
-.icon-happy-padlock-2::before {
-  content: ""; }
-
-.icon-happy-padlock::before {
-  content: ""; }
-
-.icon-happy-exclamation::before {
-  content: ""; }
-
-.icon-happy-desktop::before {
-  content: ""; }
-
-.icon-happy-cellphone::before {
-  content: ""; }
-
-.icon-gift::before {
-  content: ""; }
-
-.icon-getout::before {
-  content: ""; }
-
-.icon-gasoline::before {
-  content: ""; }
-
-.icon-furniture::before {
-  content: ""; }
-
-.icon-friends::before {
-  content: ""; }
-
-.icon-fork-knife::before {
-  content: ""; }
-
-.icon-flag-success::before {
-  content: ""; }
-
-.icon-fail-padlock::before {
-  content: ""; }
-
-.icon-factory::before {
-  content: ""; }
-
-.icon-exclamation::before {
-  content: ""; }
-
-.icon-error::before {
-  content: ""; }
-
-.icon-email-sent::before {
+.icon-email-sent:before {
   content: ""; }
 
-.icon-email::before {
-  content: ""; }
-
-.icon-ecommerce::before {
-  content: ""; }
-
-.icon-dog::before {
-  content: ""; }
-
-.icon-copy::before {
-  content: ""; }
-
-.icon-document::before {
-  content: ""; }
-
-.icon-diamond::before {
-  content: ""; }
-
-.icon-deposit::before {
-  content: ""; }
-
-.icon-delivery::before {
+.icon-hide-password:before {
   content: ""; }
 
-.icon-cvc::before {
-  content: ""; }
-
-.icon-custom::before {
-  content: ""; }
-
-.icon-coupon-info::before {
+.icon-limits-info:before {
   content: ""; }
 
-.icon-coupon-2::before {
+.icon-loading:before {
   content: ""; }
 
-.icon-corporatecard::before {
-  content: ""; }
-
-.icon-corporate::before {
-  content: ""; }
-
-.icon-construction::before {
-  content: ""; }
-
-.icon-close::before {
+.icon-location-car:before {
   content: ""; }
 
-.icon-clipboard::before {
-  content: ""; }
+.icon-money .path1:before {
+  content: "";
+  color: black; }
 
-.icon-clip::before {
-  content: ""; }
+.icon-money .path2:before {
+  content: "";
+  margin-left: -1em;
+  color: black; }
 
-.icon-circle-dolar::before {
-  content: ""; }
+.icon-money .path3:before {
+  content: "";
+  margin-left: -1em;
+  color: #231f20; }
 
-.icon-choose-card::before {
-  content: ""; }
-
-.icon-checked-1::before {
-  content: ""; }
-
-.icon-checked::before {
-  content: ""; }
-
-.icon-chat::before {
-  content: ""; }
-
-.icon-change-password::before {
+.icon-number-card:before {
   content: ""; }
 
-.icon-celphone::before {
+.icon-payment-bill:before {
+  content: ""; }
+
+.icon-rates:before {
+  content: ""; }
+
+.icon-tax-info .path1:before {
+  content: "";
+  color: black; }
+
+.icon-tax-info .path2:before {
+  content: "";
+  margin-left: -1em;
+  color: #231f20; }
+
+.icon-sun:before {
+  content: ""; }
+
+.icon-world:before {
+  content: ""; }
+
+.icon-wifi:before {
+  content: ""; }
+
+.icon-user-status:before {
+  content: ""; }
+
+.icon-user-info:before {
+  content: ""; }
+
+.icon-unblock:before {
+  content: ""; }
+
+.icon-tv:before {
+  content: ""; }
+
+.icon-tshirt:before {
+  content: ""; }
+
+.icon-trophy:before {
+  content: ""; }
+
+.icon-transfer:before {
+  content: ""; }
+
+.icon-telecommunications:before {
+  content: ""; }
+
+.icon-ted-doc:before {
+  content: ""; }
+
+.icon-status-happy-card:before {
+  content: ""; }
+
+.icon-sms-sent:before {
+  content: ""; }
+
+.icon-show-password:before {
+  content: ""; }
+
+.icon-share:before {
+  content: ""; }
+
+.icon-services:before {
+  content: ""; }
+
+.icon-school:before {
+  content: ""; }
+
+.icon-sad-card:before {
+  content: ""; }
+
+.icon-reminder:before {
+  content: ""; }
+
+.icon-recharge:before {
+  content: ""; }
+
+.icon-printer:before {
+  content: ""; }
+
+.icon-plus2:before {
+  content: ""; }
+
+.icon-plus:before {
+  content: ""; }
+
+.icon-players:before {
+  content: ""; }
+
+.icon-plane:before {
+  content: ""; }
+
+.icon-phone:before {
+  content: ""; }
+
+.icon-payment-card:before {
+  content: ""; }
+
+.icon-password:before {
+  content: ""; }
+
+.icon-no-sun:before {
+  content: ""; }
+
+.icon-no-padlock:before {
+  content: ""; }
+
+.icon-no-magnetic:before {
+  content: ""; }
+
+.icon-no-key:before {
+  content: ""; }
+
+.icon-no-clips:before {
+  content: ""; }
+
+.icon-newspaper:before {
+  content: ""; }
+
+.icon-music:before {
+  content: ""; }
+
+.icon-money-pig:before {
+  content: ""; }
+
+.icon-medal:before {
+  content: ""; }
+
+.icon-mastercard:before {
+  content: ""; }
+
+.icon-shopping-cart:before {
+  content: ""; }
+
+.icon-maplocation:before {
+  content: ""; }
+
+.icon-magnetic:before {
+  content: ""; }
+
+.icon-lottery:before {
+  content: ""; }
+
+.icon-location:before {
+  content: ""; }
+
+.icon-limits:before {
+  content: ""; }
+
+.icon-key:before {
+  content: ""; }
+
+.icon-internet:before {
+  content: ""; }
+
+.icon-insert-card:before {
+  content: ""; }
+
+.icon-hotel:before {
+  content: ""; }
+
+.icon-home:before {
+  content: ""; }
+
+.icon-help:before {
+  content: ""; }
+
+.icon-healthy-heart:before {
+  content: ""; }
+
+.icon-happy-recharge:before {
+  content: ""; }
+
+.icon-happy-padlock-2:before {
+  content: ""; }
+
+.icon-happy-padlock:before {
+  content: ""; }
+
+.icon-happy-desktop:before {
+  content: ""; }
+
+.icon-happy-cellphone:before {
+  content: ""; }
+
+.icon-gift:before {
+  content: ""; }
+
+.icon-getout:before {
+  content: ""; }
+
+.icon-gasoline:before {
+  content: ""; }
+
+.icon-furniture:before {
+  content: ""; }
+
+.icon-friends:before {
+  content: ""; }
+
+.icon-fork-knife:before {
+  content: ""; }
+
+.icon-flag-success:before {
+  content: ""; }
+
+.icon-fail-padlock:before {
+  content: ""; }
+
+.icon-factory:before {
+  content: ""; }
+
+.icon-exclamation:before {
+  content: ""; }
+
+.icon-email:before {
+  content: ""; }
+
+.icon-ecommerce:before {
+  content: ""; }
+
+.icon-dog:before {
+  content: ""; }
+
+.icon-documents:before {
+  content: ""; }
+
+.icon-document:before {
+  content: ""; }
+
+.icon-diamond:before {
+  content: ""; }
+
+.icon-deposit:before {
+  content: ""; }
+
+.icon-cvc:before {
+  content: ""; }
+
+.icon-custom:before {
+  content: ""; }
+
+.icon-corporatecard:before {
+  content: ""; }
+
+.icon-corporate:before {
+  content: ""; }
+
+.icon-construction:before {
+  content: ""; }
+
+.icon-error:before {
+  content: ""; }
+
+.icon-clipboard:before {
+  content: ""; }
+
+.icon-clip:before {
+  content: ""; }
+
+.icon-choose-card:before {
+  content: ""; }
+
+.icon-checked:before {
+  content: ""; }
+
+.icon-celphone:before {
   content: ""; }
 
-.icon-cellphone::before {
+.icon-cellphone:before {
   content: ""; }
 
-.icon-casino::before {
+.icon-casino:before {
   content: ""; }
 
-.icon-cash-out::before {
+.icon-cash-out:before {
   content: ""; }
 
-.icon-cash-money::before {
+.icon-cash-money:before {
   content: ""; }
 
-.icon-cardmachine::before {
+.icon-cardmachine:before {
   content: ""; }
 
-.icon-car::before {
+.icon-car:before {
   content: ""; }
 
-.icon-camera::before {
+.icon-camera:before {
   content: ""; }
 
-.icon-bus::before {
+.icon-bus:before {
   content: ""; }
 
-.icon-padlock::before {
+.icon-padlock:before {
   content: ""; }
 
-.icon-beauty::before {
+.icon-beauty:before {
   content: ""; }
 
-.icon-bag::before {
+.icon-bag:before {
   content: ""; }
 
-.icon-arrow::before {
+.icon-arrow:before {
   content: ""; }
 
-.icon-advantages-star::before {
+.icon-advantages-star:before {
   content: ""; }
 
-.icon-advantages-info::before {
+.icon-advantages-info:before {
   content: ""; }
 
-.icon-activation::before {
+.icon-activation:before {
   content: ""; }
 
-.icon-acessocard::before {
+.icon-acessocard:before {
   content: ""; }
-
-.icon-acesso::before {
-  content: ""; }
 
 .modal-overlay {
   background-color: rgba(0, 0, 0, 0.8);
