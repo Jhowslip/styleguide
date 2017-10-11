@@ -54,6 +54,12 @@
     content: $icon-delivery-truck;
   }
 }
+
+.icon-dolar-sign {
+  &:before {
+    content: $icon-circle-dolar;
+  }
+}
 .icon-email-sent {
   &:before {
     content: $icon-email-sent;
