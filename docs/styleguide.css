@@ -1958,6 +1958,31 @@ a {
     cursor: not-allowed;
     color: #d9d9d9; }
 
+.input-container.fixed .hint {
+  color: #838383;
+  display: inline-block;
+  opacity: 1; }
+
+.input-container.fixed label {
+  font-size: 16px;
+  font-size: 1rem;
+  color: #00a6df;
+  top: -1.25rem;
+  cursor: default; }
+  @media (min-width: 48em) {
+    .input-container.fixed label {
+      font-size: 18px;
+      font-size: 1.125rem; } }
+
+.input-container.fixed input:not(disabled):focus + label, .input-container.fixed input:not(disabled):not([value='']) + label {
+  transform: translateY(0); }
+
+.input-container.fixed input:disabled + label {
+  color: #d9d9d9; }
+
+.input-container.fixed input:disabled ~ .hint {
+  color: #d9d9d9; }
+
 input[type='radio']:checked, input[type='radio']:not(:checked) {
   display: none; }
   input[type='radio']:checked + label, input[type='radio']:not(:checked) + label {

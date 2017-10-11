@@ -1,0 +1,40 @@
+.input-container.fixed {
+    .hint {
+        color: $hint-color;
+        display: inline-block;
+        opacity: 1;
+      }
+    
+      label {
+        @include respond-to(sm) {
+          @include font-size(18px);
+        }
+    
+        @include font-size(16px);
+    
+        color: $focus-color;
+        top: -1.25rem;
+        cursor: default;
+      }
+
+      input { 
+            &:not(disabled) {
+                &:focus,
+                &:not([value='']) {
+                    & + label {
+                        transform: translateY(0);
+                    }
+                }
+            }
+
+            &:disabled {
+                & + label {
+                    color: $disabled-color
+                }
+
+                & ~ .hint {
+                    color: $disabled-color
+                }
+            }
+      }
+  }
