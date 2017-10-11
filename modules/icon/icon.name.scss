@@ -24,6 +24,11 @@
     content: $icon-circle-dolar;
   }
 }
+.icon-close {
+  &:before {
+    content: $icon-error;
+  }
+}
 .icon-close-2 {
   &:before {
     content: $icon-close-2;
@@ -37,6 +42,11 @@
 .icon-coupon-info {
   &:before {
     content: $icon-coupon-info;
+  }
+}
+.icon-delivery {
+  &:before {
+    content: $icon-delivery-truck;
   }
 }
 .icon-delivery-truck {
@@ -69,24 +79,9 @@
     content: $icon-location-car;
   }
 }
-.icon-money .path1 {
+.icon-money {
   &:before {
-    content: $icon-money-path1;  
-    color: rgb(0, 0, 0);
-  }
-}
-.icon-money .path2 {
-  &:before {
-    content: $icon-money-path2;  
-    margin-left: -1em;  
-    color: rgb(0, 0, 0);
-  }
-}
-.icon-money .path3 {
-  &:before {
-    content: $icon-money-path3;  
-    margin-left: -1em;  
-    color: rgb(35, 31, 32);
+    content: $icon-money;
   }
 }
 .icon-number-card {
@@ -104,17 +99,9 @@
     content: $icon-rates;
   }
 }
-.icon-tax-info .path1 {
+.icon-tax-info {
   &:before {
-    content: $icon-tax-info-path1;  
-    color: rgb(0, 0, 0);
-  }
-}
-.icon-tax-info .path2 {
-  &:before {
-    content: $icon-tax-info-path2;  
-    margin-left: -1em;  
-    color: rgb(35, 31, 32);
+    content: $icon-tax-info;  
   }
 }
 .icon-sun {
@@ -347,6 +334,11 @@
     content: $icon-key;
   }
 }
+.icon-interrogation {
+  &:before {
+    content: $icon-help;
+  }
+}
 .icon-internet {
   &:before {
     content: $icon-internet;
@@ -515,6 +507,11 @@
 .icon-error {
   &:before {
     content: $icon-error;
+  }
+}
+.icon-copy {
+  &:before {
+    content: $icon-documents;
   }
 }
 .icon-clipboard {

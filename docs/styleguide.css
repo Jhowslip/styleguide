@@ -1142,7 +1142,7 @@ a {
   font-family: 'acesso';
   font-style: normal;
   font-weight: normal;
-  src: url("https://i.icomoon.io/public/f995540dd0/IconografiadaAcesso/acesso.eot") format("embedded-opentype"), url("https://i.icomoon.io/public/f995540dd0/IconografiadaAcesso/acesso.ttf") format("truetype"), url("https://i.icomoon.io/public/f995540dd0/IconografiadaAcesso/acesso.svg") format("svg"), url("https://i.icomoon.io/public/f995540dd0/IconografiadaAcesso/acesso.woff") format("woff"), url("https://i.icomoon.io/public/f995540dd0/IconografiadaAcesso/acesso.woff2") format("woff2"); }
+  src: url("https://i.icomoon.io/public/f995540dd0/IconografiadaAcesso/acesso.eot") format("embedded-opentype"), url("https://i.icomoon.io/public/f995540dd0/IconografiadaAcesso/acesso.woff2") format("woff2"), url("https://i.icomoon.io/public/f995540dd0/IconografiadaAcesso/acesso.woff") format("woff"), url("https://i.icomoon.io/public/f995540dd0/IconografiadaAcesso/acesso.svg") format("svg"), url("https://i.icomoon.io/public/f995540dd0/IconografiadaAcesso/acesso.ttf") format("truetype"); }
 
 [class^='icon-'],
 [class*=' icon-'] {
@@ -1201,6 +1201,9 @@ a {
 .icon-circle-dolar:before {
   content: ""; }
 
+.icon-close:before {
+  content: ""; }
+
 .icon-close-2:before {
   content: ""; }
 
@@ -1209,6 +1212,9 @@ a {
 
 .icon-coupon-info:before {
   content: ""; }
+
+.icon-delivery:before {
+  content: ""; }
 
 .icon-delivery-truck:before {
   content: ""; }
@@ -1228,19 +1234,8 @@ a {
 .icon-location-car:before {
   content: ""; }
 
-.icon-money .path1:before {
-  content: "";
-  color: black; }
-
-.icon-money .path2:before {
-  content: "";
-  margin-left: -1em;
-  color: black; }
-
-.icon-money .path3:before {
-  content: "";
-  margin-left: -1em;
-  color: #231f20; }
+.icon-money:before {
+  content: ""; }
 
 .icon-number-card:before {
   content: ""; }
@@ -1251,14 +1246,8 @@ a {
 .icon-rates:before {
   content: ""; }
 
-.icon-tax-info .path1:before {
-  content: "";
-  color: black; }
-
-.icon-tax-info .path2:before {
-  content: "";
-  margin-left: -1em;
-  color: #231f20; }
+.icon-tax-info:before {
+  content: ""; }
 
 .icon-sun:before {
   content: ""; }
@@ -1398,6 +1387,9 @@ a {
 .icon-key:before {
   content: ""; }
 
+.icon-interrogation:before {
+  content: ""; }
+
 .icon-internet:before {
   content: ""; }
 
@@ -1499,6 +1491,9 @@ a {
 
 .icon-error:before {
   content: ""; }
+
+.icon-copy:before {
+  content: ""; }
 
 .icon-clipboard:before {
   content: ""; }
