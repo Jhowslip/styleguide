@@ -33,7 +33,7 @@
                 }
 
                 & ~ .hint {
-                    color: $disabled-color
+                    display: none
                 }
             }
       }

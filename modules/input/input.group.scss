@@ -53,7 +53,7 @@
       }
 
       &:not([value='']) {
-        & ~ label ~ .btn-icon {
+        & ~ .btn-icon {
           color: $hint-color;
         }
       }

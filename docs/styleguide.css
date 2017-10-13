@@ -1942,7 +1942,7 @@ a {
     color: #838383; }
   .input-group input:not(:disabled):not([value='']) ~ label ~ .btn, .input-group input:not(:disabled):focus ~ label ~ .btn {
     display: inline-block; }
-  .input-group input:not(:disabled):not([value='']) ~ label ~ .btn-icon {
+  .input-group input:not(:disabled):not([value='']) ~ .btn-icon {
     color: #838383; }
   .input-group input:disabled ~ label ~ .btn {
     background-color: #d9d9d9;
@@ -1981,7 +1981,7 @@ a {
   color: #d9d9d9; }
 
 .input-container.fixed input:disabled ~ .hint {
-  color: #d9d9d9; }
+  display: none; }
 
 input[type='radio']:checked, input[type='radio']:not(:checked) {
   display: none; }
