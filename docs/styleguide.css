@@ -1901,7 +1901,7 @@ a {
   .input-container.loading .loading::before {
     animation: spin 1s linear infinite;
     color: #00a6df;
-    content: '\e932';
+    content: '\e958';
     display: inline-block;
     font-family: 'acesso';
     margin-right: 5px; }
