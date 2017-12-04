@@ -1652,6 +1652,10 @@ a {
   justify-content: center;
   list-style: none;
   position: relative; }
+  @media (min-width: 48em) {
+    .track-step {
+      margin: 0 auto;
+      width: 500px; } }
   .track-step .step {
     color: #d8d8d8;
     font-size: unset;
@@ -1667,14 +1671,13 @@ a {
       position: unset;
       top: unset; }
     .track-step .step.active {
-      color: #33a4dc; }
+      color: #33a4dc;
+      flex: 1; }
       .track-step .step.active:first-child {
         margin-right: 14px; }
         @media (min-width: 48em) {
           .track-step .step.active:first-child {
             margin-right: 64px; } }
-      .track-step .step.active ~ .step {
-        color: #33a4dc; }
       .track-step .step.active .step-icon {
         background-color: #fff;
         border: 2px solid #33a4dc;
@@ -1709,13 +1712,16 @@ a {
           .track-step .step.active .step-text {
             font-size: 18px;
             font-size: 1.125rem;
-            line-height: 60px;
-            margin-left: 20px; } }
+            line-height: 55px;
+            margin-left: 40px; } }
       .track-step .step.active:not(:first-child) {
         margin: 0 16px; }
         @media (min-width: 48em) {
           .track-step .step.active:not(:first-child) {
-            margin: 0 64px; } }
+            margin-left: 64px; } }
+        @media (min-width: 48em) {
+          .track-step .step.active:not(:first-child) .step-text {
+            line-height: 60px; } }
         .track-step .step.active:not(:first-child)::before {
           background-color: currentColor;
           content: '';
@@ -1729,7 +1735,7 @@ a {
             .track-step .step.active:not(:first-child)::before {
               height: 3px;
               left: -64px;
-              top: 47%;
+              top: 50%;
               width: 64px; } }
       .track-step .step.active:last-child {
         margin-right: 0; }
@@ -1742,7 +1748,7 @@ a {
       width: 12px; }
       @media (min-width: 48em) {
         .track-step .step:not(.active) {
-          margin: 25px 0; } }
+          margin: 24px 0; } }
       .track-step .step:not(.active) .step-icon,
       .track-step .step:not(.active) .step-text {
         display: none; }

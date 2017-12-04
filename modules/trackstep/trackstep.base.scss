@@ -1,4 +1,10 @@
 .track-step {
+  @include respond-to(sm) {
+    margin: 0 auto;
+    width: 500px;
+  }
+
+
   display: flex;
   justify-content: center;
   list-style: none;
@@ -23,6 +29,7 @@
 
     &.active {
       color: $active-step-color;
+      flex: 1;
 
       &:first-child {
         @include respond-to(sm) {
@@ -33,9 +40,9 @@
         margin-right: 14px;
       }
 
-      & ~ .step {
-        color: $active-step-color;
-      }
+      // & ~ .step {
+      //   color: $active-step-color;
+      // }
 
       .step-icon {
         @include respond-to(sm) {
@@ -71,8 +78,8 @@
         @include respond-to(sm) {
           @include font-size(18px);
 
-          line-height: 60px;
-          margin-left: 20px;
+          line-height: 55px;
+          margin-left: 40px;
         }
 
 
@@ -87,17 +94,23 @@
 
       &:not(:first-child) {
         @include respond-to(sm) {
-          margin: 0 64px;
+          margin-left: 64px;
         }
 
 
         margin: 0 16px;
 
+        .step-text {
+          @include respond-to(sm) {
+            line-height: 60px;
+          }
+        }
+
         &::before {
           @include respond-to(sm) {
             height: 3px;
             left: -64px;
-            top: 47%;
+            top: 50%;
             width: 64px;
           }
 
@@ -120,7 +133,7 @@
 
     &:not(.active) {
       @include respond-to(sm) {
-        margin: 25px 0;
+        margin: 24px 0;
       }
 
 
