@@ -1709,7 +1709,7 @@ a {
           .track-step .step.active .step-text {
             font-size: 18px;
             font-size: 1.125rem;
-            line-height: 55px;
+            line-height: 60px;
             margin-left: 20px; } }
       .track-step .step.active:not(:first-child) {
         margin: 0 16px; }
@@ -1742,7 +1742,7 @@ a {
       width: 12px; }
       @media (min-width: 48em) {
         .track-step .step:not(.active) {
-          margin: 22px 0; } }
+          margin: 25px 0; } }
       .track-step .step:not(.active) .step-icon,
       .track-step .step:not(.active) .step-text {
         display: none; }

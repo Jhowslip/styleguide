@@ -71,7 +71,7 @@
         @include respond-to(sm) {
           @include font-size(18px);
 
-          line-height: 55px;
+          line-height: 60px;
           margin-left: 20px;
         }
 
@@ -120,7 +120,7 @@
 
     &:not(.active) {
       @include respond-to(sm) {
-        margin: 22px 0;
+        margin: 25px 0;
       }
 
 
