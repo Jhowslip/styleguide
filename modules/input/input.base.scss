@@ -85,7 +85,7 @@
 
       &:not([value='']) {
         border-bottom-color: $disabled-color;
-        
+
         &,
         & + label {
           cursor: not-allowed;

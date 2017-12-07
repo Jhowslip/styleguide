@@ -1,13 +1,14 @@
 .track-step {
   @include respond-to(sm) {
-    margin: 0 auto;
-    width: 500px;
+    max-width: 570px;
   }
 
 
   display: flex;
   justify-content: center;
   list-style: none;
+  margin: 10px auto 0;
+  max-width: 320px;
   position: relative;
 
   .step {
@@ -31,14 +32,13 @@
       color: $active-step-color;
       flex: 1;
 
-      &:first-child {
-        @include respond-to(sm) {
-          margin-right: 64px;
-        }
+      // &:first-child {
+      //   @include respond-to(sm) {
+      //     margin-right: 64px;
+      //   }
 
-
-        margin-right: 14px;
-      }
+      //   margin-right: 14px;
+      // }
 
       // & ~ .step {
       //   color: $active-step-color;
@@ -46,7 +46,7 @@
 
       .step-icon {
         @include respond-to(sm) {
-          border-width: 3px;
+          border-width: 2px;
           height: 55px;
           width: 55px;
         }
@@ -79,7 +79,6 @@
           @include font-size(18px);
 
           line-height: 55px;
-          margin-left: 40px;
         }
 
 
@@ -94,11 +93,11 @@
 
       &:not(:first-child) {
         @include respond-to(sm) {
-          margin-left: 64px;
+          margin-left: 100px;
         }
 
 
-        margin: 0 16px;
+        margin: 0 25px;
 
         .step-text {
           @include respond-to(sm) {
@@ -108,10 +107,9 @@
 
         &::before {
           @include respond-to(sm) {
-            height: 3px;
-            left: -64px;
+            left: -100px;
             top: 50%;
-            width: 64px;
+            width: 100px;
           }
 
 
@@ -119,10 +117,10 @@
           content: '';
           display: block;
           height: 2px;
-          left: -18px;
+          left: -25px;
           position: relative;
           top: 50%;
-          width: 18px;
+          width: 25px;
         }
       }
 
@@ -133,16 +131,18 @@
 
     &:not(.active) {
       @include respond-to(sm) {
+        height: 16px;
         margin: 24px 0;
+        width: 16px;
       }
 
 
       border: 2px solid $step-background-color;
       border-radius: 100%;
       display: inline-block;
-      height: 12px;
+      height: 14px;
       margin: 12px 0;
-      width: 12px;
+      width: 14px;
 
       .step-icon,
       .step-text {
@@ -152,17 +152,16 @@
       & + .step {
         &:not(.active) {
           @include respond-to(sm) {
-            margin-left: 64px;
+            margin-left: 100px;
           }
 
 
-          margin-left: 18px;
+          margin-left: 25px;
 
           &::after {
             @include respond-to(sm) {
-              height: 3px;
-              left: -66px;
-              width: 64px;
+              left: -102px;
+              width: 100px;
             }
 
 
@@ -170,10 +169,10 @@
             content: '';
             display: block;
             height: 2px;
-            left: -20px;
+            left: -27px;
             position: relative;
             top: 50%;
-            width: 18px;
+            width: 25px;
           }
         }
       }

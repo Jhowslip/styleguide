@@ -8,6 +8,7 @@
 
     background-color: transparent;
     box-shadow: none;
+    font-weight: 500;
     height: auto;
     width: auto;
 
@@ -15,23 +16,31 @@
       color: $button-link-text-color;
 
       &::before {
+        @include respond-to(sm) {
+          transform: scaleX(0);
+          visibility: hidden;
+        }
+
+
         background-color: currentColor;
         bottom: 0;
         content: '';
         height: 2px;
         left: 0;
         position: absolute;
-        transform: scaleX(0);
+        transform: scaleX(1);
         transition: transform .2s ease-in-out 0s;
-        visibility: hidden;
+        visibility: visible;
         width: 100%;
       }
 
       &:hover,
       &.hover {
         &::before {
-          transform: scaleX(1);
-          visibility: visible;
+          @include respond-to(sm) {
+            transform: scaleX(1);
+            visibility: visible;
+          }
         }
       }
     }
