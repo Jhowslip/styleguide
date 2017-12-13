@@ -1,0 +1,80 @@
+.tab-container {
+  .tab-header {
+    display: flex;
+    flex-direction: row;
+
+    .tab-header-item {
+      @include respond-to(sm) {
+        @include font-size(18px);
+      }
+
+
+      color: $tab-header-item-color;
+      flex: 1;
+      font-family: Poppins, Arial;
+      font-weight: 500;
+      margin: 15px auto;
+
+      .icon {
+        @include respond-to(sm) {
+          @include font-size(18px);
+
+          display: inline;
+        }
+
+
+        color: currentColor;
+        display: none;
+      }
+
+      a {
+        border-bottom: 2px solid currentColor;
+        color: currentColor;
+        transition: .5s;
+        vertical-align: text-bottom;
+
+        &::before {
+          content: none;
+        }
+      }
+
+      &:hover {
+        .icon {
+          color: $primary-color;
+        }
+
+        a {
+          border-bottom: 2px solid $primary-color;
+          color: $primary-color;
+          transition: .5s;
+        }
+      }
+
+      &.active {
+        a {
+          border-bottom: 0;
+          color: $primary-color;
+        }
+
+        .icon {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+
+  .tab-item {
+    @include respond-to(sm) {
+      @include font-size(18px);
+    }
+
+
+    @include font-size(16px);
+
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+}
