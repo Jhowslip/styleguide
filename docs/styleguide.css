@@ -1,5 +1,4 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,700|Roboto:300,400,500,700");
 .container-fluid,
 .container {
   margin-right: auto;
@@ -817,6 +816,9 @@ body {
     font-size: 0.875rem;
     background-color: #005d7a;
     padding: 20px 0; }
+    @media (min-width: 48em) {
+      .footer .footer-bottom .address p {
+        text-align: right; } }
     .footer .footer-bottom p {
       line-height: 1.5;
       padding: 3px 0; }
@@ -1137,7 +1139,7 @@ a {
   font-family: 'acesso';
   font-style: normal;
   font-weight: normal;
-  src: url("https://i.icomoon.io/public/f995540dd0/IconografiadaAcesso/acesso.eot") format("embedded-opentype"), url("https://i.icomoon.io/public/f995540dd0/IconografiadaAcesso/acesso.woff2") format("woff2"), url("https://i.icomoon.io/public/f995540dd0/IconografiadaAcesso/acesso.woff") format("woff"), url("https://i.icomoon.io/public/f995540dd0/IconografiadaAcesso/acesso.svg") format("svg"), url("https://i.icomoon.io/public/f995540dd0/IconografiadaAcesso/acesso.ttf") format("truetype"); }
+  src: url("https://acessocdn.azureedge.net/cdn/style/acesso.eot") format("embedded-opentype"), url("https://acessocdn.azureedge.net/cdn/style/acesso.woff2") format("woff2"), url("https://acessocdn.azureedge.net/cdn/style/acesso.woff") format("woff"), url("https://acessocdn.azureedge.net/cdn/style/acesso.svg") format("svg"), url("https://acessocdn.azureedge.net/cdn/style/acesso.ttf") format("truetype"); }
 
 [class^='icon-'],
 [class*=' icon-'] {
@@ -2085,7 +2087,8 @@ input[type='radio']:disabled + label {
         font-size: 1.125rem; } }
     .tab-container .tab-header .tab-header-item .icon {
       color: currentColor;
-      display: none; }
+      display: none;
+      margin-right: 5px; }
       @media (min-width: 48em) {
         .tab-container .tab-header .tab-header-item .icon {
           font-size: 18px;
