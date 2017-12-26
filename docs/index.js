@@ -10,7 +10,8 @@
         'sections/trackstep.html',
         'sections/input.html',
         'sections/radio.html',
-        'sections/tabs.html'
+        'sections/tabs.html',
+        'sections/float-button.html'
     ];
 
     var $examples = $('[data-examples]');
